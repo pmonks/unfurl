@@ -24,11 +24,9 @@
                       [org.clojure/clojure "1.8.0"]
                       [clj-http            "3.2.0" :exclusions [org.clojure/clojure]]
                       [hickory             "0.6.0" :exclusions [org.clojure/clojure]]
-;                      [clj-tagsoup         "0.3.0" :exclusions [org.clojure/clojure]]
-;                      [hiccup-find         "0.4.0" :exclusions [org.clojure/clojure]]
                     ]
   :profiles         {:dev {:dependencies [[midje      "1.8.3"]]
-                           :plugins      [[lein-midje "3.2"]]}   ; Don't remove this or travis-ci will assplode!
+                           :plugins      [[lein-midje "3.2.1"]]}   ; Don't remove this or travis-ci will assplode!
                      :uberjar {:aot :all}}
   :lein-release     {:deploy-via :clojars}
   )
