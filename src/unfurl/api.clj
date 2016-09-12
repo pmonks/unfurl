@@ -44,11 +44,20 @@
                       (map :attrs meta-tags)))))
 
 (defn- unfurl-html 
-  [url title meta-tags]
+  [url title-tags meta-tags]
   (strip-nil-values {
                       :url         url
-                      :title       (:content title)
+                      :title       (first (:content (first title-tags)))
                       :description (meta-tag-value meta-tags "description")
+                    }))
+
+(defn- unfurl-sailthru
+  [url meta-tags]
+  (strip-nil-values {
+                      :url         url
+                      :title       (meta-tag-value meta-tags "sailthru.title")
+                      :description (meta-tag-value meta-tags "sailthru:description")
+                      :preview-url (meta-tag-value meta-tags "sailthru.image.full")
                     }))
 
 (defn- unfurl-swiftype
@@ -78,9 +87,9 @@
                     }))
 
 (defn unfurl
-  "Unfurls the given url, throwing various exceptions if the url is invalid,
-  returning nil if the given url isn't supported, or a map containing some or
-  all of the following keys (none of which are mandatory):
+  "Unfurls the given url, throwing an exception if the url is invalid, returning
+  nil if the given url is nil or not supported, or a map containing some or all
+  of the following keys (none of which are mandatory):
 
     {
       :url           - The url of the resource, according to the server
@@ -95,18 +104,18 @@
       :follow-redirects   (default: true)     - whether to follow 30x redirects
       :timeout-ms         (default: 1000)     - timeout in ms (used for both the socket and connect timeouts)
       :user-agent         (default: \"unfurl\") - user agent string to send in the HTTP request
-      :max-content-length (default: 32767)    - maximum length (in bytes) of content to retrieve (using HTTP range requests)
+      :max-content-length (default: 16383)    - maximum length (in bytes) of content to retrieve (using HTTP range requests)
     }"
   ; Fancy options handling from http://stackoverflow.com/a/8660833/369849
   [url & { :keys [ follow-redirects timeout-ms user-agent max-content-length ]
              :or { follow-redirects   true
                    timeout-ms         1000
                    user-agent         "unfurl"
-                   max-content-length 32767 }}]
+                   max-content-length 16383 }}]
   (if url
     ; Use oembed services first, and then fallback if it's not supported for the given URL
-    (if-let [result (unfurl-oembed url)]
-      result
+    (if-let [oembed-data (unfurl-oembed url)]
+      oembed-data
       (let [response     (http/get url {:accept           :html
                                         :follow-redirects follow-redirects
                                         :socket-timeout   timeout-ms
@@ -117,10 +126,11 @@
             body         (:body response)]
         (if (.startsWith ^String content-type "text/html")
           (let [parsed-body (hc/as-hickory (hc/parse body))
-                title       (hs/select (hs/descendant (hs/tag :title)) parsed-body)
+                title-tags  (hs/select (hs/descendant (hs/tag :title)) parsed-body)
                 meta-tags   (hs/select (hs/descendant (hs/tag :meta))  parsed-body)]
             (if meta-tags
-              (merge (unfurl-html      url title meta-tags)
+              (merge (unfurl-html      url title-tags meta-tags)
+                     (unfurl-sailthru  url meta-tags)
                      (unfurl-swiftype  url meta-tags)
                      (unfurl-twitter   meta-tags)
                      (unfurl-opengraph meta-tags)))))))))

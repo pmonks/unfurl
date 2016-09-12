@@ -41,11 +41,21 @@
 )
 
 (facts "Valid URLs"
-  (unfurl "http://www.facebook.com/")
+  ; Simple HTML metatag-only site
+  (unfurl "http://clojure.org/")        
+    => { :url   "http://clojure.org/"
+         :title "Clojure"
+       }
+
+  ; Site with HTML metatags plus (partial) OpenGraph tags
+  (unfurl "http://www.facebook.com/")   
     => { :url         "https://www.facebook.com/"
+         :title       "Facebook - Log In or Sign Up"
          :description "Create an account or log into Facebook. Connect with friends, family and other people you know. Share photos and videos, send messages and get updates."
          :preview-url "https://www.facebook.com/images/fb_icon_325x325.png"
        }
+
+  ; Everything and the kitchen sink tags (OpenGraph, Twitter, Swiftype and Sailthru!)
   (unfurl "https://techcrunch.com/2016/09/08/its-a-long-hard-road-from-idea-to-ipo/")
     => { :url         "http://social.techcrunch.com/2016/09/08/its-a-long-hard-road-from-idea-to-ipo/"
          :title       "It’s a long, hard road from idea to IPO"
