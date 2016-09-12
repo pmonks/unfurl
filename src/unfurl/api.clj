@@ -104,14 +104,14 @@
       :follow-redirects   (default: true)     - whether to follow 30x redirects
       :timeout-ms         (default: 1000)     - timeout in ms (used for both the socket and connect timeouts)
       :user-agent         (default: \"unfurl\") - user agent string to send in the HTTP request
-      :max-content-length (default: 16383)    - maximum length (in bytes) of content to retrieve (using HTTP range requests)
+      :max-content-length (default: 16384)    - maximum length (in bytes) of content to retrieve (using HTTP range requests)
     }"
   ; Fancy options handling from http://stackoverflow.com/a/8660833/369849
   [url & { :keys [ follow-redirects timeout-ms user-agent max-content-length ]
              :or { follow-redirects   true
                    timeout-ms         1000
                    user-agent         "unfurl"
-                   max-content-length 16383 }}]
+                   max-content-length 16384 }}]
   (if url
     ; Use oembed services first, and then fallback if it's not supported for the given URL
     (if-let [oembed-data (unfurl-oembed url)]
@@ -120,7 +120,7 @@
                                         :follow-redirects follow-redirects
                                         :socket-timeout   timeout-ms
                                         :conn-timeout     timeout-ms
-                                        :headers          {"Range"          (str "0-" max-content-length)}
+                                        :headers          {"Range"          (str "0-" (- max-content-length 1))}
                                         :client-params    {"http.useragent" user-agent}})
             content-type (get (:headers response) "content-type")
             body         (:body response)]
