@@ -49,7 +49,7 @@
   (unfurl "https://techcrunch.com/2016/09/08/its-a-long-hard-road-from-idea-to-ipo/")
     => { :url         "http://social.techcrunch.com/2016/09/08/its-a-long-hard-road-from-idea-to-ipo/"
          :title       "It’s a long, hard road from idea to IPO"
-         :description "It may not seem it, but coming up with an idea for your startup is probably the easiest part of launching your own company. As one industry insider told me, there are a million ways to screw up…"
+         :description "It may not seem it, but coming up with an idea for your startup is probably the easiest part of launching your own company. As one industry insider told me,.."
          :preview-url "https://tctechcrunch2011.files.wordpress.com/2016/09/img_2835-1.jpg?w=764&h=400&crop=1"
        }
 )

@@ -23,10 +23,15 @@
   "Strips entries with nil values from map m."
   [m]
   (apply dissoc                                                                                            
-       m
-       (for [[k v] m :when (nil? v)] k)))
+         m
+         (for [[k v] m :when (nil? v)] k)))
 
-(defn- get-meta-tag-name
+(defn- unfurl-oembed
+  [url]
+  ;####TODO: implement this - see http://oembed.com/ for details
+  nil)
+
+(defn- meta-tag-name
   [meta-tag]
   (if-let [meta-tag-name (:name meta-tag)]
     meta-tag-name
@@ -34,22 +39,27 @@
 
 (defn- meta-tag-value
   [meta-tags tag-name]
-  (first (map :content (filter #(= tag-name (get-meta-tag-name %)) (map :attrs meta-tags)))))
+  (first (map :content
+              (filter #(= tag-name (meta-tag-name %))
+                      (map :attrs meta-tags)))))
 
-(defn- parse-oembed-data
-  [url]
-  ;####TODO: implement this - see http://oembed.com/ for details
-  nil)
-
-(defn- parse-opengraph
-  [meta-tags]
+(defn- unfurl-html 
+  [url title meta-tags]
   (strip-nil-values {
-                      :url         (meta-tag-value meta-tags "og:url")
-                      :title       (meta-tag-value meta-tags "og:title")
-                      :preview-url (meta-tag-value meta-tags "og:image")
+                      :url         url
+                      :title       (:content title)
+                      :description (meta-tag-value meta-tags "description")
                     }))
 
-(defn- parse-twitter-card
+(defn- unfurl-swiftype
+  [url meta-tags]
+  (strip-nil-values {
+                      :url         url
+                      :title       (meta-tag-value meta-tags "st:title")
+                      :preview-url (meta-tag-value meta-tags "st:image")
+                    }))
+
+(defn- unfurl-twitter
   [meta-tags]
   (strip-nil-values {
                       :url         (meta-tag-value meta-tags "twitter:url")
@@ -58,44 +68,59 @@
                       :preview-url (meta-tag-value meta-tags "twitter:image")
                     }))
 
-(defn- parse-html-tags
-  [url meta-tags]
+(defn- unfurl-opengraph
+  [meta-tags]
   (strip-nil-values {
-                      :url         url
-                      :description (meta-tag-value meta-tags "description")
+                      :url         (meta-tag-value meta-tags "og:url")
+                      :title       (meta-tag-value meta-tags "og:title")
+                      :description (meta-tag-value meta-tags "og:description")
+                      :preview-url (meta-tag-value meta-tags "og:image")
                     }))
 
 (defn unfurl
   "Unfurls the given url, throwing various exceptions if the url is invalid,
   returning nil if the given url isn't supported, or a map containing some or
-  all of the following keys (all of which may not be provided, or may be nil):
+  all of the following keys (none of which are mandatory):
 
-  {
-    :url           - The url of the resource, according to the server
-    :title         - The title of the given url
-    :description   - The description of the given url
-    :preview-url   - The url of a preview image for the given url
-  }"
+    {
+      :url           - The url of the resource, according to the server
+      :title         - The title of the given url
+      :description   - The description of the given url
+      :preview-url   - The url of a preview image for the given url
+    }
+
+  Options are provided as a map, with any/all of the following keys:
+
+    {
+      :follow-redirects   (default: true)     - whether to follow 30x redirects
+      :timeout-ms         (default: 1000)     - timeout in ms (used for both the socket and connect timeouts)
+      :user-agent         (default: \"unfurl\") - user agent string to send in the HTTP request
+      :max-content-length (default: 32767)    - maximum length (in bytes) of content to retrieve (using HTTP range requests)
+    }"
   ; Fancy options handling from http://stackoverflow.com/a/8660833/369849
-  [url & { :keys [follow-redirects timeout-ms user-agent]
-             :or {follow-redirects true
-                  timeout-ms       1000
-                  user-agent       "unfurl"}}]
+  [url & { :keys [ follow-redirects timeout-ms user-agent max-content-length ]
+             :or { follow-redirects   true
+                   timeout-ms         1000
+                   user-agent         "unfurl"
+                   max-content-length 32767 }}]
   (if url
-    (if-let [result (parse-oembed-data url)]
+    ; Use oembed services first, and then fallback if it's not supported for the given URL
+    (if-let [result (unfurl-oembed url)]
       result
       (let [response     (http/get url {:accept           :html
                                         :follow-redirects follow-redirects
                                         :socket-timeout   timeout-ms
                                         :conn-timeout     timeout-ms
-                                        :headers          {"Range"          "0-32767"}  ; Grab first 32K only
+                                        :headers          {"Range"          (str "0-" max-content-length)}
                                         :client-params    {"http.useragent" user-agent}})
             content-type (get (:headers response) "content-type")
             body         (:body response)]
-        (if (.startsWith content-type "text/html")
-          (let [meta-tags (hs/select (hs/descendant (hs/tag :meta))
-                                     (hc/as-hickory (hc/parse body)))]
+        (if (.startsWith ^String content-type "text/html")
+          (let [parsed-body (hc/as-hickory (hc/parse body))
+                title       (hs/select (hs/descendant (hs/tag :title)) parsed-body)
+                meta-tags   (hs/select (hs/descendant (hs/tag :meta))  parsed-body)]
             (if meta-tags
-              (merge (parse-html-tags    url meta-tags)
-                     (parse-twitter-card meta-tags)
-                     (parse-opengraph    meta-tags)))))))))
+              (merge (unfurl-html      url title meta-tags)
+                     (unfurl-swiftype  url meta-tags)
+                     (unfurl-twitter   meta-tags)
+                     (unfurl-opengraph meta-tags)))))))))
