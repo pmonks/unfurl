@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/pmonks/unfurl.svg?branch=master)](https://travis-ci.org/pmonks/unfurl)
+[![Dependencies Status](http://jarkeeper.com/pmonks/unfurl/status.svg)](http://jarkeeper.com/pmonks/unfurl)
+
 # unfurl
 
 This WIP library is intended to implement "unfurling" approximately according to
