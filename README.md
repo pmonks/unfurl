@@ -28,7 +28,7 @@ Require it in your application:
 The library provides a number of methods:
 
 ```
-user=> (require '[unfurl.api :as symph] :reload-all)
+user=> (require '[unfurl.api :as uf] :reload-all)
 nil
 user=> (doc unfurl.api/unfurl)
 -------------------------
