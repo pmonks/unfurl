@@ -71,12 +71,11 @@
   all of the following keys (all of which may not be provided, or may be nil):
 
   {
-    :url           - The given url
+    :url           - The url of the resource, according to the server
     :title         - The title of the given url
     :description   - The description of the given url
     :preview-url   - The url of a preview image for the given url
-  }
-  "
+  }"
   ; Fancy options handling from http://stackoverflow.com/a/8660833/369849
   [url & { :keys [follow-redirects timeout-ms user-agent]
              :or {follow-redirects true
