@@ -26,9 +26,10 @@
          m
          (for [[k v] m :when (nil? v)] k)))
 
+; See http://oembed.com/
 (defn- unfurl-oembed
   [url]
-  ;####TODO: implement this - see http://oembed.com/ for details
+  ;####TODO: implement this
   nil)
 
 (defn- meta-tag-name
@@ -51,15 +52,17 @@
                       :description (meta-tag-value meta-tags "description")
                     }))
 
+; See https://getstarted.sailthru.com/site/horizon-overview/horizon-meta-tags/
 (defn- unfurl-sailthru
   [url meta-tags]
   (strip-nil-values {
                       :url         url
                       :title       (meta-tag-value meta-tags "sailthru.title")
-                      :description (meta-tag-value meta-tags "sailthru:description")
+                      :description (meta-tag-value meta-tags "sailthru.description")
                       :preview-url (meta-tag-value meta-tags "sailthru.image.full")
                     }))
 
+; See https://swiftype.com/documentation/meta_tags
 (defn- unfurl-swiftype
   [url meta-tags]
   (strip-nil-values {
@@ -68,6 +71,7 @@
                       :preview-url (meta-tag-value meta-tags "st:image")
                     }))
 
+; See https://dev.twitter.com/cards/markup
 (defn- unfurl-twitter
   [meta-tags]
   (strip-nil-values {
@@ -77,6 +81,7 @@
                       :preview-url (meta-tag-value meta-tags "twitter:image")
                     }))
 
+; See http://ogp.me/
 (defn- unfurl-opengraph
   [meta-tags]
   (strip-nil-values {
