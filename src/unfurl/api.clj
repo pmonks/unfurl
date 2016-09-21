@@ -45,18 +45,16 @@
                       (map :attrs meta-tags)))))
 
 (defn- unfurl-html
-  [url title-tags meta-tags]
+  [title-tags meta-tags]
   (strip-nil-values {
-                      :url         url
                       :title       (first (:content (first title-tags)))
                       :description (meta-tag-value meta-tags "description")
                     }))
 
 ; See https://getstarted.sailthru.com/site/horizon-overview/horizon-meta-tags/
 (defn- unfurl-sailthru
-  [url meta-tags]
+  [meta-tags]
   (strip-nil-values {
-                      :url         url
                       :title       (meta-tag-value meta-tags "sailthru.title")
                       :description (meta-tag-value meta-tags "sailthru.description")
                       :preview-url (meta-tag-value meta-tags "sailthru.image.full")
@@ -64,9 +62,8 @@
 
 ; See https://swiftype.com/documentation/meta_tags
 (defn- unfurl-swiftype
-  [url meta-tags]
+  [meta-tags]
   (strip-nil-values {
-                      :url         url
                       :title       (meta-tag-value meta-tags "st:title")
                       :preview-url (meta-tag-value meta-tags "st:image")
                     }))
@@ -134,8 +131,8 @@
                 title-tags  (hs/select (hs/descendant (hs/tag :title)) parsed-body)
                 meta-tags   (hs/select (hs/descendant (hs/tag :meta))  parsed-body)]
             (if meta-tags
-              (merge (unfurl-html      url title-tags meta-tags)
-                     (unfurl-sailthru  url meta-tags)
-                     (unfurl-swiftype  url meta-tags)
+              (merge (unfurl-html      title-tags meta-tags)
+                     (unfurl-sailthru  meta-tags)
+                     (unfurl-swiftype  meta-tags)
                      (unfurl-twitter   meta-tags)
                      (unfurl-opengraph meta-tags)))))))))

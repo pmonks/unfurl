@@ -43,8 +43,7 @@
 (facts "Valid URLs"
   ; Simple HTML metatag-only site
   (unfurl "http://clojure.org/")
-    => { :url   "http://clojure.org/"
-         :title "Clojure"
+    => { :title "Clojure"
        }
 
   ; Site with HTML metatags plus (partial) OpenGraph tags
