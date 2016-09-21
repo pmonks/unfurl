@@ -4,15 +4,15 @@
 ; Licensed under the Apache License, Version 2.0 (the "License");
 ; you may not use this file except in compliance with the License.
 ; You may obtain a copy of the License at
-; 
+;
 ;     http://www.apache.org/licenses/LICENSE-2.0
-; 
+;
 ; Unless required by applicable law or agreed to in writing, software
 ; distributed under the License is distributed on an "AS IS" BASIS,
 ; WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 ; See the License for the specific language governing permissions and
 ; limitations under the License.
-; 
+;
 
 (ns unfurl.api-test
   (:require [midje.sweet :refer :all]
@@ -42,13 +42,13 @@
 
 (facts "Valid URLs"
   ; Simple HTML metatag-only site
-  (unfurl "http://clojure.org/")        
+  (unfurl "http://clojure.org/")
     => { :url   "http://clojure.org/"
          :title "Clojure"
        }
 
   ; Site with HTML metatags plus (partial) OpenGraph tags
-  (unfurl "http://www.facebook.com/")   
+  (unfurl "http://www.facebook.com/")
     => { :url         "https://www.facebook.com/"
          :title       "Facebook - Log In or Sign Up"
          :description "Create an account or log into Facebook. Connect with friends, family and other people you know. Share photos and videos, send messages and get updates."
