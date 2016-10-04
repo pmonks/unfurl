@@ -23,7 +23,7 @@
     => nil
   (unfurl "")
     => (throws java.net.MalformedURLException)
-  (unfurl "not a uri")
+  (unfurl "not a url")
     => (throws java.net.MalformedURLException)
   (unfurl "http://www.abcdefghijklmnopqrstuvwxyz.com/")
     => (throws java.net.UnknownHostException)
@@ -36,7 +36,7 @@
     => nil
   (unfurl "https://pbs.twimg.com/profile_images/616258163470237697/DtOTlqWX.png")
     => nil
-  (unfurl "https://s.ytimg.com/yts/swfbin/player-vflKYGdWT/watch_as3.swf")
+  (unfurl "http://samples.mplayerhq.hu/SWF/test.swf")
     => nil
 )
 

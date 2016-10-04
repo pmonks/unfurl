@@ -22,7 +22,7 @@
   :min-lein-version "2.5.0"
   :dependencies     [
                       [org.clojure/clojure "1.8.0"]
-                      [clj-http            "3.2.0" :exclusions [org.clojure/clojure]]
+                      [clj-http            "3.3.0" :exclusions [org.clojure/clojure]]
                       [org.jsoup/jsoup     "1.9.2"]
                       [hickory             "0.6.0" :exclusions [org.clojure/clojure org.jsoup/jsoup]]
                     ]
