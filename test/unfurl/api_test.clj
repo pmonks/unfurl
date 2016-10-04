@@ -25,7 +25,7 @@
     => (throws java.net.MalformedURLException)
   (unfurl "not a uri")
     => (throws java.net.MalformedURLException)
-  (unfurl "http://www.thisisnotarealhostnameitodesntexist.com/")
+  (unfurl "http://www.abcdefghijklmnopqrstuvwxyz.com/")
     => (throws java.net.UnknownHostException)
   (unfurl "https://localhost:8443/")
     => (throws java.net.ConnectException)

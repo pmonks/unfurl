@@ -103,27 +103,33 @@
   Options are provided as a map, with any/all of the following keys:
 
     {
-      :follow-redirects   (default: true)     - whether to follow 30x redirects
-      :timeout-ms         (default: 1000)     - timeout in ms (used for both the socket and connect timeouts)
-      :user-agent         (default: \"unfurl\") - user agent string to send in the HTTP request
-      :max-content-length (default: 16384)    - maximum length (in bytes) of content to retrieve (using HTTP range requests)
+      :follow-redirects    (default: true)     - whether to follow 30x redirects
+      :timeout-ms          (default: 1000)     - timeout in ms (used for both the socket and connect timeouts)
+      :user-agent          (default: \"unfurl\") - user agent string to send in the HTTP request
+      :max-content-length  (default: 16384)    - maximum length (in bytes) of content to retrieve (using HTTP range requests)
+      :proxy-host          (default: nil)      - proxy hostname
+      :proxy-port          (default: nil)      - proxy port
     }"
   ; Fancy options handling from http://stackoverflow.com/a/8660833/369849
-  [url & { :keys [ follow-redirects timeout-ms user-agent max-content-length ]
+  [url & { :keys [ follow-redirects timeout-ms user-agent max-content-length proxy-host proxy-port ]
              :or { follow-redirects   true
                    timeout-ms         1000
                    user-agent         "unfurl"
-                   max-content-length 16384 }}]
+                   max-content-length 16384
+                   proxy-host         nil
+                   proxy-port         nil }}]
   (if url
     ; Use oembed services first, and then fallback if it's not supported for the given URL
     (if-let [oembed-data (unfurl-oembed url)]
       oembed-data
-      (let [response     (http/get url {:accept           :html
-                                        :follow-redirects follow-redirects
-                                        :socket-timeout   timeout-ms
-                                        :conn-timeout     timeout-ms
-                                        :headers          {"Range"          (str "0-" (- max-content-length 1))}
-                                        :client-params    {"http.useragent" user-agent}})
+      (let [response     (http/get url (strip-nil-values {:accept           :html
+                                                          :follow-redirects follow-redirects
+                                                          :socket-timeout   timeout-ms
+                                                          :conn-timeout     timeout-ms
+                                                          :headers          {"Range"          (str "0-" (- max-content-length 1))}
+                                                          :client-params    {"http.useragent" user-agent}
+                                                          :proxy-host       proxy-host
+                                                          :proxy-port       proxy-port}))
             content-type (get (:headers response) "content-type")
             body         (:body response)]
         (if (.startsWith ^String content-type "text/html")
