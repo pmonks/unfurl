@@ -15,7 +15,8 @@
 ;
 
 (ns unfurl.api
-  (:require [clj-http.client :as http]
+  (:require [clojure.string  :as s]
+            [clj-http.client :as http]
             [hickory.core    :as hc]
             [hickory.select  :as hs]))
 
@@ -40,9 +41,12 @@
 
 (defn- meta-tag-value
   [meta-tags tag-name]
-  (first (map :content
-              (filter #(= tag-name (meta-tag-name %))
-                      (map :attrs meta-tags)))))
+  (let [value (first (map :content
+                          (filter #(= tag-name (meta-tag-name %))
+                                  (map :attrs meta-tags))))
+        value (when value (s/trim value))]
+    (when (pos? (count value))
+      value)))
 
 (defn- unfurl-html
   [title-tags meta-tags]
