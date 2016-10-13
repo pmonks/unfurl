@@ -5,8 +5,8 @@
 
 # unfurl
 
-This WIP library is intended to implement "unfurling" approximately according to
-how Slack does it. See [this blog post](https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254#.jhd6zdyjs)
+This library implements "URL unfurling" approximately according to how Slack does it.
+See [this blog post](https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254#.jhd6zdyjs)
 for more info.
 
 ## Installation
