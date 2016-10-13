@@ -60,7 +60,7 @@ unfurl.api/unfurl
       :preview-url   - The url of a preview image for the given url
     }
 
-  Options are provided as a map, with any/all of the following keys:
+  Options are provided as key/value pairs, with any/all of the following keys:
 
     {
       :follow-redirects    (default: true)     - whether to follow 30x redirects
