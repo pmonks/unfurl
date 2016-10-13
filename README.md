@@ -11,7 +11,17 @@ for more info.
 
 ## Installation
 
-For now unfurl is available in source form only, so fire up your favourite git client and get cloning!
+unfurl is available as a Maven artifact from [Clojars](https://clojars.org/org.clojars.pmonks/unfurl).
+Plonk the following in your project.clj :dependencies, substitute "#.#.#" for the latest version number,
+`lein deps` and you should be good to go:
+
+```clojure
+[org.clojars.pmonks/unfurl "#.#.#"]
+```
+
+The latest version is:
+
+[![version](https://clojars.org/org.clojars.pmonks/unfurl/latest-version.svg)](https://clojars.org/org.clojars.pmonks/unfurl)
 
 ## Usage
 
