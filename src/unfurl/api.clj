@@ -111,8 +111,8 @@
       :timeout-ms          (default: 1000)     - timeout in ms (used for both the socket and connect timeouts)
       :user-agent          (default: \"unfurl\") - user agent string to send in the HTTP request
       :max-content-length  (default: 16384)    - maximum length (in bytes) of content to retrieve (using HTTP range requests)
-      :proxy-host          (default: nil)      - proxy hostname
-      :proxy-port          (default: nil)      - proxy port
+      :proxy-host          (default: nil)      - HTTP proxy hostname
+      :proxy-port          (default: nil)      - HTTP proxy port
     }"
   ; Fancy options handling from http://stackoverflow.com/a/8660833/369849
   [url & { :keys [ follow-redirects timeout-ms user-agent max-content-length proxy-host proxy-port ]
