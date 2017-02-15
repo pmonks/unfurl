@@ -22,9 +22,9 @@
   :min-lein-version "2.5.0"
   :dependencies     [
                       [org.clojure/clojure "1.8.0"]
-                      [clj-http            "3.3.0" :exclusions [org.clojure/clojure]]
-                      [org.jsoup/jsoup     "1.10.1"]
-                      [hickory             "0.6.0" :exclusions [org.clojure/clojure org.jsoup/jsoup]]
+                      [clj-http            "3.4.1" :exclusions [org.clojure/clojure]]
+                      [org.jsoup/jsoup     "1.10.2"]
+                      [hickory             "0.7.0" :exclusions [org.clojure/clojure org.jsoup/jsoup]]
                     ]
   :profiles         {:dev {:dependencies [[midje      "1.8.3"]]
                            :plugins      [[lein-midje "3.2.1"]]}   ; Don't remove this or travis-ci will assplode!
