@@ -34,7 +34,7 @@
 (facts "Incorrect content types"
   (unfurl "http://www.apache.org/licenses/LICENSE-2.0.txt")
     => nil
-  (unfurl "https://pbs.twimg.com/profile_images/616258163470237697/DtOTlqWX.png")
+  (unfurl "http://www.ucolick.org/~diemand/vl/images/L800kpc_z0_0_poster.png")
     => nil
   (unfurl "http://samples.mplayerhq.hu/SWF/test.swf")
     => nil
