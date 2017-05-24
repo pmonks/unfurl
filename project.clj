@@ -14,7 +14,7 @@
 ; limitations under the License.
 ;
 
-(defproject org.clojars.pmonks/unfurl "0.3.0"
+(defproject org.clojars.pmonks/unfurl "0.4.0-SNAPSHOT"
   :description      "'Unfurls' URLs approximately according to how Slack does it. See https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254#.jhd6zdyjs for more info."
   :url              "https://github.com/pmonks/unfurl"
   :license          {:name "Apache License, Version 2.0"
