@@ -40,38 +40,7 @@ Require it in your application:
   (:require [unfurl.api :as uf]))
 ```
 
-The library provides a single public method:
-
-```
-user=> (require '[unfurl.api :as uf] :reload-all)
-nil
-user=> (doc unfurl.api/unfurl)
--------------------------
-unfurl.api/unfurl
-([url & {:keys [follow-redirects timeout-ms user-agent max-content-length proxy-host proxy-port], :or {follow-redirects true, timeout-ms 1000, user-agent "unfurl", max-content-length 16384, proxy-host nil, proxy-port nil}}])
-  Unfurls the given url, throwing an exception if the url is invalid, returning
-  nil if the given url is nil or not supported, or a map containing some or all
-  of the following keys (none of which are mandatory):
-
-    {
-      :url           - The url of the resource, according to the server
-      :title         - The title of the given url
-      :description   - The description of the given url
-      :preview-url   - The url of a preview image for the given url
-    }
-
-  Options are provided as key/value pairs, with any/all of the following keys:
-
-    {
-      :follow-redirects    (default: true)     - whether to follow 30x redirects
-      :timeout-ms          (default: 1000)     - timeout in ms (used for both the socket and connect timeouts)
-      :user-agent          (default: "unfurl") - user agent string to send in the HTTP request
-      :max-content-length  (default: 16384)    - maximum length (in bytes) of content to retrieve (using HTTP range requests)
-      :proxy-host          (default: nil)      - HTTP proxy hostname
-      :proxy-port          (default: nil)      - HTTP proxy port
-    }
-nil
-```
+The library provides a single function - `unfurl`.  [The API documentation](https://pmonks.github.io/unfurl/) has full details, and [the unit tests](https://github.com/pmonks/unfurl/blob/master/test/unfurl/api_test.clj) provide some example usages.
 
 ## Developer Information
 
