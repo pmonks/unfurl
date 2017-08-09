@@ -1,6 +1,39 @@
 language: clojure
-lein: lein2
-script: lein2 midje
+sudo: false
 jdk:
   - oraclejdk8
-sudo: false
+lein: lein2
+
+env:
+  global:
+    # CLOJARS_USERNAME
+    - secure: "U3QcnT4m+nGz7O6GObLwfNv3tW3C1EDGDi6Xgti8+u+ixs9VA3K6Y6LKXrawKzwwmZxgaVFCqPaw4IkXBFH71gaLAviupDCXLMaGmzUXRIeFW7XYM59TOgSZCtyC4Tqw1LJRjcUyu/ctnmPxtC1RPja8dadQulI8autjnurz5872aelSSuXuy0czaEw2nsiZT8dxu/TFX5YskcgOhM2xnC6SI8dUsIqq0BYXUQ/CajSzxBZTxgAeDIELN2FrP4bThxVmxeZH/b5FxWEe2BDU8TylDuoGP+SdwFUXY91hGdy/u2ZEa5fnfNWIsUY2y5rVDuVUllapFlm42bUDV1iXo1oD3g/33Pqm5JDCv5Rj6xe57fBnB8UNlc2tt0fiXllBU24CyjsiaJ2E9Epb8+xTsCJlqLT9YKRrh2yeRNGtFL7DemrwehSWW2NjqGvQKut1AAUDA7xjZjO+occaHhnJVqglEJMTe2Mc5zc+RaxCaOeSQKULJ8Kax8LAp6hjnO3l8+N5jnzto4DRsBjr5lEuvY6LsQ2hHDXhpUIgBT/8rQ1GTQ/WIn/DloA4xp3Zk+jypXGvulEctbKD9FdT4GkfjU2XlMkobHu6I8WUV9V8yMvlQPX5AV7aw3RGKsGjW0M3t+vU1ICbI+t/laH+1WavoJNzxCiKjpPGQBCpH9lNmxE="
+    # CLOJARS_PASSWORD
+    - secure: "GUIs/x4ar6f7s5Ky+5/ESuKF21K7GsQj5DX686XzcN6YvR2Qn877pB1jQjtyHow1Qt73/ak81V3Fy/wiecKDLf6gyq+cNP5cley+cU/I6w6s4VsmrTUD1R7cxZEuZYAiMHH/LyzZ7HTnCR46hEJQtL5wgoGpUNflD6LQUO1SY7uY1ecPPIceUKQN+38emh3PoFlGL1J5KUGj/LBVP/7twPQlFtNFPgs3LZDm0byohSvAsYHNoqQ7EXAuBlvGXaXd8z47zPLXuFUOgjvzqwcTlvbZGG9YlLUn6Irnz8MVHlfeRQtPpdcTWCI4KMQ6/prP5HeILlPCKwuqDnt2fTvPS+REJHotN8kFvfha9JIlT9hBonWelLBX/tkTtqgGUip50Clk+NAwM1vizl84tD2RC+QMWpzSlrREvrUPYnNf34fxl02A14Bk3K/OF7fvMRIgcqLu9S619XsXrOSOqDa4FYmycpbxrtuZzO/8jU0hImyDvckZmxlp8oyWLeN+15d9XdB/+WMsmKoaVSoJgzIjsHHHxlX8CqxNKFapozDRLGaZfJHUVl5YWTIssb1XK3XpxdRRm3ADHxJbE3zYri6QMoX2zDy2fD66sLsKsAdsx+aZjOIGsk3yXqmdlqORIpchqHfzx5NWqfdgBsXFWqGBey7VCCm1MBQge33LXpCw/3I="
+    # GITHUB_TOKEN
+    - secure: "j2lvSuc8nCifD1q2HCDcgrlbLaMfG3LmAwGIE6qVudlN2MLAYUr0siqAJGPB551rePDoyShmwcn97RpNg3Eie6BW1BZa0TJU15L0izroEGZHhmGFeyoVtF0XTjWjkQ8MYP8dwSQhhBoAewArEFTBLV7tEntUzKreZ37xhOb62RrPKc/RPSUG16/WwhoTms32eb4Gb16rdUWs4RA1se4V+FGFp5E1rSO9Kv30PvFmRJUkXN39Gvdl3j172LoMLklCn8WdIOShbK2H+DUBaXCxTgh7OmKYVoMjdx+CNmLiUoflwoZIhXEwQA3q0eC9eK5wEAHqD9ffaaVRpvgXrWvqBWW2gBXZamzozE10ObkIKVNRPDMa+9LZ2dMzsPJDqGVjHDoHNOTzWHZtykm5vyKk914Zp3yfhU5UWj6ALoOOJl02zKBRD8vDN42fD8Xzu06T11so4/T4fjZuKJo3DUC4E2culOJDXnVX23bfQiFB1Tf4pX17PphcVlrgUAM6VTmPkJM1ejNOAMerJpjPKtvn6SsQ7k6U3FSByB4QdTU9ORCop7mkxmL/jGBQsfPU51TgGk4BkvCPeKOEP/hRYcEp4MJnogHljMXztCmZQ4m/nHUPRJy60yomoDxcWxcp0sHcOOd1ZUZPXap5E+xfKTY1+EmzxSRX7JkH9p9nC8/PZjA="
+
+script: lein2 do check, midje
+
+deploy:
+  # Deploy binaries to Clojars
+  - provider: script
+    skip_cleanup: true
+    script: lein2 deploy
+    on:
+      branch: master
+  # Generate documentation
+  - provider: script
+    skip_cleanup: true
+    script: lein2 codox
+    on:
+      branch: master
+  # Deploy documentation
+  - provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    email: pmonks+travisci@gmail.com
+    name: Travis CI - pmonks
+    local_dir: target/doc
+    on:
+      branch: master

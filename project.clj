@@ -1,5 +1,5 @@
 ;
-; Copyright © 2016 Peter Monks
+; Copyright © 2016-2017 Peter Monks
 ;
 ; Licensed under the Apache License, Version 2.0 (the "License");
 ; you may not use this file except in compliance with the License.
@@ -15,19 +15,34 @@
 ;
 
 (defproject org.clojars.pmonks/unfurl "0.6.0-SNAPSHOT"
-  :description      "'Unfurls' URLs approximately according to how Slack does it. See https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254#.jhd6zdyjs for more info."
-  :url              "https://github.com/pmonks/unfurl"
-  :license          {:name "Apache License, Version 2.0"
-                     :url  "http://www.apache.org/licenses/LICENSE-2.0"}
-  :min-lein-version "2.5.0"
-  :dependencies     [
-                      [org.clojure/clojure "1.8.0"]
-                      [clj-http            "3.6.1" :exclusions [org.clojure/clojure]]
-                      [org.jsoup/jsoup     "1.10.3"]
-                      [hickory             "0.7.1" :exclusions [org.clojure/clojure org.jsoup/jsoup org.clojure/clojurescript viebel/codox-klipse-theme]]
-                    ]
-  :profiles         {:dev {:dependencies [[midje      "1.8.3"]]
-                           :plugins      [[lein-midje "3.2.1"]]}   ; Don't remove this or travis-ci will assplode!
-                     :uberjar {:aot :all}}
-  :lein-release     {:deploy-via :clojars}
+  :description         "'Unfurls' URLs approximately according to how Slack does it. See https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254#.jhd6zdyjs for more info."
+  :url                 "https://github.com/pmonks/unfurl"
+  :license             {:name "Apache License, Version 2.0"
+                        :url  "http://www.apache.org/licenses/LICENSE-2.0"}
+  :min-lein-version    "2.5.0"
+  :plugins             [
+                         [lein-codox "0.10.3"]
+                       ]
+  :dependencies        [
+                         [org.clojure/clojure "1.8.0"]
+                         [clj-http            "3.6.1" :exclusions [org.clojure/clojure]]
+                         [org.jsoup/jsoup     "1.10.3"]
+                         [hickory             "0.7.1" :exclusions [org.clojure/clojure org.jsoup/jsoup org.clojure/clojurescript viebel/codox-klipse-theme]]
+                       ]
+  :profiles            {:dev {:dependencies [[midje      "1.8.3"]]
+                              :plugins      [[lein-midje "3.2.1"]]}   ; Don't remove this or travis-ci will assplode!
+                        :uberjar {:aot :all}}
+  :deploy-repositories [
+                         ["snapshots" {:url      "https://clojars.org/repo"
+                                       :username :env/clojars_username
+                                       :password :env/clojars_password}]
+                         ["releases"  {:url      "https://clojars.org/repo"
+                                       :username :env/clojars_username
+                                       :password :env/clojars_password}]
+                       ]
+  :codox               {
+                         :source-uri "https://github.com/pmonks/multigrep/blob/master/{filepath}#L{line}"
+;                         :source-uri "https://github.com/pmonks/multigrep/blob/{version}/{filepath}#L{line}"
+;                         :metadata   {:doc/format :markdown}
+                       }
   )
