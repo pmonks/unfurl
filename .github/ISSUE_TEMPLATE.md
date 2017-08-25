@@ -16,6 +16,6 @@
 
 ## [ENHANCEMENT REQUEST TEMPLATE]
 ### Description of Problem:
-...what *problem* are you trying to solve that the library doesn't currently solve?
+...what *problem* are you trying to solve that the project doesn't currently solve?
 
-...please resist the temptation to describe your request in terms of a solution.  User Story form (```As a [persona] I want to perform [action] so that I can achieve [goal].```) can help ensure you're expressing the problem, rather than potential solutions.
+...please resist the temptation to describe your request in terms of a solution.  Job Story form ("When [triggering condition], I want to [motivation/goal], so I can [outcome].") can help ensure you're expressing the problem, rather than potential solutions.
