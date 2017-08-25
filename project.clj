@@ -19,7 +19,7 @@
   :url                 "https://github.com/pmonks/unfurl"
   :license             {:name "Apache License, Version 2.0"
                         :url  "http://www.apache.org/licenses/LICENSE-2.0"}
-  :min-lein-version    "2.5.0"
+  :min-lein-version    "2.7.0"
   :plugins             [
                          [lein-codox "0.10.3"]
                        ]
