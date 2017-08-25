@@ -2,7 +2,7 @@ language: clojure
 sudo: false
 jdk:
   - oraclejdk8
-lein: lein2
+lein: 2.7.1
 
 env:
   global:
