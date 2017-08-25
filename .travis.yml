@@ -13,19 +13,19 @@ env:
     # GITHUB_TOKEN
     - secure: "j2lvSuc8nCifD1q2HCDcgrlbLaMfG3LmAwGIE6qVudlN2MLAYUr0siqAJGPB551rePDoyShmwcn97RpNg3Eie6BW1BZa0TJU15L0izroEGZHhmGFeyoVtF0XTjWjkQ8MYP8dwSQhhBoAewArEFTBLV7tEntUzKreZ37xhOb62RrPKc/RPSUG16/WwhoTms32eb4Gb16rdUWs4RA1se4V+FGFp5E1rSO9Kv30PvFmRJUkXN39Gvdl3j172LoMLklCn8WdIOShbK2H+DUBaXCxTgh7OmKYVoMjdx+CNmLiUoflwoZIhXEwQA3q0eC9eK5wEAHqD9ffaaVRpvgXrWvqBWW2gBXZamzozE10ObkIKVNRPDMa+9LZ2dMzsPJDqGVjHDoHNOTzWHZtykm5vyKk914Zp3yfhU5UWj6ALoOOJl02zKBRD8vDN42fD8Xzu06T11so4/T4fjZuKJo3DUC4E2culOJDXnVX23bfQiFB1Tf4pX17PphcVlrgUAM6VTmPkJM1ejNOAMerJpjPKtvn6SsQ7k6U3FSByB4QdTU9ORCop7mkxmL/jGBQsfPU51TgGk4BkvCPeKOEP/hRYcEp4MJnogHljMXztCmZQ4m/nHUPRJy60yomoDxcWxcp0sHcOOd1ZUZPXap5E+xfKTY1+EmzxSRX7JkH9p9nC8/PZjA="
 
-script: lein2 do check, midje
+script: lein do check, midje
 
 deploy:
   # Deploy binaries to Clojars
   - provider: script
     skip_cleanup: true
-    script: lein2 deploy
+    script: lein deploy
     on:
       branch: master
   # Generate documentation
   - provider: script
     skip_cleanup: true
-    script: lein2 codox
+    script: lein codox
     on:
       branch: master
   # Deploy documentation
