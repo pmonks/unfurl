@@ -42,7 +42,5 @@
                        ]
   :codox               {
                          :source-uri "https://github.com/pmonks/unfurl/blob/master/{filepath}#L{line}"
-;                         :source-uri "https://github.com/pmonks/unfurl/blob/{version}/{filepath}#L{line}"
-;                         :metadata   {:doc/format :markdown}
                        }
   )
