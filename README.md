@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/pmonks/unfurl.svg?branch=master)](https://travis-ci.org/pmonks/unfurl)
 [![Open Issues](https://img.shields.io/github/issues/pmonks/unfurl.svg)](https://github.com/pmonks/unfurl/issues)
 [![License](https://img.shields.io/github/license/pmonks/unfurl.svg)](https://github.com/pmonks/unfurl/blob/master/LICENSE)
-[![Dependencies Status](http://jarkeeper.com/pmonks/unfurl/status.svg)](http://jarkeeper.com/pmonks/unfurl)
+[![Dependencies Status](https://versions.deps.co/pmonks/unfurl/status.svg)](https://versions.deps.co/pmonks/unfurl)
 
 # unfurl
 
