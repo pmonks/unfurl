@@ -26,10 +26,10 @@
   :dependencies        [
                          [org.clojure/clojure "1.8.0"]
                          [clj-http            "3.7.0" :exclusions [org.clojure/clojure]]
-                         [org.jsoup/jsoup     "1.11.1"]
+                         [org.jsoup/jsoup     "1.11.2"]
                          [hickory             "0.7.1" :exclusions [org.clojure/clojure org.jsoup/jsoup org.clojure/clojurescript viebel/codox-klipse-theme]]
                        ]
-  :profiles            {:dev {:dependencies [[midje      "1.8.3"]]
+  :profiles            {:dev {:dependencies [[midje      "1.9.0"]]
                               :plugins      [[lein-midje "3.2.1"]]}   ; Don't remove this or travis-ci will assplode!
                         :uberjar {:aot :all}}
   :deploy-repositories [
