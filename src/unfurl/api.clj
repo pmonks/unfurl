@@ -131,7 +131,7 @@
                                                           :socket-timeout   timeout-ms
                                                           :conn-timeout     timeout-ms
                                                           :headers          {"Range"          (str "0-" (- max-content-length 1))
-                                                                             "Accept-Charset" "UTF-8"}
+                                                                             "Accept-Charset" "UTF-8, ISO-8859-1;q=0.5, *;q=0.1"}
                                                           :client-params    {"http.useragent" user-agent}
                                                           :proxy-host       proxy-host
                                                           :proxy-port       proxy-port}))
