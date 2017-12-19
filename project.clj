@@ -14,22 +14,22 @@
 ; limitations under the License.
 ;
 
-(defproject org.clojars.pmonks/unfurl "0.7.0-SNAPSHOT"
+(defproject org.clojars.pmonks/unfurl "0.7.0"
   :description         "'Unfurls' URLs approximately according to how Slack does it. See https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254#.jhd6zdyjs for more info."
   :url                 "https://github.com/pmonks/unfurl"
   :license             {:name "Apache License, Version 2.0"
                         :url  "http://www.apache.org/licenses/LICENSE-2.0"}
-  :min-lein-version    "2.7.0"
+  :min-lein-version    "2.8.1"
   :plugins             [
                          [lein-codox "0.10.3"]
                        ]
   :dependencies        [
-                         [org.clojure/clojure "1.8.0"]
+                         [org.clojure/clojure "1.9.0"]
                          [clj-http            "3.7.0" :exclusions [org.clojure/clojure]]
                          [org.jsoup/jsoup     "1.11.2"]
                          [hickory             "0.7.1" :exclusions [org.clojure/clojure org.jsoup/jsoup org.clojure/clojurescript viebel/codox-klipse-theme]]
                        ]
-  :profiles            {:dev {:dependencies [[midje      "1.9.0"]]
+  :profiles            {:dev {:dependencies [[midje      "1.9.1"]]
                               :plugins      [[lein-midje "3.2.1"]]}   ; Don't remove this or travis-ci will assplode!
                         :uberjar {:aot :all}}
   :deploy-repositories [
