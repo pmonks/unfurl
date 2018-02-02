@@ -92,6 +92,17 @@
                       :preview-url (meta-tag-value meta-tags "og:image")
                     }))
 
+(defn- http-get
+  "'Friendly' form of http/get that adds request information to any exceptions that get thrown by clj-http."
+  [{ url     :url
+     options :options
+     :as request }]
+  (try
+    (http/get url options)
+    (catch clojure.lang.ExceptionInfo ei
+      (throw (ex-info (.getMessage ei) { :request  request
+                                         :response (ex-data ei)})))))
+
 (defn unfurl
   "Unfurls the given url, throwing an exception if the url is invalid, returning
   nil if the given url is nil or not supported, or a map containing some or all
@@ -113,8 +124,14 @@
       :max-content-length  (default: 16384)    - maximum length (in bytes) of content to retrieve (using HTTP range requests)
       :proxy-host          (default: nil)      - HTTP proxy hostname
       :proxy-port          (default: nil)      - HTTP proxy port
+    }
+
+  Thrown exceptions will usually be an ExceptionInfo with the ex-data containing:
+
+    {
+      :request  - the details of the HTTP request that was attempted
+      :response - the details of the HTTP response that was received (comes directly from clj-http)
     }"
-  ; Fancy options handling from http://stackoverflow.com/a/8660833/369849
   [url & { :keys [ follow-redirects timeout-ms user-agent max-content-length proxy-host proxy-port ]
              :or { follow-redirects   true
                    timeout-ms         1000
@@ -126,15 +143,18 @@
     ; Use oembed services first, and then fallback if it's not supported for the given URL
     (if-let [oembed-data (unfurl-oembed url)]
       oembed-data
-      (let [response     (http/get url (strip-nil-values {:accept           :html
-                                                          :follow-redirects follow-redirects
-                                                          :socket-timeout   timeout-ms
-                                                          :conn-timeout     timeout-ms
-                                                          :headers          {"Range"          (str "bytes=0-" (- max-content-length 1))
-                                                                             "Accept-Charset" "UTF-8, ISO-8859-1;q=0.5, *;q=0.1"}
-                                                          :client-params    {"http.useragent" user-agent}
-                                                          :proxy-host       proxy-host
-                                                          :proxy-port       proxy-port}))
+      (let [request      { :url     url
+                           :options (strip-nil-values { :accept           :html
+                                                        :follow-redirects follow-redirects
+                                                        :socket-timeout   timeout-ms
+                                                        :conn-timeout     timeout-ms
+                                                        :headers          {"Range"          (str "bytes=0-" (- max-content-length 1))
+                                                                           "Accept-Charset" "utf-8, iso-8859-1;q=0.5, *;q=0.1"}
+                                                        :client-params    {"http.protocol.allow-circular-redirects" false
+                                                                           "http.useragent" user-agent}
+                                                        :proxy-host       proxy-host
+                                                        :proxy-port       proxy-port })}
+            response     (http-get request)
             content-type (get (:headers response) "content-type")
             body         (:body response)]
         (if (.startsWith ^String content-type "text/html")
