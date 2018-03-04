@@ -50,6 +50,6 @@ The library provides a single function - `unfurl`.  [The API documentation](http
 
 ## License
 
-Copyright © 2016-2017 Peter Monks
+Copyright © 2016 Peter Monks
 
 Distributed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
