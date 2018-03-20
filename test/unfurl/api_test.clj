@@ -73,9 +73,9 @@
   ; Everything and the kitchen sink tags (OpenGraph, Twitter, Swiftype and Sailthru!)
   (tunfurl "https://techcrunch.com/2016/09/08/its-a-long-hard-road-from-idea-to-ipo/")
     => { :url         "http://social.techcrunch.com/2016/09/08/its-a-long-hard-road-from-idea-to-ipo/"
-         :title       "It’s a long, hard road from idea to IPO"
-         :description "It may not seem it, but coming up with an idea for your startup is probably the easiest part of launching your own company. As one industry insider told me,.."
-         :preview-url "https://tctechcrunch2011.files.wordpress.com/2016/09/img_2835-1.jpg"
+         :title       "It’s a long, hard road from idea to IPO"
+         :description "It may not seem it, but coming up with an idea for your startup is probably the easiest part of launching your own company. As one industry insider told me, there are a million ways to screw up that idea through poor execution, and many, many lose their way. Yet a precious few fight through [&helli…"
+         :preview-url "https://techcrunch.com/wp-content/uploads/2016/09/img_2835-1.jpg?w=533"
        }
 )
 
