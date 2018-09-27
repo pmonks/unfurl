@@ -52,7 +52,7 @@ unfurl is [tested on](https://travis-ci.com/pmonks/unfurl):
 | Clojure 1.7.0  | ❌<sup>1</sup>   | ✅             | ✅             | ✅             | ✅             | ✅<sup>3</sup>   |
 | Clojure 1.8.0  | ❌<sup>1</sup>   | ✅             | ✅             | ✅             | ✅             | ✅<sup>3</sup>   |
 | Clojure 1.9.0  | ❌<sup>1</sup>   | ✅             | ✅             | ✅             | ✅             | ✅<sup>3</sup>   |
-| Clojure 1.10.0 | ❌<sup>1</sup>   | ❌<sup>4</sup> | ✅             | ✅             | ✅             | ✅<sup>3</sup>   |
+| Clojure 1.10.0 | ❌<sup>1,4</sup> | ❌<sup>4</sup> | ✅             | ✅             | ✅             | ✅<sup>3</sup>   |
 
 <sup>1</sup> Leiningen v2.8 only supports JVM v1.7 and up
 
