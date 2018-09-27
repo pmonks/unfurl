@@ -18,6 +18,8 @@
   (:require [midje.sweet :refer :all]
             [unfurl.api  :refer :all]))
 
+(println "\n☔️ Running tests on Clojure" (clojure-version) "/ JVM" (System/getProperty "java.version"))
+
 ; Tune down logging noise from Apache HTTP client - it's rather noisy by default
 (.setLevel (java.util.logging.Logger/getLogger "org.apache.http.client") java.util.logging.Level/SEVERE)
 
