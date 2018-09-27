@@ -1,5 +1,5 @@
 ;
-; Copyright © 2016-2017 Peter Monks
+; Copyright © 2016 Peter Monks
 ;
 ; Licensed under the Apache License, Version 2.0 (the "License");
 ; you may not use this file except in compliance with the License.
@@ -17,30 +17,30 @@
 (defproject org.clojars.pmonks/unfurl "0.10.0-SNAPSHOT"
   :description         "'Unfurls' URLs approximately according to how Slack does it. See https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254#.jhd6zdyjs for more info."
   :url                 "https://github.com/pmonks/unfurl"
-  :license             {:name "Apache License, Version 2.0"
-                        :url  "http://www.apache.org/licenses/LICENSE-2.0"}
+  :license             {:spdx-license-identifier "Apache-2.0"
+                        :name                    "Apache License, Version 2.0"
+                        :url                     "http://www.apache.org/licenses/LICENSE-2.0"}
   :min-lein-version    "2.8.1"
-  :plugins             [
-                         [lein-codox "0.10.3"]
-                       ]
-  :dependencies        [
-                         [org.clojure/clojure "1.9.0"]
-                         [clj-http            "3.9.0" :exclusions [org.clojure/clojure]]
-                         [org.jsoup/jsoup     "1.11.3"]
-                         [hickory             "0.7.1" :exclusions [org.clojure/clojure org.jsoup/jsoup org.clojure/clojurescript viebel/codox-klipse-theme]]
-                       ]
-  :profiles            {:dev {:dependencies [[midje      "1.9.1"]]
-                              :plugins      [[lein-midje "3.2.1"]]}   ; Don't remove this or travis-ci will assplode!
-                        :uberjar {:aot :all}}
-  :deploy-repositories [
-                         ["snapshots" {:url      "https://clojars.org/repo"
-                                       :username :env/clojars_username
-                                       :password :env/clojars_password}]
-                         ["releases"  {:url      "https://clojars.org/repo"
-                                       :username :env/clojars_username
-                                       :password :env/clojars_password}]
-                       ]
-  :codox               {
-                         :source-uri "https://github.com/pmonks/unfurl/blob/master/{filepath}#L{line}"
-                       }
-  )
+  :repositories        [["sonatype-snapshots" {:url "https://oss.sonatype.org/content/groups/public" :snapshots true}]
+                        ["jitpack"            {:url "https://jitpack.io"}]]
+  :plugins             [[lein-codox "0.10.3"]]
+  :dependencies        [[org.clojure/clojure "1.9.0"]
+                        [clj-http            "3.9.1" :exclusions [org.clojure/clojure]]
+                        [org.jsoup/jsoup     "1.11.3"]
+                        [hickory             "0.7.1" :exclusions [org.clojure/clojure org.jsoup/jsoup org.clojure/clojurescript viebel/codox-klipse-theme]]]
+  :profiles            {:dev  {:dependencies [[midje         "1.9.2"]]
+                               :plugins      [[lein-licenses "0.2.2"]
+                                              [lein-midje    "3.2.1"]]}
+                        :1.5  {:dependencies [[org.clojure/clojure "1.5.1"]]}
+                        :1.6  {:dependencies [[org.clojure/clojure "1.6.0"]]}
+                        :1.7  {:dependencies [[org.clojure/clojure "1.7.0"]]}
+                        :1.8  {:dependencies [[org.clojure/clojure "1.8.0"]]}
+                        :1.9  {:dependencies [[org.clojure/clojure "1.9.0"]]}
+                        :1.10 {:dependencies [[org.clojure/clojure "1.10.0-master-SNAPSHOT"]]}}
+  :deploy-repositories [["snapshots" {:url      "https://clojars.org/repo"
+                                      :username :env/clojars_username
+                                      :password :env/clojars_password}]
+                        ["releases"  {:url      "https://clojars.org/repo"
+                                      :username :env/clojars_username
+                                      :password :env/clojars_password}]]
+  :codox               {:source-uri "https://github.com/pmonks/unfurl/blob/master/{filepath}#L{line}"})
