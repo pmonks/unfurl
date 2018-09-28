@@ -23,7 +23,7 @@
   :min-lein-version    "2.8.1"
   :repositories        [["sonatype-snapshots" {:url "https://oss.sonatype.org/content/groups/public" :snapshots true}]
                         ["jitpack"            {:url "https://jitpack.io"}]]
-  :plugins             [[lein-codox "0.10.3"]]
+  :plugins             [[lein-codox "0.10.4"]]
   :dependencies        [[org.clojure/clojure "1.9.0"]
                         [clj-http            "3.9.1" :exclusions [org.clojure/clojure]]
                         [org.jsoup/jsoup     "1.11.3"]
