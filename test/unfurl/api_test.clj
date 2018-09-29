@@ -58,12 +58,13 @@
 
     ; Everything and the kitchen sink tags (OpenGraph, Twitter, Swiftype and Sailthru!)
 ; Commented out as TechCrunch web server's aren't reliable enough to use for unit testing - sometimes they work, sometimes they time out, sometimes they return a corrupted ZLIB stream, ...
-    (is (= (tunfurl "https://techcrunch.com/2016/09/08/its-a-long-hard-road-from-idea-to-ipo/")
-           { :url         "http://social.techcrunch.com/2016/09/08/its-a-long-hard-road-from-idea-to-ipo/"
-             :title       "It’s a long, hard road from idea to IPO"
-             :description "It may not seem it, but coming up with an idea for your startup is probably the easiest part of launching your own company. As one industry insider told me, there are a million ways to screw up that idea through poor execution, and many, many lose their way. Yet a precious few fight through [&helli…"
-             :preview-url "https://techcrunch.com/wp-content/uploads/2016/09/img_2835-1.jpg?w=533"
-           })))
+;    (is (= (tunfurl "https://techcrunch.com/2016/09/08/its-a-long-hard-road-from-idea-to-ipo/")
+;           { :url         "http://social.techcrunch.com/2016/09/08/its-a-long-hard-road-from-idea-to-ipo/"
+;             :title       "It’s a long, hard road from idea to IPO"
+;             :description "It may not seem it, but coming up with an idea for your startup is probably the easiest part of launching your own company. As one industry insider told me, there are a million ways to screw up that idea through poor execution, and many, many lose their way. Yet a precious few fight through [&helli…"
+;             :preview-url "https://techcrunch.com/wp-content/uploads/2016/09/img_2835-1.jpg?w=533"
+;           }))
+    )
 
   (testing "Valid URLs that resist unfurling"
     (is (thrown? clojure.lang.ExceptionInfo (tunfurl "https://www.linkedin.com/in/pmonks/"))))  ; Note: should also be confirming (check-exception-status-code 999) here
