@@ -18,7 +18,7 @@ env:
     - secure: "J65dl520kW0eLm7zhhzyYcmNDnma0JSbtXEExDALHAzC98S/QlMj1DmnAGpGU+3bv8CscEheKoUpyu7anw1NUSr/fkJmeCo6b4OzK5PuUDA2abXvfSVHtHKZFYLbcFepg+bxYM24XQdVTIiGpPvtrP2eZFTfAi1y2jbCzDjxg7WEWHOt8U8WcxUdRkWtcnzXLsBIUKRKqqYUgCA1A69WvwjseiM+qEcvlaJqnrPGE0hdB21XjtiqShfdD4fREmJbvohytI9bJn4sjgQhr9awD/WseDmQWJocJbiI3wbjbfxTXdmYi1AkhZxO9guwv//zvWvJbytEK/5jlvN4dUyFPb1g/ekh12kmv6K0T5YmmRQU0PJRGBLT+BQiKCegfpmBxpGe1TZuKdWypXgPTdTUczPrcGh927IPUkgsu6vKP56mvvgBHWieLT7qaCzsdg20PoPNk1gJz7qY1IT3enHQGAxxApCkjbMnF9tvbqftZlGTPQvPPAhq2C8Gwxv0keWImBg4pxhzg8INhc7K8OXe67PDObQt/8uNPXc5yxJGejGmBKDrpebTK4sHbnlqxZ3GjszUtxluXwwnde7P61YIHbprMdugrKjWS/yHgxNLttO+CVvjurhJ2LqHbQPVD6pnlCpwyMLJf4mu4tQENcje5Opwj1m9lIsi40qHIVrPnVU="
 
 script:
-  - export PROFILES=+1.5:+1.6:+1.7:+1.8:+1.9
+  - export PROFILES=+1.6:+1.7:+1.8:+1.9
   - if [[ $JAVA_HOME != *java-7* ]]; then export PROFILES=${PROFILES}:+1.10; fi
   - lein with-profile ${PROFILES} do version, check, test
 
