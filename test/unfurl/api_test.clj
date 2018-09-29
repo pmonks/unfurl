@@ -15,7 +15,7 @@
 ;
 
 (ns unfurl.api-test
-  (:require [midje.sweet :refer :all]
+  (:require [clojure.test    :refer :all]
             [unfurl.api  :refer :all]))
 
 (println "\n☔️ Running tests on Clojure" (clojure-version) "/ JVM" (System/getProperty "java.version"))
@@ -31,64 +31,41 @@
     (let [actual-status-code (:status (:response (ex-data ex)))]
       (= expected-status-code actual-status-code))))
 
-(facts "Empty or syntactically invalid URLs"
-  (tunfurl nil)
-    => nil
-  (tunfurl "")
-    => (throws java.net.MalformedURLException)
-  (tunfurl "not a url")
-    => (throws java.net.MalformedURLException)
-  (tunfurl "http://www.abcdefghijklmnopqrstuvwxyz.com/")
-    => (throws java.net.UnknownHostException)
-  (tunfurl "https://localhost:8443/")
-    => (throws java.net.ConnectException)
-)
+(deftest unfurl-test
+  (testing "Empty or syntactically invalid URLs"
+    (is (= (tunfurl nil) nil))
+    (is (thrown? java.net.MalformedURLException (tunfurl "")))
+    (is (thrown? java.net.MalformedURLException (tunfurl "not a url")))
+    (is (thrown? java.net.UnknownHostException  (tunfurl "http://www.abcdefghijklmnopqrstuvwxyz.com/")))
+    (is (thrown? java.net.ConnectException      (tunfurl "https://localhost:8443/"))))
+  (testing "URLs that don't point to a resource"
+    (is (thrown? clojure.lang.ExceptionInfo     (tunfurl "https://google.com/foo"))))   ; Note: should also be confirming (check-exception-status-code 404) here
+  (testing "Incorrect content types"
+    (is (= (tunfurl "http://www.apache.org/licenses/LICENSE-2.0.txt") nil))
+    (is (= (tunfurl "http://www.ucolick.org/~diemand/vl/images/L800kpc_z0_0_poster.png") nil))
+    (is (= (tunfurl "http://samples.mplayerhq.hu/SWF/test.swf") nil)))
+  (testing "Valid URLs"
+    ; Simple HTML metatag-only site
+    (is (= (tunfurl "http://clojure.org/")
+           { :title "Clojure" }))
+    ; Site with HTML metatags plus (partial) OpenGraph tags
+    (is (= (tunfurl "http://www.facebook.com/")
+           { :url         "https://www.facebook.com/"
+             :title       "Facebook - Log In or Sign Up"
+             :description "Create an account or log into Facebook. Connect with friends, family and other people you know. Share photos and videos, send messages and get updates."
+             :preview-url "https://www.facebook.com/images/fb_icon_325x325.png"
+           }))
 
-(facts "URLs that don't point to a resource"
-  (tunfurl "https://google.com/foo")
-    => (throws clojure.lang.ExceptionInfo (check-exception-status-code 404))
-)
-
-(facts "Incorrect content types"
-  (tunfurl "http://www.apache.org/licenses/LICENSE-2.0.txt")
-    => nil
-  (tunfurl "http://www.ucolick.org/~diemand/vl/images/L800kpc_z0_0_poster.png")
-    => nil
-  (tunfurl "http://samples.mplayerhq.hu/SWF/test.swf")
-    => nil
-)
-
-(facts "Valid URLs"
-  ; Simple HTML metatag-only site
-  (tunfurl "http://clojure.org/")
-    => { :title "Clojure"
-       }
-
-  ; Site with HTML metatags plus (partial) OpenGraph tags
-  (tunfurl "http://www.facebook.com/")
-    => { :url         "https://www.facebook.com/"
-         :title       "Facebook - Log In or Sign Up"
-         :description "Create an account or log into Facebook. Connect with friends, family and other people you know. Share photos and videos, send messages and get updates."
-         :preview-url "https://www.facebook.com/images/fb_icon_325x325.png"
-       }
-
-  ; Everything and the kitchen sink tags (OpenGraph, Twitter, Swiftype and Sailthru!)
+    ; Everything and the kitchen sink tags (OpenGraph, Twitter, Swiftype and Sailthru!)
 ; Commented out as TechCrunch web server's aren't reliable enough to use for unit testing - sometimes they work, sometimes they time out, sometimes they return a corrupted ZLIB stream, ...
-;  (tunfurl "https://techcrunch.com/2016/09/08/its-a-long-hard-road-from-idea-to-ipo/")
-;    => { :url         "http://social.techcrunch.com/2016/09/08/its-a-long-hard-road-from-idea-to-ipo/"
-;         :title       "It’s a long, hard road from idea to IPO"
-;         :description "It may not seem it, but coming up with an idea for your startup is probably the easiest part of launching your own company. As one industry insider told me, there are a million ways to screw up that idea through poor execution, and many, many lose their way. Yet a precious few fight through [&helli…"
-;         :preview-url "https://techcrunch.com/wp-content/uploads/2016/09/img_2835-1.jpg?w=533"
-;       }
-)
+    (is (= (tunfurl "https://techcrunch.com/2016/09/08/its-a-long-hard-road-from-idea-to-ipo/")
+           { :url         "http://social.techcrunch.com/2016/09/08/its-a-long-hard-road-from-idea-to-ipo/"
+             :title       "It’s a long, hard road from idea to IPO"
+             :description "It may not seem it, but coming up with an idea for your startup is probably the easiest part of launching your own company. As one industry insider told me, there are a million ways to screw up that idea through poor execution, and many, many lose their way. Yet a precious few fight through [&helli…"
+             :preview-url "https://techcrunch.com/wp-content/uploads/2016/09/img_2835-1.jpg?w=533"
+           })))
 
-(facts "Valid URLs that resist unfurling"
-  (tunfurl "https://www.linkedin.com/in/pmonks/")
-    => (throws clojure.lang.ExceptionInfo (check-exception-status-code 999))
-)
-
-(facts "Informative exceptions"
-  (tunfurl "https://www.linkedin.com/in/pmonks/")
-    => (throws clojure.lang.ExceptionInfo (fn [ex] (not-any? nil? '((:request ex) (:response ex)))))
-)
-
+  (testing "Valid URLs that resist unfurling"
+    (is (thrown? clojure.lang.ExceptionInfo (tunfurl "https://www.linkedin.com/in/pmonks/"))))  ; Note: should also be confirming (check-exception-status-code 999) here
+  (testing "Informative exceptions"
+    (is (thrown? clojure.lang.ExceptionInfo (tunfurl "https://www.linkedin.com/in/pmonks/")))))   ; Note: should also be confirming ex-info contains :request and :response keys here
