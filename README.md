@@ -11,17 +11,24 @@ for more info.
 
 ## Installation
 
-unfurl is available as a Maven artifact from [Clojars](https://clojars.org/org.clojars.pmonks/unfurl).
-Plonk the following in your project.clj :dependencies, substitute "#.#.#" for the latest version number,
-`lein deps` and you should be good to go:
-
-```clojure
-[org.clojars.pmonks/unfurl "#.#.#"]
-```
-
-The latest version is:
+unfurl is available as a Maven artifact from [Clojars](https://clojars.org/org.clojars.pmonks/unfurl).  The latest version is:
 
 [![version](https://clojars.org/org.clojars.pmonks/unfurl/latest-version.svg)](https://clojars.org/org.clojars.pmonks/unfurl)
+
+### Trying it Out
+If you prefer to kick the library's tyres before creating a project, you can use the [`lein try` plugin](https://github.com/rkneufeld/lein-try):
+
+```shell
+$ lein try org.clojars.pmonks/unfurl
+```
+
+or (as of v0.10.0), if you have installed the [Clojure CLI tools](https://clojure.org/guides/getting_started#_clojure_installer_and_cli_tools):
+
+```shell
+$ clj -Sdeps '{:deps {org.clojars.pmonks/unfurl {:mvn/version "#.#.#"}}}'  # Where #.#.# is replaced with an actual version number >= 0.10.0
+```
+
+Either way, you will be dropped in a REPL with the library downloaded and ready for use.
 
 ## Usage
 
