@@ -1,4 +1,4 @@
-{:deps {org.clojure/clojure {:mvn/version "1.9.0"}
+{:deps {org.clojure/clojure {:mvn/version "1.10.0"}
         clj-http/clj-http   {:mvn/version "3.9.1"}
         org.jsoup/jsoup     {:mvn/version "1.11.3"}
         hickory/hickory     {:mvn/version "0.7.1"}}

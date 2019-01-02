@@ -53,13 +53,13 @@ The library provides a single function - `unfurl`.  [The API documentation](http
 
 unfurl is [tested on](https://travis-ci.com/pmonks/unfurl):
 
-|                           | JVM v1.6         | JVM v1.7       | JVM v1.8        | JVM v9         | JVM v10        | JVM v11         |
-|                      ---: |  :---:           |  :---:         |  :---:          |  :---:         |  :---:         |  :---:          |
-| Clojure 1.6.0             | ❌<sup>1,2</sup> | ❌<sup>1</sup> | ❌<sup>1</sup> | ❌<sup>1</sup> | ❌<sup>1</sup> | ❌<sup>1</sup> |
-| Clojure 1.7.0             | ❌<sup>2</sup>   | ✅             | ✅             | ✅             | ✅             | ✅             |
-| Clojure 1.8.0             | ❌<sup>2</sup>   | ✅             | ✅             | ✅             | ✅             | ✅             |
-| Clojure 1.9.0             | ❌<sup>2</sup>   | ✅             | ✅             | ✅             | ✅             | ✅             |
-| Clojure 1.10.0 (snapshot) | ❌<sup>2,3</sup> | ❌<sup>3</sup> | ✅             | ✅             | ✅             | ✅             |
+|                | JVM v1.6         | JVM v1.7       | JVM v1.8        | JVM v9         | JVM v10        | JVM v11         |
+|           ---: |  :---:           |  :---:         |  :---:          |  :---:         |  :---:         |  :---:          |
+| Clojure 1.6.0  | ❌<sup>1,2</sup> | ❌<sup>1</sup> | ❌<sup>1</sup> | ❌<sup>1</sup> | ❌<sup>1</sup> | ❌<sup>1</sup> |
+| Clojure 1.7.0  | ❌<sup>2</sup>   | ✅             | ✅             | ✅             | ✅             | ✅             |
+| Clojure 1.8.0  | ❌<sup>2</sup>   | ✅             | ✅             | ✅             | ✅             | ✅             |
+| Clojure 1.9.0  | ❌<sup>2</sup>   | ✅             | ✅             | ✅             | ✅             | ✅             |
+| Clojure 1.10.0 | ❌<sup>2,3</sup> | ❌<sup>3</sup> | ✅             | ✅             | ✅             | ✅             |
 
 <sup>1</sup> The version of `hickory` used by this library only supports Clojure v1.7.0 and up
 
