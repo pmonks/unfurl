@@ -1,7 +1,7 @@
-[![Build Status](https://travis-ci.com/pmonks/unfurl.svg?branch=master)](https://travis-ci.com/pmonks/unfurl)
-[![Open Issues](https://img.shields.io/github/issues/pmonks/unfurl.svg)](https://github.com/pmonks/unfurl/issues)
-[![License](https://img.shields.io/github/license/pmonks/unfurl.svg)](https://github.com/pmonks/unfurl/blob/master/LICENSE)
-[![Dependencies Status](https://versions.deps.co/pmonks/unfurl/status.svg)](https://versions.deps.co/pmonks/unfurl)
+[![Build Status](https://travis-ci.com/clj-commons/unfurl.svg?branch=master)](https://travis-ci.com/clj-commons/unfurl)
+[![Open Issues](https://img.shields.io/github/issues/clj-commons/unfurl.svg)](https://github.com/clj-commons/unfurl/issues)
+[![License](https://img.shields.io/github/license/clj-commons/unfurl.svg)](https://github.com/clj-commons/unfurl/blob/master/LICENSE)
+[![Dependencies Status](https://versions.deps.co/clj-commons/unfurl/status.svg)](https://versions.deps.co/clj-commons/unfurl)
 
 # unfurl
 
@@ -11,21 +11,21 @@ for more info.
 
 ## Installation
 
-unfurl is available as a Maven artifact from [Clojars](https://clojars.org/org.clojars.pmonks/unfurl).  The latest version is:
+unfurl is available as a Maven artifact from [Clojars](https://clojars.org/clj-commons/unfurl).  The latest version is:
 
-[![version](https://clojars.org/org.clojars.pmonks/unfurl/latest-version.svg)](https://clojars.org/org.clojars.pmonks/unfurl)
+[![version](https://clojars.org/clj-commons/unfurl/latest-version.svg)](https://clojars.org/clj-commons/unfurl)
 
 ### Trying it Out
 If you prefer to kick the library's tyres before creating a project, you can use the [`lein try` plugin](https://github.com/rkneufeld/lein-try):
 
 ```shell
-$ lein try org.clojars.pmonks/unfurl
+$ lein try clj-commons/unfurl
 ```
 
 or (as of v0.10.0), if you have installed the [Clojure CLI tools](https://clojure.org/guides/getting_started#_clojure_installer_and_cli_tools):
 
 ```shell
-$ clj -Sdeps '{:deps {org.clojars.pmonks/unfurl {:mvn/version "#.#.#"}}}'  # Where #.#.# is replaced with an actual version number >= 0.10.0
+$ clj -Sdeps '{:deps {clj-commons/unfurl {:mvn/version "#.#.#"}}}'  # Where #.#.# is replaced with an actual version number >= 0.10.0
 ```
 
 Either way, you will be dropped in a REPL with the library downloaded and ready for use.
@@ -47,11 +47,11 @@ Require it in your application:
   (:require [unfurl.api :as uf]))
 ```
 
-The library provides a single function - `unfurl`.  [The API documentation](https://pmonks.github.io/unfurl/) has full details, and [the unit tests](https://github.com/pmonks/unfurl/blob/master/test/unfurl/api_test.clj) provide some example usages.
+The library provides a single function - `unfurl`.  [The API documentation](https://clj-commons.github.io/unfurl/) has full details, and [the unit tests](https://github.com/clj-commons/unfurl/blob/master/test/unfurl/api_test.clj) provide some example usages.
 
 ## Tested Versions
 
-unfurl is [tested on](https://travis-ci.com/pmonks/unfurl):
+unfurl is [tested on](https://travis-ci.com/clj-commons/unfurl):
 
 |                | JVM v1.6         | JVM v1.7       | JVM v1.8        | JVM v9         | JVM v10        | JVM v11         |
 |           ---: |  :---:           |  :---:         |  :---:          |  :---:         |  :---:         |  :---:          |
@@ -69,9 +69,9 @@ unfurl is [tested on](https://travis-ci.com/pmonks/unfurl):
 
 ## Developer Information
 
-[GitHub project](https://github.com/pmonks/unfurl)
+[GitHub project](https://github.com/clj-commons/unfurl)
 
-[Bug Tracker](https://github.com/pmonks/unfurl/issues)
+[Bug Tracker](https://github.com/clj-commons/unfurl/issues)
 
 ## License
 
