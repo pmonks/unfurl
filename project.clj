@@ -14,7 +14,7 @@
 ; limitations under the License.
 ;
 
-(defproject clj-commons/unfurl "0.11.0-SNAPSHOT"
+(defproject clj-commons/unfurl "0.11.0"
   :description         "'Unfurls' URLs approximately according to how Slack does it. See https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254#.jhd6zdyjs for more info."
   :url                 "https://github.com/clj-commons/unfurl"
   :license             {:spdx-license-identifier "Apache-2.0"
