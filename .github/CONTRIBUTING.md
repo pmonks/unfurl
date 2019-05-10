@@ -22,8 +22,7 @@ By submitting a contribution to the unfurl project you agree to the above statem
 
 ## Raising an Issue
 * Create your issue [here](https://github.com/clj-commons/unfurl/issues/new).
-* New issues contain two templates in the description: bug report and enhancement request. Please pick the most appropriate for your issue, **then delete the other**.
-  * Please also tag the new issue with either "Bug" or "Enhancement".
+* Please pick the most appropriate issue template (bug, enhancement, etc.).
 * Please use [Markdown formatting](https://help.github.com/categories/writing-on-github/)
 liberally to assist in readability.
   * [Code fences](https://help.github.com/articles/creating-and-highlighting-code-blocks/) for exception stack traces and log entries, for example, massively improve readability.
