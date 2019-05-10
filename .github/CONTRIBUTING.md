@@ -21,7 +21,7 @@ By submitting a contribution to the unfurl project you agree to the above statem
 * [ ] Are you sure this is a bug or missing capability?
 
 ## Raising an Issue
-* Create your issue [here](https://github.com/clj-commons/unfurl/issues/new).
+* Create your issue [here](https://github.com/clj-commons/unfurl/issues/new/choose).
 * Please pick the most appropriate issue template (bug, enhancement, etc.).
 * Please use [Markdown formatting](https://help.github.com/categories/writing-on-github/)
 liberally to assist in readability.
