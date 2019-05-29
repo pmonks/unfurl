@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. http://www.webflow.com-->
+<!-- Last Published: Fri Nov 13 2015 01:48:45 GMT+0000 (UTC) -->
+<html lang="en" data-wf-site="56414d6fc8c27cad0f4e12e7" data-wf-page="5643ac587b1f28dc58ed6b89">
+<head>
+  <meta charset="utf-8">
+  <title>Clojure</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Webflow">
+  <meta name="google-site-verification" content="a30CDuC9UBifM7EL575LK9a4TEE6mNfWbKqXIoSZChg" />
+  <meta name="google-site-verification" content="iXqpntr4CN3JRM1sVm5D_YzZw8bFRizBaTVycwqii2E" />
+  <meta name="keywords" content="clojure,programming" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/clojureorg.webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/asciidoctor-mod.css">
+  <link type="text/css" href="css/default+en.css" rel="stylesheet">
+  <link type="text/css" href="css/default.css" rel="stylesheet">
+  <link type="text/css" href="css/search-result.css" rel="stylesheet">
+  <link rel="alternate" type="application/atom+xml" title="News" href="/feed.xml" />
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Open Sans:300,300italic,400,400italic,600,600italic","PT Serif:400,400italic,700,700italic","Source Code Pro:regular,500"]
+      }
+    });
+  </script>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="images/clojure-logo-icon-32.png">
+  <link rel="apple-touch-icon" href="images/clojure-logo-icon-256.png">
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-4857754-16'], ['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script');
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body>
+  <div data-collapse="none" data-animation="default" data-duration="400" data-contain="1" class="w-nav clj-navbar">
+    <div class="w-container">
+      <a href="/index" class="w-nav-brand w-clearfix clj-logo-container"><img width="60" src="images/clojure-logo-120b.png" class="clj-logo" alt="Clojure logo">
+        <div class="clj-logo-text">Clojure</div>
+      </a>
+      <nav role="navigation" class="w-nav-menu clj-nav-menu"><a href="/about/rationale" class="w-nav-link clj-nav-link">Overview</a><a href="/reference/documentation" class="w-nav-link clj-nav-link">Reference‍</a><a href="/api/api" class="w-nav-link clj-nav-link">API</a><a href="/community/downloads" class="w-nav-link clj-nav-link">Releases</a><a href="/guides/guides" class="w-nav-link clj-nav-link">Guides</a><a href="/community/success_stories" class="w-nav-link clj-nav-link">Community</a><a href="/news/news" class="w-nav-link clj-nav-link">News</a><a href="#" data-ix="search-click-trigger" class="w-nav-link clj-nav-link clj-nav-search"></a>
+      </nav>
+      <div class="w-nav-button clj-menu-button">
+        <div class="w-icon-nav-menu"></div>
+      </div>
+    </div>
+  </div>
+  <div data-ix="hide-search" class="w-section clj-search-section">
+    <div class="w-container">
+      <div class="w-form clj-search-form-wrapper">
+        <form id="wf-form-Search-Form" name="wf-form-Search-Form" data-name="Search Form" action="/search" method="get">
+          <div class="w-row">
+            <div class="w-col w-col-9 w-col-small-9">
+              <input id="q" type="text" placeholder="Search clojure.org reference, guides, and API" title="Search text" name="addsearch" data-name="q" autofocus="autofocus" class="w-input clj-search-input">
+            </div>
+            <div class="w-col w-col-3 w-col-small-3">
+              <input type="submit" value="Search" data-wait="Please wait..." class="w-button clj-search-submit">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-section clj-home-header">
+    <div class="w-container">
+      <div class="w-row">
+        <div class="w-col w-col-8">
+          <div class="clj-header-message">Clojure is a <span class="clj-header-message-highlight">robust, practical, and fast</span> programming language with a set of useful features that together form a <span class="clj-header-message-highlight">simple, coherent, and powerful tool</span>.</div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="clj-download-button-container"><a href="guides/getting_started" class="w-button clj-download-button">Get Started!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-section clj-home-intro-section">
+    <div class="w-container">
+      <div class="w-row">
+        <div class="w-col w-col-8">
+          <div>
+            <div class="clj-intro-message">
+              <h2>The Clojure Programming Language</h2>
+              <p>Clojure is a dynamic, general-purpose programming language, combining the approachability and interactive development of a scripting language with an efficient and robust infrastructure for multithreaded programming. Clojure is a compiled language, yet remains completely dynamic – every feature supported by Clojure is supported at runtime. Clojure provides easy access to the Java frameworks, with optional type hints and type inference, to ensure that calls to Java can avoid reflection.</p>
+              <p>Clojure is a dialect of Lisp, and shares with Lisp the code-as-data philosophy and a powerful macro system. Clojure is predominantly a functional programming language, and features a rich set of immutable, persistent data structures. When mutable state is needed, Clojure offers a software transactional memory system and reactive Agent system that ensure clean, correct, multithreaded designs.</p>
+              <p>I hope you find Clojure's combination of facilities elegant, powerful, practical and fun to use.</p>
+              <p>Rich Hickey
+                <br>author of Clojure and CTO Cognitect</p>
+            </div>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="clj-learn-more">
+            <h3 class="clj-learn-more-heading">Learn More</h3><a href="about/rationale" class="w-inline-block clj-learn-more-item">
+              <h4 class="clj-learn-more-item-heading">Rationale</h4>
+              <p class="clj-learn-more-detail">A brief overview of Clojure and the features it includes</p></a><a href="guides/getting_started" class="w-inline-block clj-learn-more-item">
+              <h4 class="clj-learn-more-item-heading">Getting Started</h4>
+              <p class="clj-learn-more-detail">Resources for getting Clojure up and running</p></a><a href="reference/documentation" class="w-inline-block clj-learn-more-item">
+              <h4 class="clj-learn-more-item-heading">Reference</h4>
+              <p class="clj-learn-more-detail">Grand tour of all that Clojure has to offer</p></a><a href="guides/guides" class="w-inline-block clj-learn-more-item">
+              <h4 class="clj-learn-more-item-heading">Guides</h4>
+              <p class="clj-learn-more-detail">Walkthroughs to help you learn along the way</p></a><a href="community/resources" class="w-inline-block clj-learn-more-item">
+              <h4 class="clj-learn-more-item-heading">Community</h4>
+              <p class="clj-learn-more-detail">We have a vibrant, flourishing  community. Join us!</p></a>
+              <a href="https://www.youtube.com/user/ClojureTV/videos"><img src="/images/clojuretv.png" alt="Clojure TV logo"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-section clj-home-companies-section">
+    <div class="w-container">
+      <div>
+        <h3 class="clj-home-companies-heading">Companies Succeeding with Clojure</h3>
+      </div>
+      <div class="w-row">
+        <div class="w-col w-col-4">
+          <div class="clj-home-company clj-home-company-walmart">
+            <blockquote class="clj-home-company-quote">“Our Clojure system just handled its first Walmart black Friday and came out without a scratch.”</blockquote>
+            <div class="clj-home-company-attribution">Anthony Marcar, Senior Architect
+              <br>Walmart Labs</div>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="clj-home-company clj-home-company-puppet">
+            <blockquote class="clj-home-company-quote">“Clojure is a functional programming language from top to bottom. This means that code written in Clojure is very modular, composable, reusable and easy to reason about.”</blockquote>
+            <div class="clj-home-company-attribution">Chris Price, Software Engineer
+              <br>Puppet Labs</div>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="clj-home-company clj-home-company-thoughtworks">
+            <blockquote class="clj-home-company-quote">“We discussed the existing Clojure community, the maturity of the language itself and the momentum we saw in the industry. Companies are seeing speed to market deliveries ... based on Clojure.”</blockquote>
+            <div class="clj-home-company-attribution">Dave Elliman, Head of Technology
+              <br>ThoughtWorks</div>
+          </div>
+        </div>
+      </div>
+			<div class="clj-home-company-text">
+  			<p>Read more about Clojure <a class="clj-home-company-link" href="community/success_stories">success stories</a>, how the <a class="clj-home-company-link" href="community/community_stories">community</a> uses Clojure, and find <a class="clj-home-company-link" href="community/companies">companies using Clojure</a>.</p>
+      </div>
+    </div>
+  </div>
+  <div class="w-section clj-home-features-section">
+    <div class="w-container">
+      <div class="clj-home-features-intro">
+        <h3>Features</h3>
+        <p>Clojure has a set of useful features that together form a simple, coherent, and powerful tool.</p>
+      </div>
+      <div class="w-row">
+        <div class="w-col w-col-6">
+          <div class="clj-home-feature-item">
+            <h4>Dynamic Development</h4>
+            <p>Clojure is a dynamic environment you can interact with. Almost all of the language constructs are reified, and thus can be examined and changed. You can grow your program, with data loaded, adding features, fixing bugs, testing, in an unbroken stream.</p>
+          </div>
+        </div>
+        <div class="w-col w-col-6">
+          <div class="clj-home-feature-item">
+            <h4>Functional Programming</h4>
+            <p>Clojure provides the tools to avoid mutable state, provides functions as first-class objects, and emphasizes recursive iteration instead of side-effect based looping. Clojure is impure, yet stands behind the philosophy that programs that are more functional are more robust.</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-row">
+        <div class="w-col w-col-6">
+          <div class="clj-home-feature-item">
+            <h4>LISP</h4>
+            <p>Clojure is a member of the Lisp family of languages. Many of the features of Lisp have made it into other languages, but Lisp's approach to code-as-data and its macro system still set it apart. Additionally, Clojure’s maps, sets, and vectors are as first class in Clojure as lists are in Lisp.</p>
+          </div>
+        </div>
+        <div class="w-col w-col-6">
+          <div class="clj-home-feature-item">
+            <h4>Runtime Polymorphism</h4>
+            <p>Systems that utilize runtime polymorphism are easier to change and extend. Clojure offers simple, powerful and flexible mechanisms for runtime polymorphism. Clojure’s protocols and datatypes features add mechanisms for abstraction and data structure definition with no compromises vs the facilities of the host platform.</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-row">
+        <div class="w-col w-col-6">
+          <div class="clj-home-feature-item">
+            <h4>Concurrent Programming</h4>
+            <p>Clojure simplifies multi-threaded programming in several ways. Because the core data structures are immutable, they can be shared readily between threads. Clojure, being a practical language, allows state to change but provides mechanism to ensure that, when it does so, it remains consistent, while alleviating developers from having to avoid conflicts manually using locks etc.</p>
+          </div>
+        </div>
+        <div class="w-col w-col-6">
+          <div class="clj-home-feature-item">
+            <h4>Hosted on the JVM</h4>
+            <p>Clojure is designed to be a hosted language, sharing the JVM type system, GC, threads etc. All functions are compiled to JVM bytecode. Clojure is a great Java library consumer, offering the dot-target-member notation for calls to Java. Clojure supports the dynamic implementation of Java interfaces and classes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-section clj-home-updates-section">
+    <div class="w-container">
+      <div class="w-row">
+        <div class="w-col w-col-6">
+          <div class="clj-home-updates-container">
+            <h3>News</h3>
+            <ul class="w-list-unstyled clj-home-updates-list">
+                  <li><span class="clj-home-updates-date">2019-05-16</span>
+                      &nbsp;<a href="/news/2019/05/16/jira-migration" class="clj-home-updates-link">JIRA Migration</a></li>
+                  <li><span class="clj-home-updates-date">2019-02-04</span>
+                      &nbsp;<a href="/news/2019/02/04/state-of-clojure-2019" class="clj-home-updates-link">State of Clojure 2019 Results</a></li>
+                  <li><span class="clj-home-updates-date">2019-01-07</span>
+                      &nbsp;<a href="/news/2019/01/07/clojure-2019-survey" class="clj-home-updates-link">State of Clojure 2019 Survey</a></li>
+                  <li><span class="clj-home-updates-date">2018-12-17</span>
+                      &nbsp;<a href="/news/2018/12/17/clojure110" class="clj-home-updates-link">Clojure 1.10 release</a></li>
+                  <li><span class="clj-home-updates-date">2018-03-19</span>
+                      &nbsp;<a href="/news/2018/03/19/state-of-clojure-2018" class="clj-home-updates-link">State of Clojure 2018 Results</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="w-col w-col-6">
+          <div class="clj-home-updates-container">
+            <h3>Upcoming Events</h3>
+              <ul class="w-list-unstyled clj-home-updates-list">
+                  <li><span class="clj-home-updates-date">2019-08-02</span>
+                      &nbsp;<a href="/events/2019/heartofclojure" class="clj-home-updates-link">Heart of Clojure 2019</a></li>
+                  <li><span class="clj-home-updates-date">2019-09-26</span>
+                      &nbsp;<a href="/events/2019/clojutre" class="clj-home-updates-link">ClojuTRE 2019</a></li>
+                  <li><span class="clj-home-updates-date">2019-11-21</span>
+                      &nbsp;<a href="/events/2019/clojureconj" class="clj-home-updates-link">Clojure/conj 2019</a></li>
+                  <li><span class="clj-home-updates-date">2019-12-02</span>
+                      &nbsp;<a href="/events/2019/clojurex" class="clj-home-updates-link">ClojureX 2019</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-section clj-home-support">
+    <div class="w-container">
+      <div class="w-row">
+        <div class="w-col w-col-8">
+          <div>
+            <h3><a href="http://cognitect.com">Cognitect</a></h3>
+            <p><a href="http://cognitect.com">Cognitect</a> is a collection of experienced, thoughtful technologists, passionate about helping organizations deploy technology effectively and humanely to build better futures.</p>
+            <p>In addition to working directly with companies to deliver innovative solutions, Cognitect offers architectural review, training and talent development services for companies and teams deploying Clojure and ClojureScript.</p>
+            <p>Cognitect are also the makers of <a href="https://datomic.com">Datomic</a>, a transactional database with a flexible data model, elastic scaling, and rich queries. <a href="https://docs.datomic.com/cloud/ions/ions.html">Datomic Ions</a> let you develop Clojure applications for AWS by deploying your code to a running Datomic cluster.</p>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <blockquote class="clj-home-support-quote">“We have created some of the sharpest tools in the business. We believe this platform is a better way to develop software, and we want you to have confidence using and deploying these tools. Open source doesn't mean you're on your own any more.” – cognitect.com</blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="w-section clj-footer">
+    <div class="w-container clj-footer-links-container">
+      <div class="w-row">
+        <div class="w-col w-col-3 w-col-small-6 w-col-tiny-6">
+          <h6 class="clj-footer-heading">Community</h6>
+            <a href="/community/resources" class="clj-footer-link">Resources</a>
+            <a href="/community/contributing" class="clj-footer-link">Contributing</a>
+            <a href="/community/companies" class="clj-footer-link">Companies</a>
+            <a href="/community/contributing_site" class="clj-footer-link">Site</a>
+          <h6 class="clj-footer-heading">Legal</h6>
+            <a href="/community/license" class="clj-footer-link">License</a>
+            <a href="/privacy" class="clj-footer-link">Privacy Policy</a>
+        </div>
+        <div class="w-col w-col-3 w-col-small-6 w-col-tiny-6">
+          <h6 class="clj-footer-heading">Documentation</h6>
+            <a href="/about/rationale" class="clj-footer-link">Overview</a>
+            <a href="/reference/documentation" class="clj-footer-link">Reference</a>
+            <a href="/api/api" class="clj-footer-link">API</a>
+            <a href="/guides/guides" class="clj-footer-link">Guides</a>
+            <a href="/community/libraries" class="clj-footer-link">Libraries &amp; Tools</a>
+        </div>
+        <div class="w-col w-col-3 w-col-small-6 w-col-tiny-6">
+          <h6 class="clj-footer-heading">Updates</h6>
+            <a href="/news/news" class="clj-footer-link">News</a>
+            <a href="/community/events" class="clj-footer-link">Events</a>
+          <h6 class="clj-footer-heading">ETC</h6>
+            <a href="https://www.youtube.com/user/ClojureTV" class="clj-footer-link">ClojureTV</a>
+            <a href="/community/books" class="clj-footer-link">Books</a>
+            <a href="/community/swag" class="clj-footer-link">Swag</a>
+        </div>
+        <div class="w-col w-col-3 w-col-small-6 w-col-tiny-6">
+          <h6 class="clj-footer-heading">Code</h6>
+            <a href="/community/downloads" class="clj-footer-link">Releases</a>
+            <a href="https://github.com/clojure/clojure/" class="clj-footer-link">Source</a>
+            <a href="http://clojurescript.org" class="clj-footer-link">ClojureScript</a>
+            <a href="/about/clojureclr" class="clj-footer-link">ClojureCLR</a>
+        </div>
+      </div>
+    </div>
+    <div class="w-container clj-footer-legal-container">
+      <div class="w-clearfix clj-footer-legal">
+        <div class="clj-footer-logo">&nbsp;</div>
+        <div class="clj-footer-legal-links">
+          <div class="clj-footer-copyright">Copyright 2008-2019 Rich Hickey | <a class="clj-footer-sub-link" href="/privacy">Privacy Policy</a><br/>Logo &amp; site design by <a class="clj-footer-sub-link" href="http://tomhickey.com/">Tom Hickey</a>
+          </div>
+          <div class="clj-footer-designed-by">Published 2019-05-22<br/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/webflow.js"></script>
+  <script type="text/javascript" src="js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+</body>
+</html>

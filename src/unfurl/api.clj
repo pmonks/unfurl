@@ -15,82 +15,10 @@
 ;
 
 (ns unfurl.api
-  (:require [clojure.string  :as s]
-            [clj-http.client :as http]
+  (:require [clj-http.client :as http]
             [hickory.core    :as hc]
-            [hickory.select  :as hs]))
-
-(defn- strip-nil-values
-  "Strips entries with nil values from map m."
-  [m]
-  (apply dissoc
-         m
-         (for [[k v] m :when (nil? v)] k)))
-
-; See http://oembed.com/
-(defn- unfurl-oembed
-  [url]
-  ;####TODO: implement this
-  nil)
-
-(defn- meta-tag-name
-  [meta-tag]
-  (if-let [meta-tag-name (:name meta-tag)]
-    meta-tag-name
-    (:property meta-tag)))
-
-(defn- meta-tag-value
-  [meta-tags tag-name]
-  (let [value (first (map :content
-                          (filter #(= tag-name (meta-tag-name %))
-                                  (map :attrs meta-tags))))
-        value (when value (s/trim value))]
-    (when (pos? (count value))
-      value)))
-
-(defn- unfurl-html
-  [title-tags meta-tags]
-  (strip-nil-values {
-                      :title       (first (:content (first title-tags)))
-                      :description (meta-tag-value meta-tags "description")
-                    }))
-
-; See https://getstarted.sailthru.com/site/horizon-overview/horizon-meta-tags/
-(defn- unfurl-sailthru
-  [meta-tags]
-  (strip-nil-values {
-                      :title       (meta-tag-value meta-tags "sailthru.title")
-                      :description (meta-tag-value meta-tags "sailthru.description")
-                      :preview-url (meta-tag-value meta-tags "sailthru.image.full")
-                    }))
-
-; See https://swiftype.com/documentation/meta_tags
-(defn- unfurl-swiftype
-  [meta-tags]
-  (strip-nil-values {
-                      :title       (meta-tag-value meta-tags "st:title")
-                      :preview-url (meta-tag-value meta-tags "st:image")
-                    }))
-
-; See https://dev.twitter.com/cards/markup
-(defn- unfurl-twitter
-  [meta-tags]
-  (strip-nil-values {
-                      :url         (meta-tag-value meta-tags "twitter:url")
-                      :title       (meta-tag-value meta-tags "twitter:title")
-                      :description (meta-tag-value meta-tags "twitter:description")
-                      :preview-url (meta-tag-value meta-tags "twitter:image")
-                    }))
-
-; See http://ogp.me/
-(defn- unfurl-opengraph
-  [meta-tags]
-  (strip-nil-values {
-                      :url         (meta-tag-value meta-tags "og:url")
-                      :title       (meta-tag-value meta-tags "og:title")
-                      :description (meta-tag-value meta-tags "og:description")
-                      :preview-url (meta-tag-value meta-tags "og:image")
-                    }))
+            [hickory.select  :as hs]
+            [unfurl.common   :as co]))
 
 (defn- http-get
   "'Friendly' form of http/get that adds request information to any exceptions that get thrown by clj-http."
@@ -141,10 +69,10 @@
                    proxy-port         nil }}]
   (if url
     ; Use oembed services first, and then fallback if it's not supported for the given URL
-    (if-let [oembed-data (unfurl-oembed url)]
+    (if-let [oembed-data (co/unfurl-oembed url)]
       oembed-data
       (let [request      { :url     url
-                           :options (strip-nil-values { :accept           :html
+                           :options (co/strip-nil-values { :accept           :html
                                                         :follow-redirects follow-redirects
                                                         :socket-timeout   timeout-ms
                                                         :conn-timeout     timeout-ms
@@ -162,8 +90,8 @@
                 title-tags  (hs/select (hs/descendant (hs/tag :title)) parsed-body)
                 meta-tags   (hs/select (hs/descendant (hs/tag :meta))  parsed-body)]
             (if meta-tags
-              (merge (unfurl-html      title-tags meta-tags)
-                     (unfurl-sailthru  meta-tags)
-                     (unfurl-swiftype  meta-tags)
-                     (unfurl-twitter   meta-tags)
-                     (unfurl-opengraph meta-tags)))))))))
+              (merge (co/unfurl-html      title-tags meta-tags)
+                     (co/unfurl-sailthru  meta-tags)
+                     (co/unfurl-swiftype  meta-tags)
+                     (co/unfurl-twitter   meta-tags)
+                     (co/unfurl-opengraph meta-tags)))))))))
