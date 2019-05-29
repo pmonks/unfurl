@@ -24,11 +24,17 @@
   :repositories        [["sonatype-snapshots" {:url "https://oss.sonatype.org/content/groups/public" :snapshots true}]
                         ["jitpack"            {:url "https://jitpack.io"}]]
   :dependencies        [[org.clojure/clojure "1.10.0"]
+                        [org.clojure/clojurescript "1.10.520"]
                         [clj-http            "3.9.1" :exclusions [org.clojure/clojure]]
+                        [cljs-http "0.1.46"]
+                        [org.clojure/core.async "0.4.490"]
                         [org.jsoup/jsoup     "1.11.3"]
                         [hickory             "0.7.1" :exclusions [org.clojure/clojure org.jsoup/jsoup org.clojure/clojurescript viebel/codox-klipse-theme]]]
   :profiles            {:dev  {:plugins      [[lein-licenses "0.2.2"]
-                                              [lein-codox    "0.10.4"]]}
+                                              [lein-codox    "0.10.4"]
+                                              [lein-cljsbuild "1.1.7"]
+                                              [lein-doo "0.1.10"]]
+                               :dependencies [[doo "0.1.11"]]}
                         :1.5  {:dependencies [[org.clojure/clojure "1.5.1"]]}
                         :1.6  {:dependencies [[org.clojure/clojure "1.6.0"]]}
                         :1.7  {:dependencies [[org.clojure/clojure "1.7.0"]]}
@@ -41,5 +47,11 @@
                         ["releases"  {:url      "https://clojars.org/repo"
                                       :username :env/clojars_username
                                       :password :env/clojars_password}]]
-  :codox               {:source-uri "https://github.com/clj-commons/unfurl/blob/master/{filepath}#L{line}"})
+  :codox               {:source-uri "https://github.com/clj-commons/unfurl/blob/master/{filepath}#L{line}"}
+  :cljsbuild           {:builds [{:id "test"
+                                  :source-paths ["src" "test"]
+                                  :compiler {:output-to "target/unit-tests.js"
+                                             :optimizations :none
+                                             :main unfurl.runner}}]
+                        :test-commands {"unit-tests" ["lein" "doo" "firefox-headless" "test" "once"]}})
 
