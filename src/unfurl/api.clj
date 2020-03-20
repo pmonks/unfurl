@@ -50,47 +50,37 @@
 
 (defn- unfurl-html
   [title-tags meta-tags]
-  (strip-nil-values {
-                      :title       (first (:content (first title-tags)))
-                      :description (meta-tag-value meta-tags "description")
-                    }))
+  (strip-nil-values {:title       (first (:content (first title-tags)))
+                     :description (meta-tag-value meta-tags "description")}))
 
 ; See https://getstarted.sailthru.com/site/horizon-overview/horizon-meta-tags/
 (defn- unfurl-sailthru
   [meta-tags]
-  (strip-nil-values {
-                      :title       (meta-tag-value meta-tags "sailthru.title")
-                      :description (meta-tag-value meta-tags "sailthru.description")
-                      :preview-url (meta-tag-value meta-tags "sailthru.image.full")
-                    }))
+  (strip-nil-values {:title       (meta-tag-value meta-tags "sailthru.title")
+                     :description (meta-tag-value meta-tags "sailthru.description")
+                     :preview-url (meta-tag-value meta-tags "sailthru.image.full")}))
 
 ; See https://swiftype.com/documentation/meta_tags
 (defn- unfurl-swiftype
   [meta-tags]
-  (strip-nil-values {
-                      :title       (meta-tag-value meta-tags "st:title")
-                      :preview-url (meta-tag-value meta-tags "st:image")
-                    }))
+  (strip-nil-values {:title       (meta-tag-value meta-tags "st:title")
+                     :preview-url (meta-tag-value meta-tags "st:image")}))
 
 ; See https://dev.twitter.com/cards/markup
 (defn- unfurl-twitter
   [meta-tags]
-  (strip-nil-values {
-                      :url         (meta-tag-value meta-tags "twitter:url")
-                      :title       (meta-tag-value meta-tags "twitter:title")
-                      :description (meta-tag-value meta-tags "twitter:description")
-                      :preview-url (meta-tag-value meta-tags "twitter:image")
-                    }))
+  (strip-nil-values {:url         (meta-tag-value meta-tags "twitter:url")
+                     :title       (meta-tag-value meta-tags "twitter:title")
+                     :description (meta-tag-value meta-tags "twitter:description")
+                     :preview-url (meta-tag-value meta-tags "twitter:image")}))
 
 ; See http://ogp.me/
 (defn- unfurl-opengraph
   [meta-tags]
-  (strip-nil-values {
-                      :url         (meta-tag-value meta-tags "og:url")
-                      :title       (meta-tag-value meta-tags "og:title")
-                      :description (meta-tag-value meta-tags "og:description")
-                      :preview-url (meta-tag-value meta-tags "og:image")
-                    }))
+  (strip-nil-values {:url         (meta-tag-value meta-tags "og:url")
+                     :title       (meta-tag-value meta-tags "og:title")
+                     :description (meta-tag-value meta-tags "og:description")
+                     :preview-url (meta-tag-value meta-tags "og:image")}))
 
 (defn- http-get
   "'Friendly' form of http/get that adds request information to any exceptions that get thrown by clj-http."
@@ -100,8 +90,8 @@
   (try
     (http/get url options)
     (catch clojure.lang.ExceptionInfo ei
-      (throw (ex-info (.getMessage ei) { :request  request
-                                         :response (ex-data ei)})))))
+      (throw (ex-info (.getMessage ei) {:request  request
+                                        :response (ex-data ei)})))))
 
 (defn unfurl
   "Unfurls the given url, throwing an exception if the url is invalid, returning
@@ -132,29 +122,29 @@
       :request  - the details of the HTTP request that was attempted
       :response - the details of the HTTP response that was received (comes directly from clj-http)
     }"
-  [url & { :keys [ follow-redirects timeout-ms user-agent max-content-length proxy-host proxy-port ]
-             :or { follow-redirects   true
-                   timeout-ms         1000
-                   user-agent         "unfurl"
-                   max-content-length 16384
-                   proxy-host         nil
-                   proxy-port         nil }}]
+  [url & { :keys [follow-redirects timeout-ms user-agent max-content-length proxy-host proxy-port]
+             :or {follow-redirects   true
+                  timeout-ms         1000
+                  user-agent         "unfurl"
+                  max-content-length 16384
+                  proxy-host         nil
+                  proxy-port         nil}}]
   (if url
     ; Use oembed services first, and then fallback if it's not supported for the given URL
     (if-let [oembed-data (unfurl-oembed url)]
       oembed-data
-      (let [request      { :url     url
-                           :options (strip-nil-values { :accept           :html
-                                                        :follow-redirects follow-redirects
-                                                        :socket-timeout   timeout-ms
-                                                        :conn-timeout     timeout-ms
-                                                        :headers          {"Range"          (str "bytes=0-" (- max-content-length 1))
-                                                                           "Accept"         "text/html"
-                                                                           "Accept-Charset" "utf-8, iso-8859-1;q=0.5, *;q=0.1"}
-                                                        :client-params    {"http.protocol.allow-circular-redirects" false
-                                                                           "http.useragent" user-agent}
-                                                        :proxy-host       proxy-host
-                                                        :proxy-port       proxy-port })}
+      (let [request      {:url     url
+                          :options (strip-nil-values { :accept           :html
+                                                       :follow-redirects follow-redirects
+                                                       :socket-timeout   timeout-ms
+                                                       :conn-timeout     timeout-ms
+                                                       :headers          {"Range"          (str "bytes=0-" (- max-content-length 1))
+                                                                          "Accept"         "text/html"
+                                                                          "Accept-Charset" "utf-8, iso-8859-1;q=0.5, *;q=0.1"}
+                                                       :client-params    {"http.protocol.allow-circular-redirects" false
+                                                                          "http.useragent" user-agent}
+                                                       :proxy-host       proxy-host
+                                                       :proxy-port       proxy-port})}
             response     (http-get request)
             content-type (get (:headers response) "content-type")
             body         (:body response)]
@@ -169,4 +159,5 @@
                      (unfurl-twitter   meta-tags)
                      (unfurl-opengraph meta-tags))
               (throw (ex-info "No meta tags provided in response body"
-                              {:response-body body})))))))))
+                              {:request  request
+                               :response response})))))))))
