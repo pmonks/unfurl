@@ -149,6 +149,7 @@
                                                         :socket-timeout   timeout-ms
                                                         :conn-timeout     timeout-ms
                                                         :headers          {"Range"          (str "bytes=0-" (- max-content-length 1))
+                                                                           "Accept"         "text/html"
                                                                            "Accept-Charset" "utf-8, iso-8859-1;q=0.5, *;q=0.1"}
                                                         :client-params    {"http.protocol.allow-circular-redirects" false
                                                                            "http.useragent" user-agent}
@@ -166,4 +167,6 @@
                      (unfurl-sailthru  meta-tags)
                      (unfurl-swiftype  meta-tags)
                      (unfurl-twitter   meta-tags)
-                     (unfurl-opengraph meta-tags)))))))))
+                     (unfurl-opengraph meta-tags))
+              (throw (ex-info "No meta tags provided in response body"
+                              {:response-body body})))))))))
