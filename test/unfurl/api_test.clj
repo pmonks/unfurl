@@ -21,7 +21,7 @@
 (println "\n☔️ Running tests on Clojure" (clojure-version) "/ JVM" (System/getProperty "java.version"))
 
 ; Tune down logging noise from Apache HTTP client - it's rather noisy by default
-(.setLevel (java.util.logging.Logger/getLogger "org.apache.http.client") java.util.logging.Level/SEVERE)
+(.setLevel (java.util.logging.Logger/getLogger "org.apache.http") java.util.logging.Level/SEVERE)
 
 ; Bake in appropriate Unfurl options for testing purposes
 (def tunfurl #(unfurl % :timeout-ms 5000))
@@ -33,7 +33,7 @@
 
 (deftest unfurl-test
   (testing "Empty or syntactically invalid URLs"
-    (is (= (tunfurl nil) nil))
+    (is (= nil (tunfurl nil)))
     (is (thrown? java.net.MalformedURLException (tunfurl "")))
     (is (thrown? java.net.MalformedURLException (tunfurl "not a url")))
     (is (thrown? java.net.UnknownHostException  (tunfurl "http://www.abcdefghijklmnopqrstuvwxyz.com/")))
@@ -41,20 +41,20 @@
   (testing "URLs that don't point to a resource"
     (is (thrown? clojure.lang.ExceptionInfo     (tunfurl "https://google.com/foo"))))   ; Note: should also be confirming (check-exception-status-code 404) here
   (testing "Incorrect content types"
-    (is (= (tunfurl "http://www.apache.org/licenses/LICENSE-2.0.txt") nil))
-    (is (= (tunfurl "http://www.ucolick.org/~diemand/vl/images/L800kpc_z0_0_poster.png") nil))
-    (is (= (tunfurl "http://samples.mplayerhq.hu/SWF/test.swf") nil)))
+    (is (= nil (tunfurl "http://www.apache.org/licenses/LICENSE-2.0.txt")))
+    (is (= nil (tunfurl "http://www.ucolick.org/~diemand/vl/images/L800kpc_z0_0_poster.png")))
+    (is (= nil (tunfurl "http://samples.mplayerhq.hu/SWF/test.swf"))))
   (testing "Valid URLs"
     ; Simple HTML metatag-only site
-    (is (= (tunfurl "http://clojure.org/")
-           { :title "Clojure" }))
+    (is (= { :title "Clojure" }
+           (tunfurl "http://clojure.org/")))
     ; Site with HTML metatags plus (partial) OpenGraph tags
-    (is (= (tunfurl "http://www.facebook.com/")
-           { :url         "https://www.facebook.com/"
+    (is (= { :url         "https://www.facebook.com/"
              :title       "Facebook - Log In or Sign Up"
              :description "Create an account or log into Facebook. Connect with friends, family and other people you know. Share photos and videos, send messages and get updates."
              :preview-url "https://www.facebook.com/images/fb_icon_325x325.png"
-           }))
+           }
+           (tunfurl "http://www.facebook.com/")))
 
     ; Everything and the kitchen sink tags (OpenGraph, Twitter, Swiftype and Sailthru!)
 ; Commented out as TechCrunch web server's aren't reliable enough to use for unit testing - sometimes they work, sometimes they time out, sometimes they return a corrupted ZLIB stream, ...
