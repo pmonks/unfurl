@@ -24,7 +24,7 @@
   :repositories        [["sonatype-snapshots" {:url "https://oss.sonatype.org/content/groups/public" :snapshots true}]
                         ["jitpack"            {:url "https://jitpack.io"}]]
   :dependencies        [[org.clojure/clojure "1.10.1"]
-                        [clj-http            "3.10.0" :exclusions [org.clojure/clojure]]
+                        [clj-http            "3.11.0" :exclusions [org.clojure/clojure]]
                         [org.jsoup/jsoup     "1.13.1"]
                         [hickory             "0.7.1" :exclusions [org.clojure/clojure org.jsoup/jsoup org.clojure/clojurescript viebel/codox-klipse-theme]]]
   :profiles            {:dev  {:plugins      [[lein-licenses "0.2.2"]
