@@ -1,7 +1,9 @@
-[![Build Status](https://travis-ci.com/clj-commons/unfurl.svg?branch=master)](https://travis-ci.com/clj-commons/unfurl)
-[![Open Issues](https://img.shields.io/github/issues/clj-commons/unfurl.svg)](https://github.com/clj-commons/unfurl/issues)
-[![License](https://img.shields.io/github/license/clj-commons/unfurl.svg)](https://github.com/clj-commons/unfurl/blob/master/LICENSE)
-[![Dependencies Status](https://versions.deps.co/clj-commons/unfurl/status.svg)](https://versions.deps.co/clj-commons/unfurl)
+| | | |
+|---:|:---:|:---:|
+| [**main**](https://github.com/clj-commons/unfurl/tree/main) | [![CI](https://github.com/clj-commons/unfurl/workflows/CI/badge.svg?branch=main)](https://github.com/clj-commons/unfurl/actions?query=workflow%3Alint) | [![Dependencies](https://github.com/clj-commons/unfurl/workflows/dependencies/badge.svg?branch=main)](https://github.com/clj-commons/unfurl/actions?query=workflow%3Adependencies) |
+| [**dev**](https://github.com/clj-commons/unfurl/tree/dev)  | [![CI](https://github.com/clj-commons/unfurl/workflows/CI/badge.svg?branch=dev)](https://github.com/clj-commons/unfurl/actions?query=workflow%3Alint) | [![Dependencies](https://github.com/clj-commons/unfurl/workflows/dependencies/badge.svg?branch=dev)](https://github.com/clj-commons/unfurl/actions?query=workflow%3Adependencies) |
+
+[![Latest Version](https://img.shields.io/clojars/v/clj-commons/unfurl)](https://clojars.org/clj-commons/unfurl/) [![Open Issues](https://img.shields.io/github/issues/clj-commons/unfurl.svg)](https://github.com/clj-commons/unfurl/issues) [![License](https://img.shields.io/github/license/clj-commons/unfurl.svg)](https://github.com/clj-commons/unfurl/blob/main/LICENSE)
 
 # unfurl
 
@@ -13,22 +15,19 @@ for more info.
 
 unfurl is available as a Maven artifact from [Clojars](https://clojars.org/clj-commons/unfurl).  The latest version is:
 
-[![version](https://clojars.org/clj-commons/unfurl/latest-version.svg)](https://clojars.org/clj-commons/unfurl)
-
 ### Trying it Out
-If you prefer to kick the library's tyres before creating a project, you can use the [`lein try` plugin](https://github.com/rkneufeld/lein-try):
 
-```shell
-$ lein try clj-commons/unfurl
-```
-
-or (as of v0.10.0), if you have installed the [Clojure CLI tools](https://clojure.org/guides/getting_started#_clojure_installer_and_cli_tools):
+#### Clojure CLI
 
 ```shell
 $ clj -Sdeps '{:deps {clj-commons/unfurl {:mvn/version "#.#.#"}}}'  # Where #.#.# is replaced with an actual version number >= 0.10.0
 ```
 
-Either way, you will be dropped in a REPL with the library downloaded and ready for use.
+#### Leiningen
+
+```shell
+$ lein try clj-commons/unfurl
+```
 
 ## Usage
 
@@ -49,35 +48,28 @@ Require it in your application:
 
 The library provides a single function - `unfurl`.  [The API documentation](https://clj-commons.github.io/unfurl/) has full details, and [the unit tests](https://github.com/clj-commons/unfurl/blob/master/test/unfurl/api_test.clj) provide some example usages.
 
-## Tested Versions
+### API Documentation
 
-unfurl is [tested on](https://travis-ci.com/clj-commons/unfurl):
+[API documentation is available here](http://clj-commons.org/multigrep/).
 
-|                | JVM v1.6         | JVM v1.7       | JVM v1.8        | JVM v9           | JVM v10          | JVM v11         |
-|           ---: |  :---:           |  :---:         |  :---:          |  :---:           |  :---:           |  :---:          |
-| Clojure 1.6.0  | ❌<sup>1,2</sup> | ❌<sup>1</sup> | ❌<sup>1</sup> | ❌<sup>1,3</sup> | ❌<sup>1,3</sup> | ❌<sup>1</sup> |
-| Clojure 1.7.0  | ❌<sup>2</sup>   | ✅             | ✅             | ❌<sup>3</sup>   | ❌<sup>3</sup>   | ✅             |
-| Clojure 1.8.0  | ❌<sup>2</sup>   | ✅             | ✅             | ❌<sup>3</sup>   | ❌<sup>3</sup>   | ✅             |
-| Clojure 1.9.0  | ❌<sup>2</sup>   | ✅             | ✅             | ❌<sup>3</sup>   | ❌<sup>3</sup>   | ✅             |
-| Clojure 1.10.1 | ❌<sup>2,4</sup> | ❌<sup>4</sup> | ✅             | ❌<sup>3</sup>   | ❌<sup>3</sup>   | ✅             |
+## Contributor Information
 
-<sup>1</sup> The version of `hickory` used by this library only supports Clojure v1.7.0 and up
-
-<sup>2</sup> Leiningen v2.8 only supports JVM v1.7 and up
-
-<sup>3</sup> Superceded, non-LTS version of the JVM
-
-<sup>4</sup> Clojure v1.10+ only supports JVM v1.8 and up
-
-
-## Developer Information
-
-[GitHub project](https://github.com/clj-commons/unfurl)
+[Contributing Guidelines](https://github.com/clj-commons/unfurl/blob/main/.github/CONTRIBUTING.md)
 
 [Bug Tracker](https://github.com/clj-commons/unfurl/issues)
+
+[Code of Conduct](https://github.com/clj-commons/unfurl/blob/main/.github/CODE_OF_CONDUCT.md)
+
+### Developer Workflow
+
+The repository has two permanent branches: `main` and `dev`.  **All development must occur either in branch `dev`, or (preferably) in feature branches off of `dev`.**  All PRs must also be submitted against `dev`; the `main` branch is **only** updated from `dev` via PRs created by the core development team.  All other changes submitted to `main` will be rejected.
+
+This model allows otherwise unrelated changes to be batched up in the `dev` branch, integration tested there, and then released en masse to the `main` branch, which will trigger automated generation and deployment of the release (Codox docs to GitHub Pages, JARs to Clojars, etc.).
 
 ## License
 
 Copyright © 2016 Peter Monks
 
 Distributed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+
+SPDX-License-Identifier: [Apache-2.0](https://spdx.org/licenses/Apache-2.0)
