@@ -50,7 +50,7 @@ The library provides a single function - `unfurl`.  [The API documentation](http
 
 ### API Documentation
 
-[API documentation is available here](http://clj-commons.org/multigrep/).
+[API documentation is available here](http://clj-commons.org/unfurl/).
 
 ## Contributor Information
 
