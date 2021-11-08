@@ -11,7 +11,7 @@ jobs:
       - id: skip_check
         uses: fkirc/skip-duplicate-actions@master
 
-  lint:
+  CI:
     needs: skip_check
     if: ${{ needs.skip_check.outputs.should_skip != 'true' }}
     runs-on: ubuntu-latest
