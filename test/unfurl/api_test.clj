@@ -49,11 +49,10 @@
     (is (= { :title "Clojure" }
            (tunfurl "http://clojure.org/")))
     ; Site with HTML metatags plus (partial) OpenGraph tags
-    (is (= { :url         "https://www.facebook.com/"
-             :title       "Facebook - Log In or Sign Up"   ; Note: it appears Facebook returns different case for this property, presumably depending on which web server you get sent to.  As of 2020-03-19 this causes intermittent test failures.  🤦
-             :description "Create an account or log into Facebook. Connect with friends, family and other people you know. Share photos and videos, send messages and get updates."
-             :preview-url "https://www.facebook.com/images/fb_icon_325x325.png"
-           }
+    (is (= {:title       "Facebook - Log In or Sign Up"
+            :description "Log into Facebook to start sharing and connecting with your friends, family, and people you know."
+            :url         "https://www.facebook.com/"
+            :preview-url "https://www.facebook.com/images/fb_icon_325x325.png"}
            (tunfurl "http://www.facebook.com/")))
 
     ; Everything and the kitchen sink tags (OpenGraph, Twitter, Swiftype and Sailthru!)
