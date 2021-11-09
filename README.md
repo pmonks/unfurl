@@ -3,7 +3,7 @@
 | [**main**](https://github.com/pmonks/unfurl/tree/main) | [![CI](https://github.com/pmonks/unfurl/workflows/CI/badge.svg?branch=main)](https://github.com/pmonks/unfurl/actions?query=workflow%3Alint) | [![Dependencies](https://github.com/pmonks/unfurl/workflows/dependencies/badge.svg?branch=main)](https://github.com/pmonks/unfurl/actions?query=workflow%3Adependencies) |
 | [**dev**](https://github.com/pmonks/unfurl/tree/dev)  | [![CI](https://github.com/pmonks/unfurl/workflows/CI/badge.svg?branch=dev)](https://github.com/pmonks/unfurl/actions?query=workflow%3Alint) | [![Dependencies](https://github.com/pmonks/unfurl/workflows/dependencies/badge.svg?branch=dev)](https://github.com/pmonks/unfurl/actions?query=workflow%3Adependencies) |
 
-[![Latest Version](https://img.shields.io/clojars/v/pmonks/unfurl)](https://clojars.org/pmonks/unfurl/) [![Open Issues](https://img.shields.io/github/issues/pmonks/unfurl.svg)](https://github.com/pmonks/unfurl/issues) [![License](https://img.shields.io/github/license/pmonks/unfurl.svg)](https://github.com/pmonks/unfurl/blob/main/LICENSE)
+[![Latest Version](https://img.shields.io/clojars/v/com.github.pmonks/unfurl)](https://clojars.org/com.github.pmonks/unfurl/) [![Open Issues](https://img.shields.io/github/issues/pmonks/unfurl.svg)](https://github.com/pmonks/unfurl/issues) [![License](https://img.shields.io/github/license/pmonks/unfurl.svg)](https://github.com/pmonks/unfurl/blob/main/LICENSE)
 
 # unfurl
 
@@ -13,7 +13,7 @@ for more info.
 
 ## Installation
 
-unfurl is available as a Maven artifact from [Clojars](https://clojars.org/pmonks/unfurl).  The latest version is:
+unfurl is available as a Maven artifact from [Clojars](https://clojars.org/com.github.pmonks/unfurl).  The latest version is:
 
 ### Trying it Out
 
