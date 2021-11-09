@@ -13,10 +13,12 @@
 ; See the License for the specific language governing permissions and
 ; limitations under the License.
 ;
+; SPDX-License-Identifier: Apache-2.0
+;
 
 (ns unfurl.api-test
-  (:require [clojure.test    :refer :all]
-            [unfurl.api  :refer :all]))
+  (:require [clojure.test :refer :all]
+            [unfurl.api   :refer :all]))
 
 (println "\n☔️ Running tests on Clojure" (clojure-version) "/ JVM" (System/getProperty "java.version"))
 

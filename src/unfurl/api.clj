@@ -13,6 +13,8 @@
 ; See the License for the specific language governing permissions and
 ; limitations under the License.
 ;
+; SPDX-License-Identifier: Apache-2.0
+;
 
 (ns unfurl.api
   (:require [clojure.string  :as s]
@@ -138,7 +140,7 @@
                                                        :follow-redirects follow-redirects
                                                        :socket-timeout   timeout-ms
                                                        :conn-timeout     timeout-ms
-                                                       :headers          {"Range"          (str "bytes=0-" (- max-content-length 1))
+                                                       :headers          {"Range"          (str "bytes=0-" (dec max-content-length))
                                                                           "Accept"         "text/html"
                                                                           "Accept-Charset" "utf-8, iso-8859-1;q=0.5, *;q=0.1"}
                                                        :client-params    {"http.protocol.allow-circular-redirects" false
@@ -148,7 +150,7 @@
             response     (http-get request)
             content-type (get (:headers response) "content-type")
             body         (:body response)]
-        (when (.startsWith ^String content-type "text/html")
+        (when (s/starts-with? content-type "text/html")
           (let [parsed-body (hc/as-hickory (hc/parse body))
                 title-tags  (hs/select (hs/descendant (hs/tag :title)) parsed-body)
                 meta-tags   (hs/select (hs/descendant (hs/tag :meta))  parsed-body)]
