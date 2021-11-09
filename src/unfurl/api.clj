@@ -29,7 +29,7 @@
 
 ; See http://oembed.com/
 (defn- unfurl-oembed
-  [url]
+  [_]
   ;####TODO: implement this
   nil)
 
@@ -129,7 +129,7 @@
                   max-content-length 16384
                   proxy-host         nil
                   proxy-port         nil}}]
-  (if url
+  (when url
     ; Use oembed services first, and then fallback if it's not supported for the given URL
     (if-let [oembed-data (unfurl-oembed url)]
       oembed-data
@@ -148,7 +148,7 @@
             response     (http-get request)
             content-type (get (:headers response) "content-type")
             body         (:body response)]
-        (if (.startsWith ^String content-type "text/html")
+        (when (.startsWith ^String content-type "text/html")
           (let [parsed-body (hc/as-hickory (hc/parse body))
                 title-tags  (hs/select (hs/descendant (hs/tag :title)) parsed-body)
                 meta-tags   (hs/select (hs/descendant (hs/tag :meta))  parsed-body)]
