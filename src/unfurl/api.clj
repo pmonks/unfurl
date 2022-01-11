@@ -116,6 +116,7 @@
       :max-content-length  (default: 16384)    - maximum length (in bytes) of content to retrieve (using HTTP range requests)
       :proxy-host          (default: nil)      - HTTP proxy hostname
       :proxy-port          (default: nil)      - HTTP proxy port
+      :other-headers       (default: nil)      - a map of any other HTTP request headers you might want to send
     }
 
   Thrown exceptions will usually be an ExceptionInfo with the ex-data containing:
@@ -124,13 +125,14 @@
       :request  - the details of the HTTP request that was attempted
       :response - the details of the HTTP response that was received (comes directly from clj-http)
     }"
-  [url & { :keys [follow-redirects timeout-ms user-agent max-content-length proxy-host proxy-port]
+  [url & { :keys [follow-redirects timeout-ms user-agent max-content-length proxy-host proxy-port other-headers]
              :or {follow-redirects   true
                   timeout-ms         1000
                   user-agent         "unfurl"
                   max-content-length 16384
                   proxy-host         nil
-                  proxy-port         nil}}]
+                  proxy-port         nil
+                  other-headers      nil}}]
   (when url
     ; Use oembed services first, and then fallback if it's not supported for the given URL
     (if-let [oembed-data (unfurl-oembed url)]
@@ -140,9 +142,10 @@
                                                        :follow-redirects follow-redirects
                                                        :socket-timeout   timeout-ms
                                                        :conn-timeout     timeout-ms
-                                                       :headers          {"Range"          (str "bytes=0-" (dec max-content-length))
-                                                                          "Accept"         "text/html"
-                                                                          "Accept-Charset" "utf-8, iso-8859-1;q=0.5, *;q=0.1"}
+                                                       :headers          (merge {"Range"          (str "bytes=0-" (dec max-content-length))
+                                                                                 "Accept"         "text/html"
+                                                                                 "Accept-Charset" "utf-8, iso-8859-1;q=0.5, *;q=0.1"}
+                                                                                 other-headers)
                                                        :client-params    {"http.protocol.allow-circular-redirects" false
                                                                           "http.useragent" user-agent}
                                                        :proxy-host       proxy-host
