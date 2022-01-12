@@ -27,7 +27,7 @@
 (.setLevel (java.util.logging.Logger/getLogger "org.apache.http") java.util.logging.Level/SEVERE)
 
 ; Bake in appropriate Unfurl options for testing purposes
-(def tunfurl #(unfurl % :timeout-ms 5000 :other-headers {"Accept-Language" "en-US,en;q=0.5"}))
+(def tunfurl #(unfurl % :timeout-ms 5000 :http-headers {"Accept-Language" "en-US,en;q=0.5"}))
 
 (defn check-exception-status-code [expected-status-code]
   (fn [ex]
