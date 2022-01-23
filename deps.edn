@@ -17,12 +17,10 @@
 ;
 
 {:deps
-   {org.clojure/clojure {:mvn/version "1.10.3"}
-    clj-http/clj-http   {:mvn/version "3.12.3"}
-    org.jsoup/jsoup     {:mvn/version "1.14.3"}
-    hickory/hickory     {:mvn/version "0.7.1"}}
+   {clj-http/clj-http {:mvn/version "3.12.3"}
+    org.jsoup/jsoup   {:mvn/version "1.14.3"}
+    hickory/hickory   {:mvn/version "0.7.1"}}
  :aliases
-   {:build
-      {:deps       {io.github.seancorfield/build-clj {:git/tag "v0.6.7" :git/sha "22c2d09"}
-                    com.github.pmonks/pbr            {:mvn/version "RELEASE"}}
-       :ns-default pbr.build}}}
+   {:build {:deps       {io.github.seancorfield/build-clj {:git/tag "v0.6.7" :git/sha "22c2d09"}
+                         com.github.pmonks/pbr            {:mvn/version "RELEASE"}}
+            :ns-default pbr.build}}}
