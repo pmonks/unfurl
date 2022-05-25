@@ -52,8 +52,9 @@
     (is (= { :title "Clojure" }
            (tunfurl "http://clojure.org/")))
     ; Site with HTML metatags plus (partial) OpenGraph tags
-    (let [result (tunfurl "http://www.facebook.com/")]   ; We do it this way because Facebook's meta tags change frequently enough that testing precise values is painful
-      (is (= (:title result)       "Facebook - Log In or Sign Up"))
+    (let [result (tunfurl "http://www.facebook.com/")]
+      ; We do "fuzzy" testing because Facebook's meta tags change frequently enough that testing precise values is painful
+      (is (s/starts-with? (s/lower-case (:title result)) "facebook"))
       (is (not (s/blank? (:description result))))
       (is (= (:url result)         "https://www.facebook.com/"))
       (is (= (:preview-url result) "https://www.facebook.com/images/fb_icon_325x325.png")))
