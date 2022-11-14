@@ -21,6 +21,6 @@
     org.jsoup/jsoup   {:mvn/version "1.15.3"}
     hickory/hickory   {:mvn/version "0.7.1"}}
  :aliases
-   {:build {:deps       {io.github.clojure/tools.build {:git/tag "v0.8.3" :git/sha "0d20256"}
+   {:build {:deps       {io.github.clojure/tools.build {:git/tag "v0.8.4" :git/sha "8c3cd69"}
                          com.github.pmonks/pbr         {:mvn/version "RELEASE"}}
             :ns-default pbr.build}}}
