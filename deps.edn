@@ -18,7 +18,7 @@
 
 {:deps
    {clj-http/clj-http {:mvn/version "3.12.3"}
-    org.jsoup/jsoup   {:mvn/version "1.15.3"}
+    org.jsoup/jsoup   {:mvn/version "1.15.4"}
     hickory/hickory   {:mvn/version "0.7.1"}}
  :aliases
    {:build {:deps       {io.github.clojure/tools.build {:git/tag "v0.9.3" :git/sha "e537cd1"}
