@@ -7,26 +7,30 @@
 
 # unfurl
 
-This library implements "URL unfurling" approximately according to how Slack does it.
-See [this blog post](https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254#.jhd6zdyjs)
-for more info.
+This library implements "URL unfurling" approximately according to how Slack does it.  See [this blog post](https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254#.jhd6zdyjs) for more info.
 
 ## Installation
 
-unfurl is available as a Maven artifact from [Clojars](https://clojars.org/com.github.pmonks/unfurl).  The latest version is:
+`unfurl` is available as a Maven artifact from [Clojars](https://clojars.org/com.github.pmonks/unfurl).
 
 ### Trying it Out
 
 #### Clojure CLI
 
 ```shell
-$ clj -Sdeps '{:deps {com.github.pmonks/unfurl {:mvn/version "#.#.#"}}}'  # Where #.#.# is replaced with an actual version number >= 0.10.0
+$ clj -Sdeps '{:deps {com.github.pmonks/unfurl {:mvn/version "RELEASE"}}}'
 ```
 
 #### Leiningen
 
 ```shell
 $ lein try com.github.pmonks/unfurl
+```
+
+#### deps-try
+
+```shell
+$ deps-try com.github.pmonks/unfurl
 ```
 
 ## Usage
