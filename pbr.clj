@@ -30,7 +30,7 @@
          :validate-pom true
          :pom          {:description      "This library implements \"URL unfurling\" approximately according to how Slack does it."
                         :url              "https://github.com/pmonks/unfurl"
-                        :licenses         [:license   {:name "Apache License 2.0" :url "http://www.apache.org/licenses/LICENSE-2.0.html"}]
+                        :licenses         [:license   {:name "Apache-2.0" :url "http://www.apache.org/licenses/LICENSE-2.0.html"}]
                         :developers       [:developer {:id "pmonks" :name "Peter Monks" :email "pmonks+unfurl@gmail.com"}]
                         :scm              {:url "https://github.com/pmonks/unfurl" :connection "scm:git:git://github.com/pmonks/unfurl.git" :developer-connection "scm:git:ssh://git@github.com/pmonks/unfurl.git"}
                         :issue-management {:system "github" :url "https://github.com/pmonks/unfurl/issues"}}))
