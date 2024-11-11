@@ -3,7 +3,7 @@
 | [**main**](https://github.com/pmonks/unfurl/tree/main) | [![CI](https://github.com/pmonks/unfurl/workflows/CI/badge.svg?branch=main)](https://github.com/pmonks/unfurl/actions?query=workflow%3ACI+branch%3Amain) | [![Dependencies](https://github.com/pmonks/unfurl/workflows/dependencies/badge.svg?branch=main)](https://github.com/pmonks/unfurl/actions?query=workflow%3Adependencies+branch%3Amain) |
 | [**dev**](https://github.com/pmonks/unfurl/tree/dev) | [![CI](https://github.com/pmonks/unfurl/workflows/CI/badge.svg?branch=dev)](https://github.com/pmonks/unfurl/actions?query=workflow%3ACI+branch%3Adev) | [![Dependencies](https://github.com/pmonks/unfurl/workflows/dependencies/badge.svg?branch=dev)](https://github.com/pmonks/unfurl/actions?query=workflow%3Adependencies+branch%3Adev) |
 
-[![Latest Version](https://img.shields.io/clojars/v/com.github.pmonks/unfurl)](https://clojars.org/com.github.pmonks/unfurl/) [![Open Issues](https://img.shields.io/github/issues/pmonks/unfurl.svg)](https://github.com/pmonks/unfurl/issues) [![License](https://img.shields.io/github/license/pmonks/unfurl.svg)](https://github.com/pmonks/unfurl/blob/main/LICENSE)
+[![Latest Version](https://img.shields.io/clojars/v/com.github.pmonks/unfurl)](https://clojars.org/com.github.pmonks/unfurl/) [![Open Issues](https://img.shields.io/github/issues/pmonks/unfurl.svg)](https://github.com/pmonks/unfurl/issues) [![License](https://img.shields.io/github/license/pmonks/unfurl.svg)](https://github.com/pmonks/unfurl/blob/main/LICENSE) [![Vulnerabilities](https://github.com/pmonks/unfurl/actions/workflows/vulnerabilities.yml/badge.svg)](https://pmonks.github.io/unfurl/nvd/dependency-check-report.html)
 
 # unfurl
 
