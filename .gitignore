@@ -19,4 +19,3 @@ attic
 resources/logback-test.xml
 .clj-kondo/.cache
 .lein-failures
-greplace-test-*.txt
