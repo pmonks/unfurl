@@ -1,32 +1,36 @@
 | | | |
 |---:|:---:|:---:|
-| [**main**](https://github.com/pmonks/unfurl/tree/main) | [![CI](https://github.com/pmonks/unfurl/workflows/CI/badge.svg?branch=main)](https://github.com/pmonks/unfurl/actions?query=workflow%3Alint) | [![Dependencies](https://github.com/pmonks/unfurl/workflows/dependencies/badge.svg?branch=main)](https://github.com/pmonks/unfurl/actions?query=workflow%3Adependencies) |
-| [**dev**](https://github.com/pmonks/unfurl/tree/dev)  | [![CI](https://github.com/pmonks/unfurl/workflows/CI/badge.svg?branch=dev)](https://github.com/pmonks/unfurl/actions?query=workflow%3Alint) | [![Dependencies](https://github.com/pmonks/unfurl/workflows/dependencies/badge.svg?branch=dev)](https://github.com/pmonks/unfurl/actions?query=workflow%3Adependencies) |
+| [**release**](https://github.com/pmonks/unfurl/tree/release) | [![CI](https://github.com/pmonks/unfurl/actions/workflows/ci.yml/badge.svg?branch=release)](https://github.com/pmonks/unfurl/actions?query=workflow%3ACI+branch%3Arelease) | [![Dependencies](https://github.com/pmonks/unfurl/actions/workflows/dependencies.yml/badge.svg?branch=release)](https://github.com/pmonks/unfurl/actions?query=workflow%3Adependencies+branch%3Arelease) |
+| [**dev**](https://github.com/pmonks/unfurl/tree/dev) | [![CI](https://github.com/pmonks/unfurl/actions/workflows/ci.yml/badge.svg?branch=dev)](https://github.com/pmonks/unfurl/actions?query=workflow%3ACI+branch%3Adev) | [![Dependencies](https://github.com/pmonks/unfurl/actions/workflows/dependencies.yml/badge.svg?branch=dev)](https://github.com/pmonks/unfurl/actions?query=workflow%3Adependencies+branch%3Adev) |
 
-[![Latest Version](https://img.shields.io/clojars/v/com.github.pmonks/unfurl)](https://clojars.org/com.github.pmonks/unfurl/) [![Open Issues](https://img.shields.io/github/issues/pmonks/unfurl.svg)](https://github.com/pmonks/unfurl/issues) [![License](https://img.shields.io/github/license/pmonks/unfurl.svg)](https://github.com/pmonks/unfurl/blob/main/LICENSE)
+[![Latest Version](https://img.shields.io/clojars/v/com.github.pmonks/unfurl)](https://clojars.org/com.github.pmonks/unfurl/) [![Open Issues](https://img.shields.io/github/issues/pmonks/unfurl.svg)](https://github.com/pmonks/unfurl/issues) [![License](https://img.shields.io/github/license/pmonks/unfurl.svg)](https://github.com/pmonks/unfurl/blob/main/LICENSE) [![Vulnerabilities](https://github.com/pmonks/unfurl/actions/workflows/vulnerabilities.yml/badge.svg)](https://pmonks.github.io/unfurl/nvd/dependency-check-report.html)
 
 # unfurl
 
-This library implements "URL unfurling" approximately according to how Slack does it.
-See [this blog post](https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254#.jhd6zdyjs)
-for more info.
+This library implements "URL unfurling" approximately according to how Slack does it.  See [this blog post](https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254#.jhd6zdyjs) for more info.
 
 ## Installation
 
-unfurl is available as a Maven artifact from [Clojars](https://clojars.org/com.github.pmonks/unfurl).  The latest version is:
+`unfurl` is available as a Maven artifact from [Clojars](https://clojars.org/com.github.pmonks/unfurl).
 
 ### Trying it Out
 
 #### Clojure CLI
 
 ```shell
-$ clj -Sdeps '{:deps {com.github.pmonks/unfurl {:mvn/version "#.#.#"}}}'  # Where #.#.# is replaced with an actual version number >= 0.10.0
+$ clj -Sdeps '{:deps {com.github.pmonks/unfurl {:mvn/version "RELEASE"}}}'
 ```
 
 #### Leiningen
 
 ```shell
 $ lein try com.github.pmonks/unfurl
+```
+
+#### deps-try
+
+```shell
+$ deps-try com.github.pmonks/unfurl
 ```
 
 ## Usage
@@ -58,9 +62,9 @@ The library provides a single function - `unfurl`.  [The API documentation](http
 
 ### Developer Workflow
 
-The repository has two permanent branches: `main` and `dev`.  **All development must occur either in branch `dev`, or (preferably) in feature branches off of `dev`.**  All PRs must also be submitted against `dev`; the `main` branch is **only** updated from `dev` via PRs created by the core development team.  All other changes submitted to `main` will be rejected.
+This project uses the [git-flow branching strategy](https://nvie.com/posts/a-successful-git-branching-model/), with the caveat that the permanent branches are called `release` and `dev`.  Any changes to the `release` branch are considered a release and auto-deployed (JARs to Clojars, API docs to GitHub Pages, etc.).
 
-This model allows otherwise unrelated changes to be batched up in the `dev` branch, integration tested there, and then released en masse to the `main` branch, which will trigger automated generation and deployment of the release (Codox docs to GitHub Pages, JARs to Clojars, etc.).
+For this reason, **all development must occur either in branch `dev`, or (preferably) in temporary branches off of `dev`.**  All PRs from forked repos must also be submitted against `dev`; the `release` branch is **only** updated from `dev` via PRs created by the core development team.  All other changes submitted to `release` will be rejected.
 
 ### Why are there so many different groupIds on Clojars for this project?
 
@@ -70,6 +74,6 @@ The project was originally developed under my personal GitHub account.  In early
 
 Copyright © 2016 Peter Monks
 
-Distributed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+Distributed under the [Mozilla Public License, version 2.0](https://www.mozilla.org/en-US/MPL/2.0/).
 
-SPDX-License-Identifier: [Apache-2.0](https://spdx.org/licenses/Apache-2.0)
+SPDX-License-Identifier: [MPL-2.0](https://spdx.org/licenses/MPL-2.0)

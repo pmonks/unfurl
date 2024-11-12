@@ -17,8 +17,9 @@
 ;
 
 (ns unfurl.api-test
-  (:require [clojure.test :refer :all]
-            [unfurl.api   :refer :all]))
+  (:require [clojure.string :as s]
+            [clojure.test   :refer :all]
+            [unfurl.api     :refer :all]))
 
 (println "\n☔️ Running tests on Clojure" (clojure-version) "/ JVM" (System/getProperty "java.version"))
 
@@ -26,7 +27,7 @@
 (.setLevel (java.util.logging.Logger/getLogger "org.apache.http") java.util.logging.Level/SEVERE)
 
 ; Bake in appropriate Unfurl options for testing purposes
-(def tunfurl #(unfurl % :timeout-ms 5000))
+(def tunfurl #(unfurl % :timeout-ms 5000 :http-headers {"Accept-Language" "en-US,en;q=0.5"}))
 
 (defn check-exception-status-code [expected-status-code]
   (fn [ex]
@@ -51,11 +52,13 @@
     (is (= { :title "Clojure" }
            (tunfurl "http://clojure.org/")))
     ; Site with HTML metatags plus (partial) OpenGraph tags
-    (is (= {:title       "Facebook - Log In or Sign Up"
-            :description "Log into Facebook to start sharing and connecting with your friends, family, and people you know."
-            :url         "https://www.facebook.com/"
-            :preview-url "https://www.facebook.com/images/fb_icon_325x325.png"}
-           (tunfurl "http://www.facebook.com/")))
+    (let [result (tunfurl "http://www.facebook.com/")]
+      ; We do "fuzzy" testing because Facebook's meta tags change frequently enough that testing precise values is painful
+      (is (true? (s/includes? (s/lower-case (:title result)) "facebook")))
+      (is (not (s/blank? (:description result))))
+      (is (true? (s/includes? (:url result) "https://www.facebook.com/")))
+      (is (true? (or (nil? (:preview-url result))  ; Because Facebook (unpredictably) does not return a preview URL in some cases 🙄
+                     (s/includes? (:preview-url result) "https://www.facebook.com/images/")))))
 
     ; Everything and the kitchen sink tags (OpenGraph, Twitter, Swiftype and Sailthru!)
 ; Commented out as TechCrunch web server's aren't reliable enough to use for unit testing - sometimes they work, sometimes they time out, sometimes they return a corrupted ZLIB stream, ...

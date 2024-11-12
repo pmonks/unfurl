@@ -16,21 +16,19 @@
 ; SPDX-License-Identifier: Apache-2.0
 ;
 
-(def lib 'com.github.pmonks/unfurl)
-
 #_{:clj-kondo/ignore [:unresolved-namespace]}
-(def version (format "1.0.%s" (b/git-count-revs nil)))
-
 (defn set-opts
   [opts]
   (assoc opts
-         :lib          lib
-         :version      version
+         :lib          'com.github.pmonks/unfurl
+         :version      (pbr/calculate-version 1 0)
+         :prod-branch  "release"
          :write-pom    true
          :validate-pom true
          :pom          {:description      "This library implements \"URL unfurling\" approximately according to how Slack does it."
                         :url              "https://github.com/pmonks/unfurl"
-                        :licenses         [:license   {:name "Apache License 2.0" :url "http://www.apache.org/licenses/LICENSE-2.0.html"}]
+                        :licenses         [:license   {:name "Apache-2.0" :url "http://www.apache.org/licenses/LICENSE-2.0.html"}]
                         :developers       [:developer {:id "pmonks" :name "Peter Monks" :email "pmonks+unfurl@gmail.com"}]
                         :scm              {:url "https://github.com/pmonks/unfurl" :connection "scm:git:git://github.com/pmonks/unfurl.git" :developer-connection "scm:git:ssh://git@github.com/pmonks/unfurl.git"}
-                        :issue-management {:system "github" :url "https://github.com/pmonks/unfurl/issues"}}))
+                        :issue-management {:system "github" :url "https://github.com/pmonks/unfurl/issues"}}
+         :codox        {:metadata         {:doc/format :markdown}}))
