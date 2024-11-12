@@ -54,10 +54,10 @@
     ; Site with HTML metatags plus (partial) OpenGraph tags
     (let [result (tunfurl "http://www.facebook.com/")]
       ; We do "fuzzy" testing because Facebook's meta tags change frequently enough that testing precise values is painful
-      (is (s/starts-with? (s/lower-case (:title result)) "facebook"))
+      (is (true? (s/includes? (s/lower-case (:title result)) "facebook")))
       (is (not (s/blank? (:description result))))
-      (is (= (:url result)         "https://www.facebook.com/"))
-      (is (= (:preview-url result) "https://www.facebook.com/images/fb_icon_325x325.png")))
+      (is (true? (s/includes? (:url result) "https://www.facebook.com/")))
+      (is (true? (s/includes? (:preview-url result) "https://www.facebook.com/images/"))))
 
     ; Everything and the kitchen sink tags (OpenGraph, Twitter, Swiftype and Sailthru!)
 ; Commented out as TechCrunch web server's aren't reliable enough to use for unit testing - sometimes they work, sometimes they time out, sometimes they return a corrupted ZLIB stream, ...
