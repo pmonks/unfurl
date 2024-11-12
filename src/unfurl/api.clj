@@ -1,19 +1,11 @@
 ;
 ; Copyright © 2016 Peter Monks
 ;
-; Licensed under the Apache License, Version 2.0 (the "License");
-; you may not use this file except in compliance with the License.
-; You may obtain a copy of the License at
+; This Source Code Form is subject to the terms of the Mozilla Public
+; License, v. 2.0. If a copy of the MPL was not distributed with this
+; file, You can obtain one at https://mozilla.org/MPL/2.0/.
 ;
-;     http://www.apache.org/licenses/LICENSE-2.0
-;
-; Unless required by applicable law or agreed to in writing, software
-; distributed under the License is distributed on an "AS IS" BASIS,
-; WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-; See the License for the specific language governing permissions and
-; limitations under the License.
-;
-; SPDX-License-Identifier: Apache-2.0
+; SPDX-License-Identifier: MPL-2.0
 ;
 
 (ns unfurl.api
@@ -32,7 +24,7 @@
 ; See http://oembed.com/
 (defn- unfurl-oembed
   [_]
-  ;####TODO: implement this
+  ;####TODO: implement this - it's more complex than other schemes
   nil)
 
 (defn- meta-tag-name
@@ -85,10 +77,9 @@
                      :preview-url (meta-tag-value meta-tags "og:image")}))
 
 (defn- http-get
-  "'Friendly' form of http/get that adds request information to any exceptions that get thrown by clj-http."
-  [{ url     :url
-     options :options
-     :as request }]
+  "Version of `clj-http`'s `http/get` fn that adds request information to any
+  exceptions that get thrown."
+  [{url :url options :options :as request}]
   (try
     (http/get url options)
     (catch clojure.lang.ExceptionInfo ei
@@ -96,39 +87,53 @@
                                         :response (ex-data ei)})))))
 
 (defn unfurl
-  "Unfurls the given url, throwing an exception if the url is invalid, returning
-  nil if the given url is nil or not supported, or a map containing some or all
-  of the following keys (none of which are mandatory):
+  "Unfurls the given `url` , returning `nil` if `url` is `nil` or not supported,
+  or a map containing some or all of the following keys (all of which are
+  optional):
 
-    {
-      :url           - The url of the resource, according to the server
-      :title         - The title of the given url
-      :description   - The description of the given url
-      :preview-url   - The url of a preview image for the given url
-    }
+  * `:url` (`String`)
+    The url of the resource, according to the server.
+  * `:title` (`String`)
+    The title of the given url.
+  * `:description` (`String`)
+    A brief textual description of the given url.
+  * `:preview-url` (`String`)
+    The url of a preview image for the given url.
 
-  Options are provided as key/value pairs, with any/all of the following keys:
+  Options are:
 
-    {
-      :follow-redirects    (default: true)     - whether to follow 30x redirects
-      :timeout-ms          (default: 1000)     - timeout in ms (used for both the socket and connect timeouts)
-      :user-agent          (default: \"unfurl\") - user agent string to send in the HTTP request
-      :max-content-length  (default: 16384)    - maximum length (in bytes) of content to retrieve (using HTTP range requests)
-      :proxy-host          (default: nil)      - HTTP proxy hostname
-      :proxy-port          (default: nil)      - HTTP proxy port
-      :http-headers        (default: nil)      - a map of any other HTTP request headers you might want to send
-    }
+  * `:follow-redirects` (`boolean`, default `true`):
+    Whether to follow 30x redirects.
+  * `:timeout-ms` (`long`, default `1000`)
+    Timeout in ms (used for both the socket and connect timeouts).
+  * `:user-agent` (`String`, default `\"https://github.com/pmonks/unfurl\"`)
+    User agent string to send in the HTTP request. This should be either a
+    browser identification string, an email address, or a URL, as some servers
+    will reject requests with User Agent values that aren't in one of these
+    domains.
+  * `:max-content-length` (`long`, default `16384`)
+    Maximum length (in bytes) of content to retrieve, using HTTP range requests
+    (the entire content does not normally need to be retrieved in order to get
+    the metadata `unfurl` uses).
+  * `:proxy-host` (`String`, default `nil`)
+    HTTP proxy hostname.
+  * `:proxy-port` (`long`, default `nil`)
+    HTTP proxy port.
+  * `:http-headers` (a map with `String` keys and `String` values, default `nil`)
+    A map of any other HTTP request headers you might want `unfurl` to include
+    in the requests it makes.
 
-  Thrown exceptions will usually be an ExceptionInfo with the ex-data containing:
+  Throws on I/O errors, usually an ExceptionInfo with the `ex-data` containing:
 
-    {
-      :request  - the details of the HTTP request that was attempted
-      :response - the details of the HTTP response that was received (comes directly from clj-http)
-    }"
+  * `:request` (a map with `String` keys and `String` values)
+    Contains the details of the HTTP request that was attempted.
+  * `:response` (a map with `String` keys and `String` values)
+    Contains the details of the HTTP response that was received (directly from
+    `clj-http`)."
   [url & { :keys [follow-redirects timeout-ms user-agent max-content-length proxy-host proxy-port http-headers]
              :or {follow-redirects   true
                   timeout-ms         1000
-                  user-agent         "unfurl"
+                  user-agent         "https://github.com/pmonks/unfurl"
                   max-content-length 16384
                   proxy-host         nil
                   proxy-port         nil
@@ -147,7 +152,7 @@
                                                                                 "Accept-Charset" "utf-8, iso-8859-1;q=0.5, *;q=0.1"}
                                                                                 http-headers)
                                                       :client-params    {"http.protocol.allow-circular-redirects" false
-                                                                        "http.useragent" user-agent}
+                                                                         "http.useragent"                         user-agent}
                                                       :proxy-host       proxy-host
                                                       :proxy-port       proxy-port})}
             response     (http-get request)
