@@ -57,7 +57,8 @@
       (is (true? (s/includes? (s/lower-case (:title result)) "facebook")))
       (is (not (s/blank? (:description result))))
       (is (true? (s/includes? (:url result) "https://www.facebook.com/")))
-      (is (true? (s/includes? (:preview-url result) "https://www.facebook.com/images/"))))
+      (is (true? (or (nil? (:preview-url result))  ; Because Facebook (unpredictably) does not return a preview URL in some cases 🙄
+                     (s/includes? (:preview-url result) "https://www.facebook.com/images/")))))
 
     ; Everything and the kitchen sink tags (OpenGraph, Twitter, Swiftype and Sailthru!)
 ; Commented out as TechCrunch web server's aren't reliable enough to use for unit testing - sometimes they work, sometimes they time out, sometimes they return a corrupted ZLIB stream, ...
