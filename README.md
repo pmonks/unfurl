@@ -1,11 +1,13 @@
-| | | |
-|---:|:---:|:---:|
-| [**release**](https://github.com/pmonks/unfurl/tree/release) | [![CI](https://github.com/pmonks/unfurl/actions/workflows/ci.yml/badge.svg?branch=release)](https://github.com/pmonks/unfurl/actions?query=workflow%3ACI+branch%3Arelease) | [![Dependencies](https://github.com/pmonks/unfurl/actions/workflows/dependencies.yml/badge.svg?branch=release)](https://github.com/pmonks/unfurl/actions?query=workflow%3Adependencies+branch%3Arelease) |
-| [**dev**](https://github.com/pmonks/unfurl/tree/dev) | [![CI](https://github.com/pmonks/unfurl/actions/workflows/ci.yml/badge.svg?branch=dev)](https://github.com/pmonks/unfurl/actions?query=workflow%3ACI+branch%3Adev) | [![Dependencies](https://github.com/pmonks/unfurl/actions/workflows/dependencies.yml/badge.svg?branch=dev)](https://github.com/pmonks/unfurl/actions?query=workflow%3Adependencies+branch%3Adev) |
-
-[![Latest Version](https://img.shields.io/clojars/v/com.github.pmonks/unfurl)](https://clojars.org/com.github.pmonks/unfurl/) [![Open Issues](https://img.shields.io/github/issues/pmonks/unfurl.svg)](https://github.com/pmonks/unfurl/issues) [![License](https://img.shields.io/github/license/pmonks/unfurl.svg)](https://github.com/pmonks/unfurl/blob/main/LICENSE) [![Vulnerabilities](https://github.com/pmonks/unfurl/actions/workflows/vulnerabilities.yml/badge.svg)](https://pmonks.github.io/unfurl/nvd/dependency-check-report.html)
-
 # unfurl
+
+[![CI](https://github.com/pmonks/unfurl/actions/workflows/ci.yml/badge.svg?branch=dev)](https://github.com/pmonks/unfurl/actions?query=workflow%3ACI+branch%3Adev)
+[![Dependencies](https://github.com/pmonks/unfurl/actions/workflows/dependencies.yml/badge.svg?branch=dev)](https://github.com/pmonks/unfurl/actions?query=workflow%3Adependencies+branch%3Adev)
+[![Vulnerabilities](https://github.com/pmonks/unfurl/actions/workflows/vulnerabilities.yml/badge.svg)](https://pmonks.github.io/unfurl/nvd/dependency-check-report.html)
+<br/>
+[![Latest Version](https://img.shields.io/clojars/v/com.github.pmonks/unfurl)](https://clojars.org/com.github.pmonks/unfurl/)
+[![Open Issues](https://img.shields.io/github/issues/pmonks/unfurl.svg)](https://github.com/pmonks/unfurl/issues)
+[![License](https://img.shields.io/github/license/pmonks/unfurl.svg)](https://github.com/pmonks/unfurl/blob/main/LICENSE)
+![Maintained](https://badges.ws/badge/?label=maintained&value=yes,+at+author's+discretion)
 
 This library implements "URL unfurling" approximately according to how Slack does it.  See [this blog post](https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254#.jhd6zdyjs) for more info.
 
