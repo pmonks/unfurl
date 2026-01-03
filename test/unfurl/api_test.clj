@@ -44,13 +44,15 @@
     (is (= { :title "Clojure" }
            (tunfurl "http://clojure.org/")))
     ; Site with HTML metatags plus (partial) OpenGraph tags
-    (let [result (tunfurl "http://www.facebook.com/")]
-      ; We do "fuzzy" testing because Facebook's meta tags change frequently enough that testing precise values is painful
-      (is (true? (s/includes? (s/lower-case (:title result)) "facebook")))
-      (is (not (s/blank? (:description result))))
-      (is (true? (s/includes? (:url result) "https://www.facebook.com/")))
-      (is (true? (or (nil? (:preview-url result))  ; Because Facebook (unpredictably) does not return a preview URL in some cases 🙄
-                     (s/includes? (:preview-url result) "https://www.facebook.com/images/")))))
+    (if-let [result (tunfurl "http://www.facebook.com/")]
+      (do
+        ; We do "fuzzy" testing because Facebook's meta tags change frequently enough that testing precise values is painful
+        (is (true? (s/includes? (s/lower-case (:title result)) "facebook")))
+        (is (not (s/blank? (:description result))))
+        (is (true? (s/includes? (:url result) "https://www.facebook.com/")))
+        (is (true? (or (nil? (:preview-url result))  ; Because Facebook (unpredictably) does not return a preview URL in some cases 🙄
+                       (s/includes? (:preview-url result) "https://www.facebook.com/images/")))))
+      (is false "No unfurl metadata returned from Facebook"))  ; Force just one test failure if we got no metadata from Facebook, rather than several
 
     ; Everything and the kitchen sink tags (OpenGraph, Twitter, Swiftype and Sailthru!)
 ; Commented out as TechCrunch web server's aren't reliable enough to use for unit testing - sometimes they work, sometimes they time out, sometimes they return a corrupted ZLIB stream, ...
