@@ -425,13 +425,13 @@ arising out of or in connection with the use of this tool, the analysis performe
 <a href="https://dependency-check.github.io/DependencyCheck/general/suppression.html" target="_blank">Suppressing false positives</a> |
 Getting Help: <a href="https://github.com/dependency-check/DependencyCheck/issues" target="_blank">github issues</a></h3>
 
-            <h2 class="">Project:&nbsp;com.github.pmonks/unfurl 1.0.231-SNAPSHOT</h2>
+            <h2 class="">Project:&nbsp;com.github.pmonks/unfurl 1.0.232-SNAPSHOT</h2>
             <div class="">
 
                 Scan Information:<br/>
                     <ul class="indent">
                         <li><i>dependency-check version</i>: 12.2.0</li>
-                        <li><i>Report Generated On</i>: Tue, 17 Feb 2026 04:38:35 GMT</li>
+                        <li><i>Report Generated On</i>: Tue, 24 Feb 2026 04:38:45 GMT</li>
                         <li><i>Dependencies Scanned</i>:&nbsp;34 (32 unique)</li>
                         <li><i>Vulnerable Dependencies</i>:&nbsp;<span id="vulnerableCount">5</span></li>
                         <li><i>Vulnerabilities Found</i>:&nbsp;9</li>
@@ -916,9 +916,7 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                                         <li class="vs5"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aguava%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:redhat:virtualization_host:4.0:*:*:*:*:*:*:*</a></li>
                                     </ul></p>
                                 <p><b><a target="_blank" href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2020-8908">CVE-2020-8908</a></b></p>
-                            <p>                            <pre>A temp directory creation vulnerability exists in all versions of Guava, allowing an attacker with access to the machine to potentially access data in a temporary directory created by the Guava API com.google.common.io.Files.createTempDir(). By default, on unix-like systems, the created directory is world-readable (readable by an attacker with access to the system). The method in question has been marked @Deprecated in versions 30.0 and later and should not be used. For Android developers, we recommend choosing a temporary directory API provided by Android, such as context.getCacheDir(). For other Java developers, we recommend migrating to the Java 7 API java.nio.file.Files.createTempDirectory() which explicitly configures permissions of 700, or configuring the Java runtime's java.io.tmpdir system property to point to a location whose permissions are appropriately configured.
-
-</pre>
+                            <p>                            <pre>A temp directory creation vulnerability exists in all versions of Guava, allowing an attacker with access to the machine to potentially access data in a temporary directory created by the Guava API com.google.common.io.Files.createTempDir(). By default, on unix-like systems, the created directory is world-readable (readable by an attacker with access to the system). The method in question has been marked @Deprecated in versions 30.0 and later and should not be used. For Android developers, we recommend choosing a temporary directory API provided by Android, such as context.getCacheDir(). For other Java developers, we recommend migrating to the Java 7 API java.nio.file.Files.createTempDirectory() which explicitly configures permissions of 700, or configuring the Java runtime's java.io.tmpdir system property to point to a location whose permissions are appropriately configured.</pre>
 
                                 CWE-378 Creation of Temporary File With Insecure Permissions, CWE-732 Incorrect Permission Assignment for Critical Resource<br/><br/>
                             CVSSv2:

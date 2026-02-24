@@ -4,16 +4,16 @@
         <engineVersion>12.2.0</engineVersion>
         <dataSource>
             <name>NVD API Last Checked</name>
-            <timestamp>2026-02-17T04:38:25Z</timestamp>
+            <timestamp>2026-02-24T04:38:35Z</timestamp>
         </dataSource>
         <dataSource>
             <name>NVD API Last Modified</name>
-            <timestamp>2026-02-17T03:16:01Z</timestamp>
+            <timestamp>2026-02-24T04:15:59Z</timestamp>
         </dataSource>
     </scanInfo>
     <projectInfo>
-        <name>com.github.pmonks/unfurl 1.0.231-SNAPSHOT</name>
-        <reportDate>2026-02-17T04:38:35.372791664Z</reportDate>
+        <name>com.github.pmonks/unfurl 1.0.232-SNAPSHOT</name>
+        <reportDate>2026-02-24T04:38:45.189135540Z</reportDate>
         <credits>This product uses the NVD API but is not endorsed or certified by the NVD. This report contains data retrieved from the National Vulnerability Database: https://nvd.nist.gov, Github Advisory Database (via NPM Audit API): https://github.com/advisories/, and the RetireJS community.</credits>
     </projectInfo>
     <dependencies>
@@ -5435,9 +5435,7 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
 <exploitabilityScore>1.8</exploitabilityScore><impactScore>1.4</impactScore><version>3.1</version>                    </cvssV3>
                     <cwes>
 <cwe>CWE-378</cwe><cwe>CWE-732</cwe>                    </cwes>
-                    <description>A temp directory creation vulnerability exists in all versions of Guava, allowing an attacker with access to the machine to potentially access data in a temporary directory created by the Guava API com.google.common.io.Files.createTempDir(). By default, on unix-like systems, the created directory is world-readable (readable by an attacker with access to the system). The method in question has been marked @Deprecated in versions 30.0 and later and should not be used. For Android developers, we recommend choosing a temporary directory API provided by Android, such as context.getCacheDir(). For other Java developers, we recommend migrating to the Java 7 API java.nio.file.Files.createTempDirectory() which explicitly configures permissions of 700, or configuring the Java runtime&apos;s java.io.tmpdir system property to point to a location whose permissions are appropriately configured.
-
-</description>
+                    <description>A temp directory creation vulnerability exists in all versions of Guava, allowing an attacker with access to the machine to potentially access data in a temporary directory created by the Guava API com.google.common.io.Files.createTempDir(). By default, on unix-like systems, the created directory is world-readable (readable by an attacker with access to the system). The method in question has been marked @Deprecated in versions 30.0 and later and should not be used. For Android developers, we recommend choosing a temporary directory API provided by Android, such as context.getCacheDir(). For other Java developers, we recommend migrating to the Java 7 API java.nio.file.Files.createTempDirectory() which explicitly configures permissions of 700, or configuring the Java runtime&apos;s java.io.tmpdir system property to point to a location whose permissions are appropriately configured.</description>
                     <references>
                         <reference>
                             <source>cve-coordination@google.com</source>
