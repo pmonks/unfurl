@@ -5,19 +5,19 @@
         "dataSource": [
 {
                 "name": "NVD API Last Checked",
-                "timestamp": "2026-02-24T04:38:35Z"
+                "timestamp": "2026-03-03T04:37:13Z"
             }
 ,{
                 "name": "NVD API Last Modified",
-                "timestamp": "2026-02-24T04:15:59Z"
+                "timestamp": "2026-03-03T03:15:54Z"
             }
         ]
 
 
     },
     "projectInfo": {
-        "name": "com.github.pmonks\/unfurl 1.0.232-SNAPSHOT",
-        "reportDate": "2026-02-24T04:38:45.189135540Z",
+        "name": "com.github.pmonks\/unfurl 1.0.233-SNAPSHOT",
+        "reportDate": "2026-03-03T04:37:23.068155252Z",
         "credits": {
             "NVD": "This product uses the NVD API but is not endorsed or certified by the NVD. This report contains data retrieved from the National Vulnerability Database: https://nvd.nist.gov",
             "CISA": "This report may contain data retrieved from the CISA Known Exploited Vulnerability Catalog: https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
