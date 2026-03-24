@@ -4,16 +4,16 @@
         <engineVersion>12.2.0</engineVersion>
         <dataSource>
             <name>NVD API Last Checked</name>
-            <timestamp>2026-03-17T09:05:37Z</timestamp>
+            <timestamp>2026-03-24T05:37:04Z</timestamp>
         </dataSource>
         <dataSource>
             <name>NVD API Last Modified</name>
-            <timestamp>2026-03-17T08:15:57Z</timestamp>
+            <timestamp>2026-03-24T05:16:25Z</timestamp>
         </dataSource>
     </scanInfo>
     <projectInfo>
-        <name>com.github.pmonks/unfurl 1.0.233-SNAPSHOT</name>
-        <reportDate>2026-03-17T09:05:47.578351123Z</reportDate>
+        <name>com.github.pmonks/unfurl 1.0.234-SNAPSHOT</name>
+        <reportDate>2026-03-24T05:37:15.415756581Z</reportDate>
         <credits>This product uses the NVD API but is not endorsed or certified by the NVD. This report contains data retrieved from the National Vulnerability Database: https://nvd.nist.gov, Github Advisory Database (via NPM Audit API): https://github.com/advisories/, and the RetireJS community.</credits>
     </projectInfo>
     <dependencies>
