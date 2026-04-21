@@ -4,16 +4,16 @@
         <engineVersion>12.2.0</engineVersion>
         <dataSource>
             <name>NVD API Last Checked</name>
-            <timestamp>2026-04-14T06:44:54Z</timestamp>
+            <timestamp>2026-04-21T05:37:41Z</timestamp>
         </dataSource>
         <dataSource>
             <name>NVD API Last Modified</name>
-            <timestamp>2026-04-14T06:16:05Z</timestamp>
+            <timestamp>2026-04-21T04:16:13Z</timestamp>
         </dataSource>
     </scanInfo>
     <projectInfo>
         <name>com.github.pmonks/unfurl 1.0.234-SNAPSHOT</name>
-        <reportDate>2026-04-14T06:45:04.526004434Z</reportDate>
+        <reportDate>2026-04-21T05:37:50.531839536Z</reportDate>
         <credits>This product uses the NVD API but is not endorsed or certified by the NVD. This report contains data retrieved from the National Vulnerability Database: https://nvd.nist.gov, Github Advisory Database (via NPM Audit API): https://github.com/advisories/, and the RetireJS community.</credits>
     </projectInfo>
     <dependencies>
@@ -7857,7 +7857,86 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                 <package confidence="HIGH">
                     <id>pkg:maven/org.mozilla/rhino@1.7R5</id>
                 </package>
+                <vulnerabilityIds confidence="HIGHEST">
+                    <id>cpe:2.3:a:mozilla:rhino:1.7:r5:*:*:*:*:*:*</id>
+                    <url>https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Amozilla%3Arhino%3A1.7%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A</url>
+                </vulnerabilityIds>
             </identifiers>
+            <vulnerabilities>
+                <vulnerability source="NVD">
+                    <name>CVE-2025-66453</name>
+    <severity>MEDIUM</severity>
+                    <cvssV3>
+                        <baseScore>7.5</baseScore>
+                        <attackVector>NETWORK</attackVector>
+                        <attackComplexity>LOW</attackComplexity>
+                        <privilegesRequired>NONE</privilegesRequired>
+                        <userInteraction>NONE</userInteraction>
+                        <scope>UNCHANGED</scope>
+                        <confidentialityImpact>NONE</confidentialityImpact>
+                        <integrityImpact>NONE</integrityImpact>
+                        <availabilityImpact>HIGH</availabilityImpact>
+                        <baseSeverity>HIGH</baseSeverity>
+<exploitabilityScore>3.9</exploitabilityScore><impactScore>3.6</impactScore><version>3.1</version>                    </cvssV3>
+                    <cvssV4>
+                            <source>security-advisories@github.com</source>
+                            <type>Secondary</type>
+                            <version>4.0</version>
+                            <vectorString>CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:N/V:X/RE:X/U:X</vectorString>
+                            <attackVector>NETWORK</attackVector>
+                            <attackComplexity>LOW</attackComplexity>
+                            <attackRequirements>NONE</attackRequirements>
+                            <privilegesRequired>NONE</privilegesRequired>
+                            <userInteraction>NONE</userInteraction>
+                            <vulnerableSystemConfidentiality>NONE</vulnerableSystemConfidentiality>
+                            <vulnerableSystemIntegrity>NONE</vulnerableSystemIntegrity>
+                            <vulnerableSystemAvailability>LOW</vulnerableSystemAvailability>
+                            <subsequentSystemConfidentiality>NONE</subsequentSystemConfidentiality>
+)
+                            <subsequentSystemIntegrity>NONE</subsequentSystemIntegrity>
+                            <subsequentSystemAvailability>NONE</subsequentSystemAvailability>
+                            <exploitMaturity>PROOF_OF_CONCEPT</exploitMaturity>
+                            <confidentialityRequirements>NOT_DEFINED</confidentialityRequirements>
+                            <integrityRequirements>NOT_DEFINED</integrityRequirements>
+                            <availabilityRequirements>NOT_DEFINED</availabilityRequirements>
+                            <modifiedAttackVector>NOT_DEFINED</modifiedAttackVector>
+                            <modifiedAttackComplexity>NOT_DEFINED</modifiedAttackComplexity>
+                            <modifiedAttackRequirements>NOT_DEFINED</modifiedAttackRequirements>
+                            <modifiedPrivilegesRequired>NOT_DEFINED</modifiedPrivilegesRequired>
+                            <modifiedUserInteraction>NOT_DEFINED</modifiedUserInteraction>
+                            <modifiedVulnerableSystemConfidentiality>NOT_DEFINED</modifiedVulnerableSystemConfidentiality>
+                            <modifiedVulnerableSystemIntegrity>NOT_DEFINED</modifiedVulnerableSystemIntegrity>
+                            <modifiedVulnerableSystemAvailability>NOT_DEFINED</modifiedVulnerableSystemAvailability>
+                            <modifiedSubsequentSystemConfidentiality>NOT_DEFINED</modifiedSubsequentSystemConfidentiality>
+                            <modifiedSubsequentSystemIntegrity>NOT_DEFINED</modifiedSubsequentSystemIntegrity>
+                            <modifiedSubsequentSystemAvailability>NOT_DEFINED</modifiedSubsequentSystemAvailability>
+                            <safety>NOT_DEFINED</safety>
+                            <automatable>NOT_DEFINED</automatable>
+                            <recovery>NOT_DEFINED</recovery>
+                            <valueDensity>NOT_DEFINED</valueDensity>
+                            <vulnerabilityResponseEffort>NOT_DEFINED</vulnerabilityResponseEffort>
+                            <providerUrgency>NOT_DEFINED</providerUrgency>
+                            <baseScore>5.5</baseScore>
+                            <baseSeverity>MEDIUM</baseSeverity>
+                    </cvssV4>
+                    <cwes>
+<cwe>CWE-400</cwe>                    </cwes>
+                    <description>Rhino is an open-source implementation of JavaScript written entirely in Java. Prior to 1.8.1, 1.7.15.1, and 1.7.14.1, when an application passed an attacker controlled float poing number into the toFixed() function, it might lead to high CPU consumption and a potential Denial of Service. Small numbers go through this call stack: NativeNumber.numTo &gt; DToA.JS_dtostr &gt; DToA.JS_dtoa &gt; DToA.pow5mult where pow5mult attempts to raise 5 to a ridiculous power. This vulnerability is fixed in 1.8.1, 1.7.15.1, and 1.7.14.1.</description>
+                    <references>
+                        <reference>
+                            <source>security-advisories@github.com</source>
+<url>https://github.com/mozilla/rhino/security/advisories/GHSA-3w8q-xq97-5j7x</url><name>VENDOR_ADVISORY</name>                        </reference>
+                    </references>
+                    <vulnerableSoftware>
+                        <software vulnerabilityIdMatched="true"
+ versionEndExcluding="1.7.14.1"                        >cpe:2.3:a:mozilla:rhino:*:*:*:*:*:*:*:*</software>
+                        <software
+                        >cpe:2.3:a:mozilla:rhino:1.7.15:*:*:*:*:*:*:*</software>
+                        <software
+                        >cpe:2.3:a:mozilla:rhino:1.8.0:*:*:*:*:*:*:*</software>
+                    </vulnerableSoftware>
+                </vulnerability>
+            </vulnerabilities>
         </dependency>
         <dependency isVirtual="false">
             <fileName>riddley-0.1.12.jar</fileName>

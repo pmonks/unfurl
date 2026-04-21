@@ -22,8 +22,8 @@
                         "url": "https://github.com/dependency-check/DependencyCheck/"
         },
 
-        "end_time": "2026-04-14T06:45:04",
-                "start_time": "2026-04-14T06:45:04",
+        "end_time": "2026-04-21T05:37:50",
+                "start_time": "2026-04-21T05:37:50",
                 "status":  "success"  ,
                 "type": "dependency_scanning"
 
@@ -1419,6 +1419,38 @@
                                     {
                                                                                 "name": "VENDOR_ADVISORY",
                                         "url": "https:\/\/cloud.google.com\/support\/bulletins#gcp-2022-001"
+                                    }
+                        ]
+                                                                                            }
+                                        ,
+                                        {
+                        "id": "CVE-2025-66453",
+                        "identifiers": [
+                            {
+                                "type": "NVD"
+                                    , "name": "CVE-2025-66453"
+                                , "value": "95f0003cea7ebf26aef5ed64c77c05fcd1ff9648"
+
+                                                                    , "url": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2025-66453"
+                            }
+                        ],
+                        "location": {
+                            "file": "\/home\/runner\/.m2\/repository\/org\/mozilla\/rhino\/1.7R5\/rhino-1.7R5.jar",
+                            "dependency": {
+                                "package": {
+                                    "name": "org.mozilla:rhino"
+                                },
+                                "version": "1.7R5"
+                                                                                                                                                                                                                                                                                                                                                                                                                            }
+                        },
+
+                                                "name": "CVE-2025-66453",
+                        "description": "Rhino is an open-source implementation of JavaScript written entirely in Java. Prior to 1.8.1, 1.7.15.1, and 1.7.14.1, when an application passed an attacker controlled float poing number into the toFixed() function, it might lead to high CPU consumption and a potential Denial of Service. Small numbers go through this call stack: NativeNumber.numTo > DToA.JS_dtostr > DToA.JS_dtoa > DToA.pow5mult where pow5mult attempts to raise 5 to a ridiculous power. This vulnerability is fixed in 1.8.1, 1.7.15.1, and 1.7.14.1.",
+                        "severity": "Medium",
+                                                "links": [
+                                    {
+                                                                                "name": "VENDOR_ADVISORY",
+                                        "url": "https:\/\/github.com\/mozilla\/rhino\/security\/advisories\/GHSA-3w8q-xq97-5j7x"
                                     }
                         ]
                                                                                             }

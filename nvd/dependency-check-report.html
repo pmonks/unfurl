@@ -678,15 +678,15 @@ Getting Help: <a href="https://github.com/dependency-check/DependencyCheck/issue
                 Scan Information (<a href="#" title="Click to toggle display" id="scanInformationToggle">show all</a>):<br/>
                     <ul class="indent">
                         <li><i>dependency-check version</i>: 12.2.0</li>
-                        <li><i>Report Generated On</i>: Tue, 14 Apr 2026 06:45:04 GMT</li>
+                        <li><i>Report Generated On</i>: Tue, 21 Apr 2026 05:37:50 GMT</li>
                         <li><i>Dependencies Scanned</i>:&nbsp;34 (32 unique)</li>
-                        <li><i>Vulnerable Dependencies</i>:&nbsp;<span id="vulnerableCount">5</span></li>
-                        <li><i>Vulnerabilities Found</i>:&nbsp;9</li>
+                        <li><i>Vulnerable Dependencies</i>:&nbsp;<span id="vulnerableCount">6</span></li>
+                        <li><i>Vulnerabilities Found</i>:&nbsp;10</li>
                         <li><i>Vulnerabilities Suppressed</i>:&nbsp;0
                         </li>
                         <li class="scaninfo">...</li>
-                        <li class="scaninfo hidden"><i>NVD API Last Checked</i>: 2026-04-14T06:44:54Z</li>
-                        <li class="scaninfo hidden"><i>NVD API Last Modified</i>: 2026-04-14T06:16:05Z</li>
+                        <li class="scaninfo hidden"><i>NVD API Last Checked</i>: 2026-04-21T05:37:41Z</li>
+                        <li class="scaninfo hidden"><i>NVD API Last Modified</i>: 2026-04-21T04:16:13Z</li>
                     </ul><br/>
 <h2>Summary</h2>
                 <p><span id="tablecaption-plain">Summary of Vulnerable Dependencies </span><a href="#" title="Click to toggle display" id="vulnerabilityDisplayToggle">(click to show all)</a></p>
@@ -1038,16 +1038,17 @@ Getting Help: <a href="https://github.com/dependency-check/DependencyCheck/issue
                         <td data-sort-value="0"></td>
                         <td>12</td>
                     </tr>
-                    <tr class="notvulnerable">
+                    <tr class=" vulnerable">
                         <td data-sort-value="RHINO-1.7R5.JAR"><a href="#l28_95f0003cea7ebf26aef5ed64c77c05fcd1ff9648">rhino-1.7R5.jar</a></td>
-                        <td data-sort-value="">
+                        <td data-sort-value="cpe:2.3:a:mozilla:rhino:1.7:r5:*:*:*:*:*:*">
+                                <a href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Amozilla%3Arhino%3A1.7%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A" target="_blank">cpe:2.3:a:mozilla:rhino:1.7:r5:*:*:*:*:*:*</a>
                         </td>
                         <td data-sort-value="pkg:maven/org.mozilla/rhino@1.7R5">
                                 pkg:maven/org.mozilla/rhino@1.7R5
 </td>
-                        <td data-sort-value="-10">&nbsp;</td>
-                        <td>0</td>
-                        <td data-sort-value="0"></td>
+                                                                                <td data-sort-value="55.0">MEDIUM</td>
+                        <td>1</td>
+                        <td data-sort-value="0">Highest</td>
                         <td>24</td>
                     </tr>
                     <tr class="notvulnerable">
@@ -3585,8 +3586,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                             </ul>
                         </div>
                 </div>
-                    <h3 class="subsectionheader standardsubsection notvulnerable"><a name="l28_95f0003cea7ebf26aef5ed64c77c05fcd1ff9648"></a>rhino-1.7R5.jar</h3>
-                    <div class="subsectioncontent notvulnerable">
+                    <h3 class="subsectionheader standardsubsection"><a name="l28_95f0003cea7ebf26aef5ed64c77c05fcd1ff9648"></a>rhino-1.7R5.jar</h3>
+                    <div class="subsectioncontent">
                             <p><b>Description:</b><pre>
       Rhino is an open-source implementation of JavaScript written entirely in Java. It is typically
       embedded into Java applications to provide scripting to end users.
@@ -3634,8 +3635,36 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                                     <li>pkg:maven/org.mozilla/rhino@1.7R5
                                     &nbsp;&nbsp;(<i>Confidence</i>:High)
                                 </li>
+                                <li><a href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Amozilla%3Arhino%3A1.7%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A" target="_blank">cpe:2.3:a:mozilla:rhino:1.7:r5:*:*:*:*:*:*</a>
+                                    &nbsp;&nbsp;(<i>Confidence</i>:Highest)
+                                &nbsp;&nbsp;<button class="copybutton" title="Generate Suppression XML for the identified vulnerability identifier" data-display-name="rhino-1.7R5.jar" data-sha1="95f0003cea7ebf26aef5ed64c77c05fcd1ff9648" data-pkgurl="pkg:maven/org.mozilla/rhino@1.7R5" data-type-to-suppress="cpe" data-id-to-suppress="cpe:/a:mozilla:rhino">suppress</button>
+                            </li>
                             </ul>
                         </div>
+                    <h4 id="header64" class="subsectionheader collapsed collaspablesubsection white">Published Vulnerabilities</h4>
+                    <div id="content64" class="subsectioncontent standardsubsection">
+                                <p><b><a target="_blank" href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2025-66453">CVE-2025-66453</a></b>&nbsp;&nbsp;<button class="copybutton" title="Generate Suppression XML for this CVE for this file" data-display-name="rhino-1.7R5.jar" data-sha1="95f0003cea7ebf26aef5ed64c77c05fcd1ff9648" data-pkgurl="pkg:maven/org.mozilla/rhino@1.7R5" data-type-to-suppress="cve" data-id-to-suppress="CVE-2025-66453">suppress</button></p>
+                            <p>                            <pre>Rhino is an open-source implementation of JavaScript written entirely in Java. Prior to 1.8.1, 1.7.15.1, and 1.7.14.1, when an application passed an attacker controlled float poing number into the toFixed() function, it might lead to high CPU consumption and a potential Denial of Service. Small numbers go through this call stack: NativeNumber.numTo &gt; DToA.JS_dtostr &gt; DToA.JS_dtoa &gt; DToA.pow5mult where pow5mult attempts to raise 5 to a ridiculous power. This vulnerability is fixed in 1.8.1, 1.7.15.1, and 1.7.14.1.</pre>
+
+                                CWE-400 Uncontrolled Resource Consumption<br/><br/>
+                                CVSSv4:
+                                <ul><li>Base Score: MEDIUM (5.5)</li>
+                                    <li>Vector: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:N/V:X/RE:X/U:X</li></ul>
+                            CVSSv3:
+                            <ul><li>Base Score: HIGH (7.5)</li>
+                                <li>Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:3.9/RC:R/MAV:A</li></ul>
+                                <br/>References:<ul>
+                                    <li>security-advisories@github.com - <a target="_blank" href="https://github.com/mozilla/rhino/security/advisories/GHSA-3w8q-xq97-5j7x">VENDOR_ADVISORY</a></li>
+                                </ul>
+                            </p>
+                                    <p>Vulnerable Software &amp; Versions:&nbsp;(<a href="#" class="versionToggle" data-toggle=".vs10">show all</a>)<ul>
+                                        <li class="vs10"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Amozilla%3Arhino%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:mozilla:rhino:*:*:*:*:*:*:*:* versions up to (excluding) 1.7.14.1</a></li>
+                                        <li class="vs10">...</li>
+                                        <li class="vs10 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Amozilla%3Arhino%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:mozilla:rhino:*:*:*:*:*:*:*:* versions up to (excluding) 1.7.14.1</a></li>
+                                        <li class="vs10 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Amozilla%3Arhino%3A1.7.15%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:mozilla:rhino:1.7.15:*:*:*:*:*:*:*</a></li>
+                                        <li class="vs10 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Amozilla%3Arhino%3A1.8.0%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:mozilla:rhino:1.8.0:*:*:*:*:*:*:*</a></li>
+                                    </ul></p>
+                    </div>
                 </div>
                     <h3 class="subsectionheader standardsubsection notvulnerable"><a name="l29_033bd1610a8ef50a6347cd571eaef76182ca50b0"></a>riddley-0.1.12.jar</h3>
                     <div class="subsectioncontent notvulnerable">
@@ -3647,8 +3676,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                             <b>SHA1:</b>&nbsp;033bd1610a8ef50a6347cd571eaef76182ca50b0<br/>
                             <b>SHA256:</b>398f61fa4825b8f86c916ae580c7e133b7c477d0b72a7d3b298d381032740bae
                         </p>
-                        <h4 id="header64" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
-                        <div id="content64" class="subsectioncontent standardsubsection hidden">
+                        <h4 id="header65" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
+                        <div id="content65" class="subsectioncontent standardsubsection hidden">
                             <table class="lined fullwidth" border="0">
                                 <tr><th class="left" style="width:10%;">Type</th><th class="left" style="width:10%;">Source</th><th class="left" style="width:20%;">Name</th><th class="left" style="width:50%;">Value</th><th class="left" style="width:10%;">Confidence</th></tr>
                                     <tr><td>Vendor</td><td>file</td><td>name</td><td>riddley</td><td>High</td></tr>
@@ -3667,8 +3696,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                                     <tr><td>Version</td><td>pom</td><td>version</td><td>0.1.12</td><td>Highest</td></tr>
                             </table>
                         </div>
-                        <h4 id="header65" class="subsectionheader white">Identifiers</h4>
-                        <div id="content65" class="subsectioncontent standardsubsection">
+                        <h4 id="header66" class="subsectionheader white">Identifiers</h4>
+                        <div id="content66" class="subsectioncontent standardsubsection">
                             <ul>
                                     <li>pkg:maven/riddley/riddley@0.1.12
                                     &nbsp;&nbsp;(<i>Confidence</i>:High)
@@ -3686,8 +3715,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                             <b>SHA1:</b>&nbsp;be4aed05849752f9ac5d09691755dec3dd8ed5f3<br/>
                             <b>SHA256:</b>a68ac22bf2ea3cd54ce34db70fd69844d631ef549f6450c278c30e6f79df63f3
                         </p>
-                        <h4 id="header66" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
-                        <div id="content66" class="subsectioncontent standardsubsection hidden">
+                        <h4 id="header67" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
+                        <div id="content67" class="subsectioncontent standardsubsection hidden">
                             <table class="lined fullwidth" border="0">
                                 <tr><th class="left" style="width:10%;">Type</th><th class="left" style="width:10%;">Source</th><th class="left" style="width:20%;">Name</th><th class="left" style="width:50%;">Value</th><th class="left" style="width:10%;">Confidence</th></tr>
                                     <tr><td>Vendor</td><td>file</td><td>name</td><td>slingshot</td><td>High</td></tr>
@@ -3704,8 +3733,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                                     <tr><td>Version</td><td>pom</td><td>version</td><td>0.12.2</td><td>Highest</td></tr>
                             </table>
                         </div>
-                        <h4 id="header67" class="subsectionheader white">Identifiers</h4>
-                        <div id="content67" class="subsectioncontent standardsubsection">
+                        <h4 id="header68" class="subsectionheader white">Identifiers</h4>
+                        <div id="content68" class="subsectioncontent standardsubsection">
                             <ul>
                                     <li>pkg:maven/slingshot/slingshot@0.12.2
                                     &nbsp;&nbsp;(<i>Confidence</i>:High)
@@ -3723,8 +3752,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                             <b>SHA1:</b>&nbsp;4eb5dea521c4e6e1f68c2c47517f14a922003e60<br/>
                             <b>SHA256:</b>94cd99b6ea639641f37af4860a643b6ed399ee5a8be5d717cff0b663c8d75077
                         </p>
-                        <h4 id="header68" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
-                        <div id="content68" class="subsectioncontent standardsubsection hidden">
+                        <h4 id="header69" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
+                        <div id="content69" class="subsectioncontent standardsubsection hidden">
                             <table class="lined fullwidth" border="0">
                                 <tr><th class="left" style="width:10%;">Type</th><th class="left" style="width:10%;">Source</th><th class="left" style="width:20%;">Name</th><th class="left" style="width:50%;">Value</th><th class="left" style="width:10%;">Confidence</th></tr>
                                     <tr><td>Vendor</td><td>file</td><td>name</td><td>spec.alpha</td><td>High</td></tr>
@@ -3755,8 +3784,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                                     <tr><td>Version</td><td>pom</td><td>version</td><td>0.5.238</td><td>Highest</td></tr>
                             </table>
                         </div>
-                        <h4 id="header69" class="subsectionheader white">Identifiers</h4>
-                        <div id="content69" class="subsectioncontent standardsubsection">
+                        <h4 id="header70" class="subsectionheader white">Identifiers</h4>
+                        <div id="content70" class="subsectioncontent standardsubsection">
                             <ul>
                                     <li>pkg:maven/org.clojure/spec.alpha@0.5.238
                                     &nbsp;&nbsp;(<i>Confidence</i>:High)
@@ -3774,8 +3803,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                             <b>SHA1:</b>&nbsp;2551fe91105779f8641ed51d8eb21f1bf50b49e4<br/>
                             <b>SHA256:</b>da123ee25d9515c7b9edc871e11ab0332d58904ca7af854b3ddc2d34332ad7bc
                         </p>
-                        <h4 id="header70" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
-                        <div id="content70" class="subsectioncontent standardsubsection hidden">
+                        <h4 id="header71" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
+                        <div id="content71" class="subsectioncontent standardsubsection hidden">
                             <table class="lined fullwidth" border="0">
                                 <tr><th class="left" style="width:10%;">Type</th><th class="left" style="width:10%;">Source</th><th class="left" style="width:20%;">Name</th><th class="left" style="width:50%;">Value</th><th class="left" style="width:10%;">Confidence</th></tr>
                                     <tr><td>Vendor</td><td>file</td><td>name</td><td>tools.reader</td><td>High</td></tr>
@@ -3800,8 +3829,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                                     <tr><td>Version</td><td>pom</td><td>version</td><td>1.0.0-beta3</td><td>Highest</td></tr>
                             </table>
                         </div>
-                        <h4 id="header71" class="subsectionheader white">Identifiers</h4>
-                        <div id="content71" class="subsectioncontent standardsubsection">
+                        <h4 id="header72" class="subsectionheader white">Identifiers</h4>
+                        <div id="content72" class="subsectioncontent standardsubsection">
                             <ul>
                                     <li>pkg:maven/org.clojure/tools.reader@1.0.0-beta3
                                     &nbsp;&nbsp;(<i>Confidence</i>:High)

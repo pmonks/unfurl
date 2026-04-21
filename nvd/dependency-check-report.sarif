@@ -96,6 +96,35 @@
 "cvssv3_exploitabilityScore": "1.8","cvssv3_impactScore": "5.2","cvssv3_version": "_3_1",                "source": "NVD"
               }
             },{
+              "id": "CVE-2025-66453",
+              "shortDescription": {
+                 "text": "medium severity - CVE-2025-66453 Uncontrolled Resource Consumption vulnerability in pkg:maven\/org.mozilla\/rhino@1.7R5"
+              },
+              "fullDescription": {
+                "text": "Rhino is an open-source implementation of JavaScript written entirely in Java. Prior to 1.8.1, 1.7.15.1, and 1.7.14.1, when an application passed an attacker controlled float poing number into the toFixed() function, it might lead to high CPU consumption and a potential Denial of Service. Small numbers go through this call stack: NativeNumber.numTo > DToA.JS_dtostr > DToA.JS_dtoa > DToA.pow5mult where pow5mult attempts to raise 5 to a ridiculous power. This vulnerability is fixed in 1.8.1, 1.7.15.1, and 1.7.14.1."
+              },
+              "help": {
+                "text": "",
+                "markdown": "For more information see [CVE-2025-66453](https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2025-66453).\n\n\nIf this is a false positive - consider using the HTML report to generate a suppression file.\nFor more information see [How dependency-check works](https://dependency-check.github.io/DependencyCheck/general/internals.html),\n[How to read the HTML report](https://dependency-check.github.io/DependencyCheck/general/thereport.html), and\n[Suppressing false positives](https://dependency-check.github.io/DependencyCheck/general/suppression.html)."
+              },
+              "properties": {
+                    "cvssv3_baseScore": 7.5,
+                    "security-severity": "7.5",
+                    "cvssv3_attackVector": "NETWORK",
+                    "cvssv3_attackComplexity": "LOW",
+                    "cvssv3_privilegesRequired": "NONE",
+                    "cvssv3_userInteraction": "NONE",
+                    "cvssv3_scope": "UNCHANGED",
+                    "cvssv3_confidentialityImpact": "NONE",
+                    "cvssv3_integrityImpact": "NONE",
+                    "cvssv3_availabilityImpact": "HIGH",
+                    "cvssv3_baseSeverity": "HIGH",
+"cvssv3_exploitabilityScore": "3.9","cvssv3_impactScore": "3.6","cvssv3_version": "_3_1",                "cvssv4_baseScore": 5.5,
+                "security-severity": "5.5",
+                "cvssv4_vector": "CVSS:4.0\/AV:N\/AC:L\/AT:N\/PR:N\/UI:N\/VC:N\/VI:N\/VA:L\/SC:N\/SI:N\/SA:N\/E:P\/CR:X\/IR:X\/AR:X\/MAV:X\/MAC:X\/MAT:X\/MPR:X\/MUI:X\/MVC:X\/MVI:X\/MVA:X\/MSC:X\/MSI:X\/MSA:X\/S:X\/AU:X\/R:N\/V:X\/RE:X\/U:X",
+                "source": "NVD"
+              }
+            },{
               "id": "CVE-2021-22569",
               "shortDescription": {
                  "text": "medium severity - CVE-2021-22569 vulnerability in pkg:maven\/com.google.protobuf\/protobuf-java@2.5.0"
@@ -294,8 +323,8 @@
           "npm": "This report may contain data retrieved from the the Github Advisory Database (via NPM Audit API): https://github.com/advisories/",
           "retirejs": "This report may contain data retrieved from the RetireJS community: https://retirejs.github.io/retire.js/",
           "ossindex": "This report may contain data retrieved from the Sonatype OSS Index: https://ossindex.sonatype.org"
-            ,"NVD API Last Checked": "2026-04-14T06:44:54Z"
-            ,"NVD API Last Modified": "2026-04-14T06:16:05Z"
+            ,"NVD API Last Checked": "2026-04-21T05:37:41Z"
+            ,"NVD API Last Modified": "2026-04-21T04:16:13Z"
           }
         }
       },
@@ -725,6 +754,7 @@
             "sha256": "e00e09a71abc4677e17dd8d42b0755b59a9e9ab09b60fd8b1abb45e4c80409c0"
           },          "properties": {
 "license": "Mozilla Public License, Version 2.0: http:\/\/www.mozilla.org\/MPL\/2.0\/index.txt",                    "id28": "pkg:maven\/org.mozilla\/rhino@1.7R5"
+,                    "vid14": "cpe:2.3:a:mozilla:rhino:1.7:r5:*:*:*:*:*:*"
           }
         }
 ,{
@@ -1009,6 +1039,31 @@
                 ,"logicalLocations": [
                     {
                     "fullyQualifiedName": "pkg:maven\/com.google.protobuf\/protobuf-java@2.5.0"
+                    }
+                ]
+              
+            }
+          ]
+          }, {
+          "ruleId": "CVE-2025-66453",
+          "level": "warning",
+          "message": {
+            "text": "CVE-2025-66453 - Rhino is an open-source implementation of JavaScript written entirely in Java. Prior to 1.8.1, 1.7.15.1, and 1.7.14.1, when an application passed an attacker controlled float poing number into the toFixed() function, it might lead to high CPU consumption and a potential Denial of Service. Small numbers go through this call stack: NativeNumber.numTo > DToA.JS_dtostr > DToA.JS_dtoa > DToA.pow5mult where pow5mult attempts to raise 5 to a ridiculous power. This vulnerability is fixed in 1.8.1, 1.7.15.1, and 1.7.14.1."
+          },
+          "partialFingerprints": {
+            "vulnerabilityHash": "d2ea666842fe0ad8c1be64691aafef48"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file://\/home\/runner\/.m2\/repository\/org\/mozilla\/rhino\/1.7R5\/rhino-1.7R5.jar"
+                  ,"index": 27
+                }
+              }
+                ,"logicalLocations": [
+                    {
+                    "fullyQualifiedName": "pkg:maven\/org.mozilla\/rhino@1.7R5"
                     }
                 ]
               
