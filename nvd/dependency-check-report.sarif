@@ -323,8 +323,8 @@
           "npm": "This report may contain data retrieved from the the Github Advisory Database (via NPM Audit API): https://github.com/advisories/",
           "retirejs": "This report may contain data retrieved from the RetireJS community: https://retirejs.github.io/retire.js/",
           "ossindex": "This report may contain data retrieved from the Sonatype OSS Index: https://ossindex.sonatype.org"
-            ,"NVD API Last Checked": "2026-05-12T06:21:23Z"
-            ,"NVD API Last Modified": "2026-05-12T06:16:09Z"
+            ,"NVD API Last Checked": "2026-05-19T07:35:56Z"
+            ,"NVD API Last Modified": "2026-05-19T07:16:30Z"
           }
         }
       },
@@ -365,15 +365,15 @@
              "text": "Clojure core environment and runtime library."
           },
           "location": {
-            "uri": "file://\/home\/runner\/.m2\/repository\/org\/clojure\/clojure\/1.12.4\/clojure-1.12.4.jar"
+            "uri": "file://\/home\/runner\/.m2\/repository\/org\/clojure\/clojure\/1.12.5\/clojure-1.12.5.jar"
           },
           "hashes": {
-            "md5": "c9e27ed601e1c83392c78fd9f3e7ecec",
-            "sha1": "580cd548600f63b597efea7e94c3e55be2d12537",
-            "sha256": "4b81e9ba6da38c45d9cc58023c674062b8c9f0714f33ff00ded22e6a949da177"
+            "md5": "087ba6fd877952c650a56f2f421713b5",
+            "sha1": "3ec635a14dea6c584eafc2fd6dab89cb5008407b",
+            "sha256": "dfdee131460216a84fef22e537bb0d0579965f8f70338d748323dff26f8e5a8b"
           },          "properties": {
-"license": "Eclipse Public License 1.0: http:\/\/opensource.org\/licenses\/eclipse-1.0.php",                    "id3": "pkg:maven\/org.clojure\/clojure@1.12.4"
-,                    "vid2": "cpe:2.3:a:clojure:clojure:1.12.4:*:*:*:*:*:*:*"
+"license": "Eclipse Public License 1.0: http:\/\/opensource.org\/licenses\/eclipse-1.0.php",                    "id3": "pkg:maven\/org.clojure\/clojure@1.12.5"
+,                    "vid2": "cpe:2.3:a:clojure:clojure:1.12.5:*:*:*:*:*:*:*"
           }
         }
 ,{
