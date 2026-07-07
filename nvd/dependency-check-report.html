@@ -678,15 +678,15 @@ Getting Help: <a href="https://github.com/dependency-check/DependencyCheck/issue
                 Scan Information (<a href="#" title="Click to toggle display" id="scanInformationToggle">show all</a>):<br/>
                     <ul class="indent">
                         <li><i>dependency-check version</i>: 12.2.0</li>
-                        <li><i>Report Generated On</i>: Tue, 16 Jun 2026 07:55:02 GMT</li>
+                        <li><i>Report Generated On</i>: Tue, 7 Jul 2026 09:42:54 GMT</li>
                         <li><i>Dependencies Scanned</i>:&nbsp;34 (32 unique)</li>
-                        <li><i>Vulnerable Dependencies</i>:&nbsp;<span id="vulnerableCount">6</span></li>
-                        <li><i>Vulnerabilities Found</i>:&nbsp;10</li>
+                        <li><i>Vulnerable Dependencies</i>:&nbsp;<span id="vulnerableCount">8</span></li>
+                        <li><i>Vulnerabilities Found</i>:&nbsp;14</li>
                         <li><i>Vulnerabilities Suppressed</i>:&nbsp;0
                         </li>
                         <li class="scaninfo">...</li>
-                        <li class="scaninfo hidden"><i>NVD API Last Checked</i>: 2026-06-16T07:54:52Z</li>
-                        <li class="scaninfo hidden"><i>NVD API Last Modified</i>: 2026-06-16T06:16:58Z</li>
+                        <li class="scaninfo hidden"><i>NVD API Last Checked</i>: 2026-07-07T09:42:44Z</li>
+                        <li class="scaninfo hidden"><i>NVD API Last Modified</i>: 2026-07-07T09:16:30Z</li>
                     </ul><br/>
 <h2>Summary</h2>
                 <p><span id="tablecaption-plain">Summary of Vulnerable Dependencies </span><a href="#" title="Click to toggle display" id="vulnerabilityDisplayToggle">(click to show all)</a></p>
@@ -928,28 +928,30 @@ Getting Help: <a href="https://github.com/dependency-check/DependencyCheck/issue
                         <td data-sort-value="0">Highest</td>
                         <td>31</td>
                     </tr>
-                    <tr class="notvulnerable">
+                    <tr class=" vulnerable">
                         <td data-sort-value="HTTPCORE-4.4.16.JAR"><a href="#l19_51cf043c87253c9f58b539c9f7e44c8894223850">httpcore-4.4.16.jar</a></td>
-                        <td data-sort-value="">
+                        <td data-sort-value="cpe:2.3:a:apache:httpcomponents_core:4.4.16:*:*:*:*:*:*:*">
+                                <a href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aapache%3Ahttpcomponents_core%3A4.4.16%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A" target="_blank">cpe:2.3:a:apache:httpcomponents_core:4.4.16:*:*:*:*:*:*:*</a>
                         </td>
                         <td data-sort-value="pkg:maven/org.apache.httpcomponents/httpcore@4.4.16">
                                 pkg:maven/org.apache.httpcomponents/httpcore@4.4.16
 </td>
-                        <td data-sort-value="-10">&nbsp;</td>
-                        <td>0</td>
-                        <td data-sort-value="0"></td>
+                                                                                <td data-sort-value="75.0">HIGH</td>
+                        <td>2</td>
+                        <td data-sort-value="0">Highest</td>
                         <td>31</td>
                     </tr>
-                    <tr class="notvulnerable">
+                    <tr class=" vulnerable">
                         <td data-sort-value="HTTPCORE-NIO-4.4.15.JAR"><a href="#l20_85d2b6825d42db909a1474f0ffbd6328429b7a32">httpcore-nio-4.4.15.jar</a></td>
-                        <td data-sort-value="">
+                        <td data-sort-value="cpe:2.3:a:apache:httpcomponents_core:4.4.15:*:*:*:*:*:*:*">
+                                <a href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aapache%3Ahttpcomponents_core%3A4.4.15%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A" target="_blank">cpe:2.3:a:apache:httpcomponents_core:4.4.15:*:*:*:*:*:*:*</a>
                         </td>
                         <td data-sort-value="pkg:maven/org.apache.httpcomponents/httpcore-nio@4.4.15">
                                 pkg:maven/org.apache.httpcomponents/httpcore-nio@4.4.15
 </td>
-                        <td data-sort-value="-10">&nbsp;</td>
-                        <td>0</td>
-                        <td data-sort-value="0"></td>
+                                                                                <td data-sort-value="75.0">HIGH</td>
+                        <td>2</td>
+                        <td data-sort-value="0">Highest</td>
                         <td>29</td>
                     </tr>
                     <tr class="notvulnerable">
@@ -3003,8 +3005,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                             </ul>
                         </div>
                 </div>
-                    <h3 class="subsectionheader standardsubsection notvulnerable"><a name="l19_51cf043c87253c9f58b539c9f7e44c8894223850"></a>httpcore-4.4.16.jar</h3>
-                    <div class="subsectioncontent notvulnerable">
+                    <h3 class="subsectionheader standardsubsection"><a name="l19_51cf043c87253c9f58b539c9f7e44c8894223850"></a>httpcore-4.4.16.jar</h3>
+                    <div class="subsectioncontent">
                             <p><b>Description:</b><pre>
    Apache HttpComponents Core (blocking I/O)
   </pre></p>
@@ -3057,11 +3059,56 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                                     <li>pkg:maven/org.apache.httpcomponents/httpcore@4.4.16
                                     &nbsp;&nbsp;(<i>Confidence</i>:High)
                                 </li>
+                                <li><a href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aapache%3Ahttpcomponents_core%3A4.4.16%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A" target="_blank">cpe:2.3:a:apache:httpcomponents_core:4.4.16:*:*:*:*:*:*:*</a>
+                                    &nbsp;&nbsp;(<i>Confidence</i>:Highest)
+                                &nbsp;&nbsp;<button class="copybutton" title="Generate Suppression XML for the identified vulnerability identifier" data-display-name="httpcore-4.4.16.jar" data-sha1="51cf043c87253c9f58b539c9f7e44c8894223850" data-pkgurl="pkg:maven/org.apache.httpcomponents/httpcore@4.4.16" data-type-to-suppress="cpe" data-id-to-suppress="cpe:/a:apache:httpcomponents_core">suppress</button>
+                            </li>
                             </ul>
                         </div>
+                    <h4 id="header45" class="subsectionheader collapsed collaspablesubsection white">Published Vulnerabilities</h4>
+                    <div id="content45" class="subsectioncontent standardsubsection">
+                                <p><b><a target="_blank" href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-54399">CVE-2026-54399</a></b>&nbsp;&nbsp;<button class="copybutton" title="Generate Suppression XML for this CVE for this file" data-display-name="httpcore-4.4.16.jar" data-sha1="51cf043c87253c9f58b539c9f7e44c8894223850" data-pkgurl="pkg:maven/org.apache.httpcomponents/httpcore@4.4.16" data-type-to-suppress="cve" data-id-to-suppress="CVE-2026-54399">suppress</button></p>
+                            <p>                            <pre>Uncontrolled Resource Consumption vulnerability in the HTTP/1.1 message parser&nbsp;in Apache HttpComponents Core (5.4.2 and earlier, 5.5-beta1 and earlier) allows&nbsp;an remote attacker to cause a denial of service through memory exhaustion by sending messages with excessive number of headers / excessive header length</pre>
+
+                                CWE-400 Uncontrolled Resource Consumption, NVD-CWE-noinfo<br/><br/>
+                            CVSSv3:
+                            <ul><li>Base Score: HIGH (7.5)</li>
+                                <li>Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:3.9/RC:R/MAV:A</li></ul>
+                                <br/>References:<ul>
+                                    <li>af854a3a-2127-422b-91ae-364da2661108 - <a target="_blank" href="http://www.openwall.com/lists/oss-security/2026/07/01/4">MAILING_LIST,THIRD_PARTY_ADVISORY</a></li>
+                                    <li>security@apache.org - <a target="_blank" href="https://lists.apache.org/thread/zmxh1pl2zohov5ntdh4lt85gfrlchgpy">MAILING_LIST,VENDOR_ADVISORY</a></li>
+                                </ul>
+                            </p>
+                                    <p>Vulnerable Software &amp; Versions:&nbsp;(<a href="#" class="versionToggle" data-toggle=".vs7">show all</a>)<ul>
+                                        <li class="vs7"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aapache%3Ahttpcomponents_core%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:apache:httpcomponents_core:*:*:*:*:*:*:*:* versions up to (including) 5.4.2</a></li>
+                                        <li class="vs7">...</li>
+                                        <li class="vs7 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aapache%3Ahttpcomponents_core%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:apache:httpcomponents_core:*:*:*:*:*:*:*:* versions up to (including) 5.4.2</a></li>
+                                        <li class="vs7 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aapache%3Ahttpcomponents_core%3A5.5%3Aalpha1%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:apache:httpcomponents_core:5.5:alpha1:*:*:*:*:*:*</a></li>
+                                        <li class="vs7 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aapache%3Ahttpcomponents_core%3A5.5%3Abeta1%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:apache:httpcomponents_core:5.5:beta1:*:*:*:*:*:*</a></li>
+                                    </ul></p>
+                                <p><b><a target="_blank" href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-54428">CVE-2026-54428</a></b>&nbsp;&nbsp;<button class="copybutton" title="Generate Suppression XML for this CVE for this file" data-display-name="httpcore-4.4.16.jar" data-sha1="51cf043c87253c9f58b539c9f7e44c8894223850" data-pkgurl="pkg:maven/org.apache.httpcomponents/httpcore@4.4.16" data-type-to-suppress="cve" data-id-to-suppress="CVE-2026-54428">suppress</button></p>
+                            <p>                            <pre>Allocation of resources without limits or throttling in the HTTP/2 HPACK decoder in Apache HttpComponents Core (5.4.2 and earlier, 5.5-beta1 and earlier) allows an remote attacker to cause a denial of service through memory exhaustion by sending oversized compressed header blocks before the HTTP/2 SETTINGS acknowledgement causes the configured header list size limit to be applied.</pre>
+
+                                CWE-400 Uncontrolled Resource Consumption, CWE-770 Allocation of Resources Without Limits or Throttling<br/><br/>
+                            CVSSv3:
+                            <ul><li>Base Score: HIGH (7.5)</li>
+                                <li>Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:3.9/RC:R/MAV:A</li></ul>
+                                <br/>References:<ul>
+                                    <li>af854a3a-2127-422b-91ae-364da2661108 - <a target="_blank" href="http://www.openwall.com/lists/oss-security/2026/07/01/3">MITIGATION,THIRD_PARTY_ADVISORY</a></li>
+                                    <li>security@apache.org - <a target="_blank" href="https://lists.apache.org/thread/5zjp8vczvxq19pw2rvhs21q446bhl0sd">MITIGATION,VENDOR_ADVISORY</a></li>
+                                </ul>
+                            </p>
+                                    <p>Vulnerable Software &amp; Versions:&nbsp;(<a href="#" class="versionToggle" data-toggle=".vs8">show all</a>)<ul>
+                                        <li class="vs8"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aapache%3Ahttpcomponents_core%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:apache:httpcomponents_core:*:*:*:*:*:*:*:* versions up to (including) 5.4.2</a></li>
+                                        <li class="vs8">...</li>
+                                        <li class="vs8 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aapache%3Ahttpcomponents_core%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:apache:httpcomponents_core:*:*:*:*:*:*:*:* versions up to (including) 5.4.2</a></li>
+                                        <li class="vs8 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aapache%3Ahttpcomponents_core%3A5.5%3Aalpha1%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:apache:httpcomponents_core:5.5:alpha1:*:*:*:*:*:*</a></li>
+                                        <li class="vs8 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aapache%3Ahttpcomponents_core%3A5.5%3Abeta1%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:apache:httpcomponents_core:5.5:beta1:*:*:*:*:*:*</a></li>
+                                    </ul></p>
+                    </div>
                 </div>
-                    <h3 class="subsectionheader standardsubsection notvulnerable"><a name="l20_85d2b6825d42db909a1474f0ffbd6328429b7a32"></a>httpcore-nio-4.4.15.jar</h3>
-                    <div class="subsectioncontent notvulnerable">
+                    <h3 class="subsectionheader standardsubsection"><a name="l20_85d2b6825d42db909a1474f0ffbd6328429b7a32"></a>httpcore-nio-4.4.15.jar</h3>
+                    <div class="subsectioncontent">
                             <p><b>Description:</b><pre>
    Apache HttpComponents Core (non-blocking I/O)
   </pre></p>
@@ -3071,8 +3118,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                             <b>SHA1:</b>&nbsp;85d2b6825d42db909a1474f0ffbd6328429b7a32<br/>
                             <b>SHA256:</b>44ee3edb7d5e96d3e6d00263c838af23dd2ce67554129714ea30ae447ba95b92
                         </p>
-                        <h4 id="header45" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
-                        <div id="content45" class="subsectioncontent standardsubsection hidden">
+                        <h4 id="header46" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
+                        <div id="content46" class="subsectioncontent standardsubsection hidden">
                             <table class="lined fullwidth" border="0">
                                 <tr><th class="left" style="width:10%;">Type</th><th class="left" style="width:10%;">Source</th><th class="left" style="width:20%;">Name</th><th class="left" style="width:50%;">Value</th><th class="left" style="width:10%;">Confidence</th></tr>
                                     <tr><td>Vendor</td><td>file</td><td>name</td><td>httpcore-nio</td><td>High</td></tr>
@@ -3106,14 +3153,59 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                                     <tr><td>Version</td><td>pom</td><td>version</td><td>4.4.15</td><td>Highest</td></tr>
                             </table>
                         </div>
-                        <h4 id="header46" class="subsectionheader white">Identifiers</h4>
-                        <div id="content46" class="subsectioncontent standardsubsection">
+                        <h4 id="header47" class="subsectionheader white">Identifiers</h4>
+                        <div id="content47" class="subsectioncontent standardsubsection">
                             <ul>
                                     <li>pkg:maven/org.apache.httpcomponents/httpcore-nio@4.4.15
                                     &nbsp;&nbsp;(<i>Confidence</i>:High)
                                 </li>
+                                <li><a href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aapache%3Ahttpcomponents_core%3A4.4.15%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A" target="_blank">cpe:2.3:a:apache:httpcomponents_core:4.4.15:*:*:*:*:*:*:*</a>
+                                    &nbsp;&nbsp;(<i>Confidence</i>:Highest)
+                                &nbsp;&nbsp;<button class="copybutton" title="Generate Suppression XML for the identified vulnerability identifier" data-display-name="httpcore-nio-4.4.15.jar" data-sha1="85d2b6825d42db909a1474f0ffbd6328429b7a32" data-pkgurl="pkg:maven/org.apache.httpcomponents/httpcore-nio@4.4.15" data-type-to-suppress="cpe" data-id-to-suppress="cpe:/a:apache:httpcomponents_core">suppress</button>
+                            </li>
                             </ul>
                         </div>
+                    <h4 id="header48" class="subsectionheader collapsed collaspablesubsection white">Published Vulnerabilities</h4>
+                    <div id="content48" class="subsectioncontent standardsubsection">
+                                <p><b><a target="_blank" href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-54399">CVE-2026-54399</a></b>&nbsp;&nbsp;<button class="copybutton" title="Generate Suppression XML for this CVE for this file" data-display-name="httpcore-nio-4.4.15.jar" data-sha1="85d2b6825d42db909a1474f0ffbd6328429b7a32" data-pkgurl="pkg:maven/org.apache.httpcomponents/httpcore-nio@4.4.15" data-type-to-suppress="cve" data-id-to-suppress="CVE-2026-54399">suppress</button></p>
+                            <p>                            <pre>Uncontrolled Resource Consumption vulnerability in the HTTP/1.1 message parser&nbsp;in Apache HttpComponents Core (5.4.2 and earlier, 5.5-beta1 and earlier) allows&nbsp;an remote attacker to cause a denial of service through memory exhaustion by sending messages with excessive number of headers / excessive header length</pre>
+
+                                CWE-400 Uncontrolled Resource Consumption, NVD-CWE-noinfo<br/><br/>
+                            CVSSv3:
+                            <ul><li>Base Score: HIGH (7.5)</li>
+                                <li>Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:3.9/RC:R/MAV:A</li></ul>
+                                <br/>References:<ul>
+                                    <li>af854a3a-2127-422b-91ae-364da2661108 - <a target="_blank" href="http://www.openwall.com/lists/oss-security/2026/07/01/4">MAILING_LIST,THIRD_PARTY_ADVISORY</a></li>
+                                    <li>security@apache.org - <a target="_blank" href="https://lists.apache.org/thread/zmxh1pl2zohov5ntdh4lt85gfrlchgpy">MAILING_LIST,VENDOR_ADVISORY</a></li>
+                                </ul>
+                            </p>
+                                    <p>Vulnerable Software &amp; Versions:&nbsp;(<a href="#" class="versionToggle" data-toggle=".vs9">show all</a>)<ul>
+                                        <li class="vs9"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aapache%3Ahttpcomponents_core%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:apache:httpcomponents_core:*:*:*:*:*:*:*:* versions up to (including) 5.4.2</a></li>
+                                        <li class="vs9">...</li>
+                                        <li class="vs9 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aapache%3Ahttpcomponents_core%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:apache:httpcomponents_core:*:*:*:*:*:*:*:* versions up to (including) 5.4.2</a></li>
+                                        <li class="vs9 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aapache%3Ahttpcomponents_core%3A5.5%3Aalpha1%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:apache:httpcomponents_core:5.5:alpha1:*:*:*:*:*:*</a></li>
+                                        <li class="vs9 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aapache%3Ahttpcomponents_core%3A5.5%3Abeta1%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:apache:httpcomponents_core:5.5:beta1:*:*:*:*:*:*</a></li>
+                                    </ul></p>
+                                <p><b><a target="_blank" href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-54428">CVE-2026-54428</a></b>&nbsp;&nbsp;<button class="copybutton" title="Generate Suppression XML for this CVE for this file" data-display-name="httpcore-nio-4.4.15.jar" data-sha1="85d2b6825d42db909a1474f0ffbd6328429b7a32" data-pkgurl="pkg:maven/org.apache.httpcomponents/httpcore-nio@4.4.15" data-type-to-suppress="cve" data-id-to-suppress="CVE-2026-54428">suppress</button></p>
+                            <p>                            <pre>Allocation of resources without limits or throttling in the HTTP/2 HPACK decoder in Apache HttpComponents Core (5.4.2 and earlier, 5.5-beta1 and earlier) allows an remote attacker to cause a denial of service through memory exhaustion by sending oversized compressed header blocks before the HTTP/2 SETTINGS acknowledgement causes the configured header list size limit to be applied.</pre>
+
+                                CWE-400 Uncontrolled Resource Consumption, CWE-770 Allocation of Resources Without Limits or Throttling<br/><br/>
+                            CVSSv3:
+                            <ul><li>Base Score: HIGH (7.5)</li>
+                                <li>Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:3.9/RC:R/MAV:A</li></ul>
+                                <br/>References:<ul>
+                                    <li>af854a3a-2127-422b-91ae-364da2661108 - <a target="_blank" href="http://www.openwall.com/lists/oss-security/2026/07/01/3">MITIGATION,THIRD_PARTY_ADVISORY</a></li>
+                                    <li>security@apache.org - <a target="_blank" href="https://lists.apache.org/thread/5zjp8vczvxq19pw2rvhs21q446bhl0sd">MITIGATION,VENDOR_ADVISORY</a></li>
+                                </ul>
+                            </p>
+                                    <p>Vulnerable Software &amp; Versions:&nbsp;(<a href="#" class="versionToggle" data-toggle=".vs10">show all</a>)<ul>
+                                        <li class="vs10"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aapache%3Ahttpcomponents_core%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:apache:httpcomponents_core:*:*:*:*:*:*:*:* versions up to (including) 5.4.2</a></li>
+                                        <li class="vs10">...</li>
+                                        <li class="vs10 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aapache%3Ahttpcomponents_core%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:apache:httpcomponents_core:*:*:*:*:*:*:*:* versions up to (including) 5.4.2</a></li>
+                                        <li class="vs10 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aapache%3Ahttpcomponents_core%3A5.5%3Aalpha1%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:apache:httpcomponents_core:5.5:alpha1:*:*:*:*:*:*</a></li>
+                                        <li class="vs10 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aapache%3Ahttpcomponents_core%3A5.5%3Abeta1%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:apache:httpcomponents_core:5.5:beta1:*:*:*:*:*:*</a></li>
+                                    </ul></p>
+                    </div>
                 </div>
                     <h3 class="subsectionheader standardsubsection notvulnerable"><a name="l21_6662758a1f1cb1149cf916bdac28332e0902ec44"></a>httpmime-4.5.14.jar</h3>
                     <div class="subsectioncontent notvulnerable">
@@ -3126,8 +3218,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                             <b>SHA1:</b>&nbsp;6662758a1f1cb1149cf916bdac28332e0902ec44<br/>
                             <b>SHA256:</b>d401243d5c6eae928a37121b6e819158c8c32ea0584793e7285bb489ab2a3d17
                         </p>
-                        <h4 id="header47" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
-                        <div id="content47" class="subsectioncontent standardsubsection hidden">
+                        <h4 id="header49" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
+                        <div id="content49" class="subsectioncontent standardsubsection hidden">
                             <table class="lined fullwidth" border="0">
                                 <tr><th class="left" style="width:10%;">Type</th><th class="left" style="width:10%;">Source</th><th class="left" style="width:20%;">Name</th><th class="left" style="width:50%;">Value</th><th class="left" style="width:10%;">Confidence</th></tr>
                                     <tr><td>Vendor</td><td>file</td><td>name</td><td>httpmime</td><td>High</td></tr>
@@ -3161,8 +3253,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                                     <tr><td>Version</td><td>pom</td><td>version</td><td>4.5.14</td><td>Highest</td></tr>
                             </table>
                         </div>
-                        <h4 id="header48" class="subsectionheader white">Identifiers</h4>
-                        <div id="content48" class="subsectioncontent standardsubsection">
+                        <h4 id="header50" class="subsectionheader white">Identifiers</h4>
+                        <div id="content50" class="subsectioncontent standardsubsection">
                             <ul>
                                     <li>pkg:maven/org.apache.httpcomponents/httpmime@4.5.14
                                     &nbsp;&nbsp;(<i>Confidence</i>:High)
@@ -3178,8 +3270,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                             <b>SHA1:</b>&nbsp;23c3a3c060ffe4817e67673cc8294e154b0a4a95<br/>
                             <b>SHA256:</b>e5c1e0ceef98fb65a3d382641bcc1faab97649da1b422bbfc60e21b47345c854
                         </p>
-                        <h4 id="header49" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
-                        <div id="content49" class="subsectioncontent standardsubsection hidden">
+                        <h4 id="header51" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
+                        <div id="content51" class="subsectioncontent standardsubsection hidden">
                             <table class="lined fullwidth" border="0">
                                 <tr><th class="left" style="width:10%;">Type</th><th class="left" style="width:10%;">Source</th><th class="left" style="width:20%;">Name</th><th class="left" style="width:50%;">Value</th><th class="left" style="width:10%;">Confidence</th></tr>
                                     <tr><td>Vendor</td><td>file</td><td>name</td><td>jsinterop-annotations</td><td>High</td></tr>
@@ -3201,8 +3293,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                                     <tr><td>Version</td><td>pom</td><td>version</td><td>1.0.0</td><td>Highest</td></tr>
                             </table>
                         </div>
-                        <h4 id="header50" class="subsectionheader white">Identifiers</h4>
-                        <div id="content50" class="subsectioncontent standardsubsection">
+                        <h4 id="header52" class="subsectionheader white">Identifiers</h4>
+                        <div id="content52" class="subsectioncontent standardsubsection">
                             <ul>
                                     <li>pkg:maven/com.google.jsinterop/jsinterop-annotations@1.0.0
                                     &nbsp;&nbsp;(<i>Confidence</i>:High)
@@ -3220,8 +3312,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                             <b>SHA1:</b>&nbsp;9085290f1032d8bdd4ab0a279d176a4bd9e282ca<br/>
                             <b>SHA256:</b>cfd3298d8720cddfb0545109ccc6ea0ef39eff7e9c40a10ad95c93a65f01c916
                         </p>
-                        <h4 id="header51" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
-                        <div id="content51" class="subsectioncontent standardsubsection hidden">
+                        <h4 id="header53" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
+                        <div id="content53" class="subsectioncontent standardsubsection hidden">
                             <table class="lined fullwidth" border="0">
                                 <tr><th class="left" style="width:10%;">Type</th><th class="left" style="width:10%;">Source</th><th class="left" style="width:20%;">Name</th><th class="left" style="width:50%;">Value</th><th class="left" style="width:10%;">Confidence</th></tr>
                                     <tr><td>Vendor</td><td>file</td><td>name</td><td>jsoup</td><td>High</td></tr>
@@ -3269,8 +3361,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                                     <tr><td>Version</td><td>pom</td><td>version</td><td>1.22.1</td><td>Highest</td></tr>
                             </table>
                         </div>
-                        <h4 id="header52" class="subsectionheader white">Identifiers</h4>
-                        <div id="content52" class="subsectioncontent standardsubsection">
+                        <h4 id="header54" class="subsectionheader white">Identifiers</h4>
+                        <div id="content54" class="subsectioncontent standardsubsection">
                             <ul>
                                     <li>pkg:maven/org.jsoup/jsoup@1.22.1
                                     &nbsp;&nbsp;(<i>Confidence</i>:High)
@@ -3292,8 +3384,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                             <b>SHA1:</b>&nbsp;40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf<br/>
                             <b>SHA256:</b>905721a0eea90a81534abb7ee6ef4ea2e5e645fa1def0a5cd88402df1b46c9ed
                         </p>
-                        <h4 id="header53" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
-                        <div id="content53" class="subsectioncontent standardsubsection hidden">
+                        <h4 id="header55" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
+                        <div id="content55" class="subsectioncontent standardsubsection hidden">
                             <table class="lined fullwidth" border="0">
                                 <tr><th class="left" style="width:10%;">Type</th><th class="left" style="width:10%;">Source</th><th class="left" style="width:20%;">Name</th><th class="left" style="width:50%;">Value</th><th class="left" style="width:10%;">Confidence</th></tr>
                                     <tr><td>Vendor</td><td>file</td><td>name</td><td>jsr305</td><td>High</td></tr>
@@ -3313,8 +3405,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                                     <tr><td>Version</td><td>pom</td><td>version</td><td>1.3.9</td><td>Highest</td></tr>
                             </table>
                         </div>
-                        <h4 id="header54" class="subsectionheader white">Identifiers</h4>
-                        <div id="content54" class="subsectioncontent standardsubsection">
+                        <h4 id="header56" class="subsectionheader white">Identifiers</h4>
+                        <div id="content56" class="subsectioncontent standardsubsection">
                             <ul>
                                     <li>pkg:maven/com.google.code.findbugs/jsr305@1.3.9
                                     &nbsp;&nbsp;(<i>Confidence</i>:High)
@@ -3332,8 +3424,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                             <b>SHA1:</b>&nbsp;5daf7733d60148213807f6e07c1a6f95a2b279f4<br/>
                             <b>SHA256:</b>b98fb8d7e79bfc3ace0f2154c853973a5831a312168845f970475aa193cb1195
                         </p>
-                        <h4 id="header55" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
-                        <div id="content55" class="subsectioncontent standardsubsection hidden">
+                        <h4 id="header57" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
+                        <div id="content57" class="subsectioncontent standardsubsection hidden">
                             <table class="lined fullwidth" border="0">
                                 <tr><th class="left" style="width:10%;">Type</th><th class="left" style="width:10%;">Source</th><th class="left" style="width:20%;">Name</th><th class="left" style="width:50%;">Value</th><th class="left" style="width:10%;">Confidence</th></tr>
                                     <tr><td>Vendor</td><td>file</td><td>name</td><td>potemkin</td><td>High</td></tr>
@@ -3355,8 +3447,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                                     <tr><td>Version</td><td>pom</td><td>version</td><td>0.4.7</td><td>Highest</td></tr>
                             </table>
                         </div>
-                        <h4 id="header56" class="subsectionheader white">Identifiers</h4>
-                        <div id="content56" class="subsectioncontent standardsubsection">
+                        <h4 id="header58" class="subsectionheader white">Identifiers</h4>
+                        <div id="content58" class="subsectioncontent standardsubsection">
                             <ul>
                                     <li>pkg:maven/potemkin/potemkin@0.4.7
                                     &nbsp;&nbsp;(<i>Confidence</i>:High)
@@ -3377,8 +3469,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                             <b>SHA1:</b>&nbsp;a10732c76bfacdbd633a7eb0f7968b1059a65dfa<br/>
                             <b>SHA256:</b>e0c1c64575c005601725e7c6a02cebf9e1285e888f756b2a1d73ffa8d725cc74
                         </p>
-                        <h4 id="header57" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
-                        <div id="content57" class="subsectioncontent standardsubsection hidden">
+                        <h4 id="header59" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
+                        <div id="content59" class="subsectioncontent standardsubsection hidden">
                             <table class="lined fullwidth" border="0">
                                 <tr><th class="left" style="width:10%;">Type</th><th class="left" style="width:10%;">Source</th><th class="left" style="width:20%;">Name</th><th class="left" style="width:50%;">Value</th><th class="left" style="width:10%;">Confidence</th></tr>
                                     <tr><td>Vendor</td><td>file</td><td>name</td><td>protobuf-java</td><td>High</td></tr>
@@ -3410,8 +3502,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                                     <tr><td>Version</td><td>pom</td><td>version</td><td>2.5.0</td><td>Highest</td></tr>
                             </table>
                         </div>
-                        <h4 id="header58" class="subsectionheader white">Identifiers</h4>
-                        <div id="content58" class="subsectioncontent standardsubsection">
+                        <h4 id="header60" class="subsectionheader white">Identifiers</h4>
+                        <div id="content60" class="subsectioncontent standardsubsection">
                             <ul>
                                     <li>pkg:maven/com.google.protobuf/protobuf-java@2.5.0
                                     &nbsp;&nbsp;(<i>Confidence</i>:High)
@@ -3422,8 +3514,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                             </li>
                             </ul>
                         </div>
-                    <h4 id="header59" class="subsectionheader collapsed collaspablesubsection white">Published Vulnerabilities</h4>
-                    <div id="content59" class="subsectioncontent standardsubsection">
+                    <h4 id="header61" class="subsectionheader collapsed collaspablesubsection white">Published Vulnerabilities</h4>
+                    <div id="content61" class="subsectioncontent standardsubsection">
                                 <p><b><a target="_blank" href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2024-7254">CVE-2024-7254</a></b>&nbsp;&nbsp;<button class="copybutton" title="Generate Suppression XML for this CVE for this file" data-display-name="protobuf-java-2.5.0.jar" data-sha1="a10732c76bfacdbd633a7eb0f7968b1059a65dfa" data-pkgurl="pkg:maven/com.google.protobuf/protobuf-java@2.5.0" data-type-to-suppress="cve" data-id-to-suppress="CVE-2024-7254">suppress</button></p>
                             <p>                            <pre>Any project that parses untrusted Protocol Buffers data&nbsp;containing an arbitrary number of nested groups / series of SGROUP&nbsp;tags can corrupted by exceeding the stack limit i.e. StackOverflow. Parsing nested groups as unknown fields with DiscardUnknownFieldsParser or Java Protobuf Lite parser, or against Protobuf map fields, creates unbounded recursions that can be abused by an attacker.</pre>
 
@@ -3440,29 +3532,29 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                                     <li>cve-coordination@google.com - <a target="_blank" href="https://github.com/protocolbuffers/protobuf/commit/cc8b3483a5584b3301e3d43d17eb59704857ffaa">PATCH</a></li>
                                 </ul>
                             </p>
-                                    <p>Vulnerable Software &amp; Versions:&nbsp;(<a href="#" class="versionToggle" data-toggle=".vs7">show all</a>)<ul>
-                                        <li class="vs7"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions up to (excluding) 3.25.5</a></li>
-                                        <li class="vs7">...</li>
-                                        <li class="vs7 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3Aruby%3A%2A%3A%2A">cpe:2.3:a:google:protobuf:*:*:*:*:*:ruby:*:* versions up to (excluding) 3.25.5</a></li>
-                                        <li class="vs7 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3Aruby%3A%2A%3A%2A">cpe:2.3:a:google:protobuf:*:*:*:*:*:ruby:*:* versions from (including) 4.0.0; versions up to (excluding) 4.27.5</a></li>
-                                        <li class="vs7 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3Aruby%3A%2A%3A%2A">cpe:2.3:a:google:protobuf:*:*:*:*:*:ruby:*:* versions from (including) 4.28.0; versions up to (excluding) 4.28.2</a></li>
-                                        <li class="vs7 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions up to (excluding) 3.25.5</a></li>
-                                        <li class="vs7 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions from (including) 4.0.0; versions up to (excluding) 4.27.5</a></li>
-                                        <li class="vs7 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions from (including) 4.28.0; versions up to (excluding) 4.28.2</a></li>
-                                        <li class="vs7 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-javalite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-javalite:*:*:*:*:*:*:*:* versions up to (excluding) 3.25.5</a></li>
-                                        <li class="vs7 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-javalite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-javalite:*:*:*:*:*:*:*:* versions from (including) 4.0.0; versions up to (excluding) 4.27.5</a></li>
-                                        <li class="vs7 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-javalite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-javalite:*:*:*:*:*:*:*:* versions from (including) 4.28.0; versions up to (excluding) 4.28.2</a></li>
-                                        <li class="vs7 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin:*:*:*:*:*:*:*:* versions up to (excluding) 3.25.5</a></li>
-                                        <li class="vs7 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin:*:*:*:*:*:*:*:* versions from (including) 4.0.0; versions up to (excluding) 4.27.5</a></li>
-                                        <li class="vs7 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin:*:*:*:*:*:*:*:* versions from (including) 4.28.0; versions up to (excluding) 4.28.2</a></li>
-                                        <li class="vs7 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin-lite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin-lite:*:*:*:*:*:*:*:* versions up to (excluding) 3.25.5</a></li>
-                                        <li class="vs7 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin-lite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin-lite:*:*:*:*:*:*:*:* versions from (including) 4.0.0; versions up to (excluding) 4.27.5</a></li>
-                                        <li class="vs7 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin-lite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin-lite:*:*:*:*:*:*:*:* versions from (including) 4.28.0; versions up to (including) 4.28.2</a></li>
-                                        <li class="vs7 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Anetapp%3Aactive_iq_unified_manager%3A-%3A%2A%3A%2A%3A%2A%3A%2A%3Alinux%3A%2A%3A%2A">cpe:2.3:a:netapp:active_iq_unified_manager:-:*:*:*:*:linux:*:*</a></li>
-                                        <li class="vs7 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Anetapp%3Aactive_iq_unified_manager%3A-%3A%2A%3A%2A%3A%2A%3A%2A%3Avmware_vsphere%3A%2A%3A%2A">cpe:2.3:a:netapp:active_iq_unified_manager:-:*:*:*:*:vmware_vsphere:*:*</a></li>
-                                        <li class="vs7 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Anetapp%3Aactive_iq_unified_manager%3A-%3A%2A%3A%2A%3A%2A%3A%2A%3Awindows%3A%2A%3A%2A">cpe:2.3:a:netapp:active_iq_unified_manager:-:*:*:*:*:windows:*:*</a></li>
-                                        <li class="vs7 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Anetapp%3Abluexp%3A-%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:netapp:bluexp:-:*:*:*:*:*:*:*</a></li>
-                                        <li class="vs7 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Anetapp%3Aontap_tools%3A10%3A%2A%3A%2A%3A%2A%3A%2A%3Avmware_vsphere%3A%2A%3A%2A">cpe:2.3:a:netapp:ontap_tools:10:*:*:*:*:vmware_vsphere:*:*</a></li>
+                                    <p>Vulnerable Software &amp; Versions:&nbsp;(<a href="#" class="versionToggle" data-toggle=".vs11">show all</a>)<ul>
+                                        <li class="vs11"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions up to (excluding) 3.25.5</a></li>
+                                        <li class="vs11">...</li>
+                                        <li class="vs11 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3Aruby%3A%2A%3A%2A">cpe:2.3:a:google:protobuf:*:*:*:*:*:ruby:*:* versions up to (excluding) 3.25.5</a></li>
+                                        <li class="vs11 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3Aruby%3A%2A%3A%2A">cpe:2.3:a:google:protobuf:*:*:*:*:*:ruby:*:* versions from (including) 4.0.0; versions up to (excluding) 4.27.5</a></li>
+                                        <li class="vs11 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3Aruby%3A%2A%3A%2A">cpe:2.3:a:google:protobuf:*:*:*:*:*:ruby:*:* versions from (including) 4.28.0; versions up to (excluding) 4.28.2</a></li>
+                                        <li class="vs11 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions up to (excluding) 3.25.5</a></li>
+                                        <li class="vs11 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions from (including) 4.0.0; versions up to (excluding) 4.27.5</a></li>
+                                        <li class="vs11 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions from (including) 4.28.0; versions up to (excluding) 4.28.2</a></li>
+                                        <li class="vs11 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-javalite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-javalite:*:*:*:*:*:*:*:* versions up to (excluding) 3.25.5</a></li>
+                                        <li class="vs11 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-javalite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-javalite:*:*:*:*:*:*:*:* versions from (including) 4.0.0; versions up to (excluding) 4.27.5</a></li>
+                                        <li class="vs11 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-javalite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-javalite:*:*:*:*:*:*:*:* versions from (including) 4.28.0; versions up to (excluding) 4.28.2</a></li>
+                                        <li class="vs11 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin:*:*:*:*:*:*:*:* versions up to (excluding) 3.25.5</a></li>
+                                        <li class="vs11 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin:*:*:*:*:*:*:*:* versions from (including) 4.0.0; versions up to (excluding) 4.27.5</a></li>
+                                        <li class="vs11 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin:*:*:*:*:*:*:*:* versions from (including) 4.28.0; versions up to (excluding) 4.28.2</a></li>
+                                        <li class="vs11 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin-lite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin-lite:*:*:*:*:*:*:*:* versions up to (excluding) 3.25.5</a></li>
+                                        <li class="vs11 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin-lite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin-lite:*:*:*:*:*:*:*:* versions from (including) 4.0.0; versions up to (excluding) 4.27.5</a></li>
+                                        <li class="vs11 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin-lite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin-lite:*:*:*:*:*:*:*:* versions from (including) 4.28.0; versions up to (including) 4.28.2</a></li>
+                                        <li class="vs11 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Anetapp%3Aactive_iq_unified_manager%3A-%3A%2A%3A%2A%3A%2A%3A%2A%3Alinux%3A%2A%3A%2A">cpe:2.3:a:netapp:active_iq_unified_manager:-:*:*:*:*:linux:*:*</a></li>
+                                        <li class="vs11 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Anetapp%3Aactive_iq_unified_manager%3A-%3A%2A%3A%2A%3A%2A%3A%2A%3Avmware_vsphere%3A%2A%3A%2A">cpe:2.3:a:netapp:active_iq_unified_manager:-:*:*:*:*:vmware_vsphere:*:*</a></li>
+                                        <li class="vs11 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Anetapp%3Aactive_iq_unified_manager%3A-%3A%2A%3A%2A%3A%2A%3A%2A%3Awindows%3A%2A%3A%2A">cpe:2.3:a:netapp:active_iq_unified_manager:-:*:*:*:*:windows:*:*</a></li>
+                                        <li class="vs11 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Anetapp%3Abluexp%3A-%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:netapp:bluexp:-:*:*:*:*:*:*:*</a></li>
+                                        <li class="vs11 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Anetapp%3Aontap_tools%3A10%3A%2A%3A%2A%3A%2A%3A%2A%3Avmware_vsphere%3A%2A%3A%2A">cpe:2.3:a:netapp:ontap_tools:10:*:*:*:*:vmware_vsphere:*:*</a></li>
                                     </ul></p>
                                 <p><b><a target="_blank" href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-3171">CVE-2022-3171</a></b>&nbsp;&nbsp;<button class="copybutton" title="Generate Suppression XML for this CVE for this file" data-display-name="protobuf-java-2.5.0.jar" data-sha1="a10732c76bfacdbd633a7eb0f7968b1059a65dfa" data-pkgurl="pkg:maven/com.google.protobuf/protobuf-java@2.5.0" data-type-to-suppress="cve" data-id-to-suppress="CVE-2022-3171">suppress</button></p>
                             <p>                            <pre>A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.</pre>
@@ -3482,29 +3574,29 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                                     <li>cve-coordination@google.com - <a target="_blank" href="https://security.gentoo.org/glsa/202301-09">THIRD_PARTY_ADVISORY</a></li>
                                 </ul>
                             </p>
-                                    <p>Vulnerable Software &amp; Versions:&nbsp;(<a href="#" class="versionToggle" data-toggle=".vs8">show all</a>)<ul>
-                                        <li class="vs8"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions up to (excluding) 3.16.3</a></li>
-                                        <li class="vs8">...</li>
-                                        <li class="vs8 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Agoogle-protobuf%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3Aruby%3A%2A%3A%2A">cpe:2.3:a:google:google-protobuf:*:*:*:*:*:ruby:*:* versions up to (excluding) 3.16.3</a></li>
-                                        <li class="vs8 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Agoogle-protobuf%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3Aruby%3A%2A%3A%2A">cpe:2.3:a:google:google-protobuf:*:*:*:*:*:ruby:*:* versions from (including) 3.17.0; versions up to (excluding) 3.19.6</a></li>
-                                        <li class="vs8 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Agoogle-protobuf%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3Aruby%3A%2A%3A%2A">cpe:2.3:a:google:google-protobuf:*:*:*:*:*:ruby:*:* versions from (including) 3.20.0; versions up to (excluding) 3.20.3</a></li>
-                                        <li class="vs8 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Agoogle-protobuf%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3Aruby%3A%2A%3A%2A">cpe:2.3:a:google:google-protobuf:*:*:*:*:*:ruby:*:* versions from (including) 3.21.0; versions up to (excluding) 3.21.7</a></li>
-                                        <li class="vs8 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions up to (excluding) 3.16.3</a></li>
-                                        <li class="vs8 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions from (including) 3.17.0; versions up to (excluding) 3.19.6</a></li>
-                                        <li class="vs8 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions from (including) 3.20.0; versions up to (excluding) 3.20.3</a></li>
-                                        <li class="vs8 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions from (including) 3.21.0; versions up to (excluding) 3.21.7</a></li>
-                                        <li class="vs8 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-javalite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-javalite:*:*:*:*:*:*:*:* versions up to (excluding) 3.16.3</a></li>
-                                        <li class="vs8 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-javalite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-javalite:*:*:*:*:*:*:*:* versions from (including) 3.17.0; versions up to (excluding) 3.19.6</a></li>
-                                        <li class="vs8 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-javalite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-javalite:*:*:*:*:*:*:*:* versions from (including) 3.20.0; versions up to (excluding) 3.20.3</a></li>
-                                        <li class="vs8 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-javalite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-javalite:*:*:*:*:*:*:*:* versions from (including) 3.21.0; versions up to (excluding) 3.21.7</a></li>
-                                        <li class="vs8 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin:*:*:*:*:*:*:*:* versions up to (excluding) 3.16.3</a></li>
-                                        <li class="vs8 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin:*:*:*:*:*:*:*:* versions from (including) 3.17.0; versions up to (excluding) 3.19.6</a></li>
-                                        <li class="vs8 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin:*:*:*:*:*:*:*:* versions from (including) 3.20.0; versions up to (excluding) 3.20.3</a></li>
-                                        <li class="vs8 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin:*:*:*:*:*:*:*:* versions from (including) 3.21.0; versions up to (excluding) 3.21.7</a></li>
-                                        <li class="vs8 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin-lite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin-lite:*:*:*:*:*:*:*:* versions up to (excluding) 3.16.3</a></li>
-                                        <li class="vs8 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin-lite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin-lite:*:*:*:*:*:*:*:* versions from (including) 3.17.0; versions up to (excluding) 3.19.6</a></li>
-                                        <li class="vs8 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin-lite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin-lite:*:*:*:*:*:*:*:* versions from (including) 3.20.0; versions up to (excluding) 3.20.3</a></li>
-                                        <li class="vs8 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin-lite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin-lite:*:*:*:*:*:*:*:* versions from (including) 3.21.0; versions up to (excluding) 3.21.7</a></li>
+                                    <p>Vulnerable Software &amp; Versions:&nbsp;(<a href="#" class="versionToggle" data-toggle=".vs12">show all</a>)<ul>
+                                        <li class="vs12"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions up to (excluding) 3.16.3</a></li>
+                                        <li class="vs12">...</li>
+                                        <li class="vs12 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Agoogle-protobuf%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3Aruby%3A%2A%3A%2A">cpe:2.3:a:google:google-protobuf:*:*:*:*:*:ruby:*:* versions up to (excluding) 3.16.3</a></li>
+                                        <li class="vs12 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Agoogle-protobuf%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3Aruby%3A%2A%3A%2A">cpe:2.3:a:google:google-protobuf:*:*:*:*:*:ruby:*:* versions from (including) 3.17.0; versions up to (excluding) 3.19.6</a></li>
+                                        <li class="vs12 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Agoogle-protobuf%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3Aruby%3A%2A%3A%2A">cpe:2.3:a:google:google-protobuf:*:*:*:*:*:ruby:*:* versions from (including) 3.20.0; versions up to (excluding) 3.20.3</a></li>
+                                        <li class="vs12 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Agoogle-protobuf%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3Aruby%3A%2A%3A%2A">cpe:2.3:a:google:google-protobuf:*:*:*:*:*:ruby:*:* versions from (including) 3.21.0; versions up to (excluding) 3.21.7</a></li>
+                                        <li class="vs12 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions up to (excluding) 3.16.3</a></li>
+                                        <li class="vs12 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions from (including) 3.17.0; versions up to (excluding) 3.19.6</a></li>
+                                        <li class="vs12 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions from (including) 3.20.0; versions up to (excluding) 3.20.3</a></li>
+                                        <li class="vs12 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions from (including) 3.21.0; versions up to (excluding) 3.21.7</a></li>
+                                        <li class="vs12 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-javalite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-javalite:*:*:*:*:*:*:*:* versions up to (excluding) 3.16.3</a></li>
+                                        <li class="vs12 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-javalite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-javalite:*:*:*:*:*:*:*:* versions from (including) 3.17.0; versions up to (excluding) 3.19.6</a></li>
+                                        <li class="vs12 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-javalite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-javalite:*:*:*:*:*:*:*:* versions from (including) 3.20.0; versions up to (excluding) 3.20.3</a></li>
+                                        <li class="vs12 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-javalite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-javalite:*:*:*:*:*:*:*:* versions from (including) 3.21.0; versions up to (excluding) 3.21.7</a></li>
+                                        <li class="vs12 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin:*:*:*:*:*:*:*:* versions up to (excluding) 3.16.3</a></li>
+                                        <li class="vs12 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin:*:*:*:*:*:*:*:* versions from (including) 3.17.0; versions up to (excluding) 3.19.6</a></li>
+                                        <li class="vs12 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin:*:*:*:*:*:*:*:* versions from (including) 3.20.0; versions up to (excluding) 3.20.3</a></li>
+                                        <li class="vs12 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin:*:*:*:*:*:*:*:* versions from (including) 3.21.0; versions up to (excluding) 3.21.7</a></li>
+                                        <li class="vs12 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin-lite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin-lite:*:*:*:*:*:*:*:* versions up to (excluding) 3.16.3</a></li>
+                                        <li class="vs12 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin-lite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin-lite:*:*:*:*:*:*:*:* versions from (including) 3.17.0; versions up to (excluding) 3.19.6</a></li>
+                                        <li class="vs12 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin-lite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin-lite:*:*:*:*:*:*:*:* versions from (including) 3.20.0; versions up to (excluding) 3.20.3</a></li>
+                                        <li class="vs12 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin-lite%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin-lite:*:*:*:*:*:*:*:* versions from (including) 3.21.0; versions up to (excluding) 3.21.7</a></li>
                                     </ul></p>
                                 <p><b><a target="_blank" href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2021-22569">CVE-2021-22569</a></b>&nbsp;&nbsp;<button class="copybutton" title="Generate Suppression XML for this CVE for this file" data-display-name="protobuf-java-2.5.0.jar" data-sha1="a10732c76bfacdbd633a7eb0f7968b1059a65dfa" data-pkgurl="pkg:maven/com.google.protobuf/protobuf-java@2.5.0" data-type-to-suppress="cve" data-id-to-suppress="CVE-2021-22569">suppress</button></p>
                             <p>                            <pre>An issue in protobuf-java allowed the interleaving of com.google.protobuf.UnknownFieldSet fields in such a way that would be processed out of order. A small malicious payload can occupy the parser for several minutes by creating large numbers of short-lived objects that cause frequent, repeated pauses. We recommend upgrading libraries beyond the vulnerable versions.</pre>
@@ -3531,21 +3623,21 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                                     <li>cve-coordination@google.com - <a target="_blank" href="https://cloud.google.com/support/bulletins#gcp-2022-001">VENDOR_ADVISORY</a></li>
                                 </ul>
                             </p>
-                                    <p>Vulnerable Software &amp; Versions:&nbsp;(<a href="#" class="versionToggle" data-toggle=".vs9">show all</a>)<ul>
-                                        <li class="vs9"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions up to (excluding) 3.16.1</a></li>
-                                        <li class="vs9">...</li>
-                                        <li class="vs9 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Agoogle-protobuf%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3Aruby%3A%2A%3A%2A">cpe:2.3:a:google:google-protobuf:*:*:*:*:*:ruby:*:* versions up to (excluding) 3.19.2</a></li>
-                                        <li class="vs9 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions up to (excluding) 3.16.1</a></li>
-                                        <li class="vs9 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions from (including) 3.18.0; versions up to (excluding) 3.18.2</a></li>
-                                        <li class="vs9 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions from (including) 3.19.0; versions up to (excluding) 3.19.2</a></li>
-                                        <li class="vs9 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin:*:*:*:*:*:*:*:* versions up to (excluding) 3.18.2</a></li>
-                                        <li class="vs9 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin:*:*:*:*:*:*:*:* versions from (including) 3.19.0; versions up to (excluding) 3.19.2</a></li>
-                                        <li class="vs9 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aoracle%3Acommunications_cloud_native_core_console%3A1.9.0%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:oracle:communications_cloud_native_core_console:1.9.0:*:*:*:*:*:*:*</a></li>
-                                        <li class="vs9 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aoracle%3Acommunications_cloud_native_core_network_repository_function%3A1.15.0%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:oracle:communications_cloud_native_core_network_repository_function:1.15.0:*:*:*:*:*:*:*</a></li>
-                                        <li class="vs9 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aoracle%3Acommunications_cloud_native_core_network_repository_function%3A1.15.1%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:oracle:communications_cloud_native_core_network_repository_function:1.15.1:*:*:*:*:*:*:*</a></li>
-                                        <li class="vs9 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aoracle%3Acommunications_cloud_native_core_policy%3A1.15.0%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:oracle:communications_cloud_native_core_policy:1.15.0:*:*:*:*:*:*:*</a></li>
-                                        <li class="vs9 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aoracle%3Aspatial_and_graph_mapviewer%3A19c%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:oracle:spatial_and_graph_mapviewer:19c:*:*:*:*:*:*:*</a></li>
-                                        <li class="vs9 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aoracle%3Aspatial_and_graph_mapviewer%3A21c%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:oracle:spatial_and_graph_mapviewer:21c:*:*:*:*:*:*:*</a></li>
+                                    <p>Vulnerable Software &amp; Versions:&nbsp;(<a href="#" class="versionToggle" data-toggle=".vs13">show all</a>)<ul>
+                                        <li class="vs13"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions up to (excluding) 3.16.1</a></li>
+                                        <li class="vs13">...</li>
+                                        <li class="vs13 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Agoogle-protobuf%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3Aruby%3A%2A%3A%2A">cpe:2.3:a:google:google-protobuf:*:*:*:*:*:ruby:*:* versions up to (excluding) 3.19.2</a></li>
+                                        <li class="vs13 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions up to (excluding) 3.16.1</a></li>
+                                        <li class="vs13 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions from (including) 3.18.0; versions up to (excluding) 3.18.2</a></li>
+                                        <li class="vs13 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-java%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-java:*:*:*:*:*:*:*:* versions from (including) 3.19.0; versions up to (excluding) 3.19.2</a></li>
+                                        <li class="vs13 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin:*:*:*:*:*:*:*:* versions up to (excluding) 3.18.2</a></li>
+                                        <li class="vs13 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Agoogle%3Aprotobuf-kotlin%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:google:protobuf-kotlin:*:*:*:*:*:*:*:* versions from (including) 3.19.0; versions up to (excluding) 3.19.2</a></li>
+                                        <li class="vs13 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aoracle%3Acommunications_cloud_native_core_console%3A1.9.0%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:oracle:communications_cloud_native_core_console:1.9.0:*:*:*:*:*:*:*</a></li>
+                                        <li class="vs13 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aoracle%3Acommunications_cloud_native_core_network_repository_function%3A1.15.0%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:oracle:communications_cloud_native_core_network_repository_function:1.15.0:*:*:*:*:*:*:*</a></li>
+                                        <li class="vs13 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aoracle%3Acommunications_cloud_native_core_network_repository_function%3A1.15.1%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:oracle:communications_cloud_native_core_network_repository_function:1.15.1:*:*:*:*:*:*:*</a></li>
+                                        <li class="vs13 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aoracle%3Acommunications_cloud_native_core_policy%3A1.15.0%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:oracle:communications_cloud_native_core_policy:1.15.0:*:*:*:*:*:*:*</a></li>
+                                        <li class="vs13 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aoracle%3Aspatial_and_graph_mapviewer%3A19c%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:oracle:spatial_and_graph_mapviewer:19c:*:*:*:*:*:*:*</a></li>
+                                        <li class="vs13 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aoracle%3Aspatial_and_graph_mapviewer%3A21c%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:oracle:spatial_and_graph_mapviewer:21c:*:*:*:*:*:*:*</a></li>
                                     </ul></p>
                     </div>
                 </div>
@@ -3559,8 +3651,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                             <b>SHA1:</b>&nbsp;0dbbb28df3e337233f934468915eb327ff488172<br/>
                             <b>SHA256:</b>655d5b6ba4057cdbbeeab163c00cdaede8d72880db4b80e8c5e8bd555960b92c
                         </p>
-                        <h4 id="header60" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
-                        <div id="content60" class="subsectioncontent standardsubsection hidden">
+                        <h4 id="header62" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
+                        <div id="content62" class="subsectioncontent standardsubsection hidden">
                             <table class="lined fullwidth" border="0">
                                 <tr><th class="left" style="width:10%;">Type</th><th class="left" style="width:10%;">Source</th><th class="left" style="width:20%;">Name</th><th class="left" style="width:50%;">Value</th><th class="left" style="width:10%;">Confidence</th></tr>
                                     <tr><td>Vendor</td><td>file</td><td>name</td><td>quoin</td><td>High</td></tr>
@@ -3577,8 +3669,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                                     <tr><td>Version</td><td>pom</td><td>version</td><td>0.1.2</td><td>Highest</td></tr>
                             </table>
                         </div>
-                        <h4 id="header61" class="subsectionheader white">Identifiers</h4>
-                        <div id="content61" class="subsectioncontent standardsubsection">
+                        <h4 id="header63" class="subsectionheader white">Identifiers</h4>
+                        <div id="content63" class="subsectioncontent standardsubsection">
                             <ul>
                                     <li>pkg:maven/quoin/quoin@0.1.2
                                     &nbsp;&nbsp;(<i>Confidence</i>:High)
@@ -3599,8 +3691,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                             <b>SHA1:</b>&nbsp;95f0003cea7ebf26aef5ed64c77c05fcd1ff9648<br/>
                             <b>SHA256:</b>e00e09a71abc4677e17dd8d42b0755b59a9e9ab09b60fd8b1abb45e4c80409c0
                         </p>
-                        <h4 id="header62" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
-                        <div id="content62" class="subsectioncontent standardsubsection hidden">
+                        <h4 id="header64" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
+                        <div id="content64" class="subsectioncontent standardsubsection hidden">
                             <table class="lined fullwidth" border="0">
                                 <tr><th class="left" style="width:10%;">Type</th><th class="left" style="width:10%;">Source</th><th class="left" style="width:20%;">Name</th><th class="left" style="width:50%;">Value</th><th class="left" style="width:10%;">Confidence</th></tr>
                                     <tr><td>Vendor</td><td>file</td><td>name</td><td>rhino</td><td>High</td></tr>
@@ -3629,8 +3721,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                                     <tr><td>Version</td><td>pom</td><td>version</td><td>1.7R5</td><td>Highest</td></tr>
                             </table>
                         </div>
-                        <h4 id="header63" class="subsectionheader white">Identifiers</h4>
-                        <div id="content63" class="subsectioncontent standardsubsection">
+                        <h4 id="header65" class="subsectionheader white">Identifiers</h4>
+                        <div id="content65" class="subsectioncontent standardsubsection">
                             <ul>
                                     <li>pkg:maven/org.mozilla/rhino@1.7R5
                                     &nbsp;&nbsp;(<i>Confidence</i>:High)
@@ -3641,8 +3733,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                             </li>
                             </ul>
                         </div>
-                    <h4 id="header64" class="subsectionheader collapsed collaspablesubsection white">Published Vulnerabilities</h4>
-                    <div id="content64" class="subsectioncontent standardsubsection">
+                    <h4 id="header66" class="subsectionheader collapsed collaspablesubsection white">Published Vulnerabilities</h4>
+                    <div id="content66" class="subsectioncontent standardsubsection">
                                 <p><b><a target="_blank" href="https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2025-66453">CVE-2025-66453</a></b>&nbsp;&nbsp;<button class="copybutton" title="Generate Suppression XML for this CVE for this file" data-display-name="rhino-1.7R5.jar" data-sha1="95f0003cea7ebf26aef5ed64c77c05fcd1ff9648" data-pkgurl="pkg:maven/org.mozilla/rhino@1.7R5" data-type-to-suppress="cve" data-id-to-suppress="CVE-2025-66453">suppress</button></p>
                             <p>                            <pre>Rhino is an open-source implementation of JavaScript written entirely in Java. Prior to 1.8.1, 1.7.15.1, and 1.7.14.1, when an application passed an attacker controlled float poing number into the toFixed() function, it might lead to high CPU consumption and a potential Denial of Service. Small numbers go through this call stack: NativeNumber.numTo &gt; DToA.JS_dtostr &gt; DToA.JS_dtoa &gt; DToA.pow5mult where pow5mult attempts to raise 5 to a ridiculous power. This vulnerability is fixed in 1.8.1, 1.7.15.1, and 1.7.14.1.</pre>
 
@@ -3657,12 +3749,12 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                                     <li>security-advisories@github.com - <a target="_blank" href="https://github.com/mozilla/rhino/security/advisories/GHSA-3w8q-xq97-5j7x">VENDOR_ADVISORY</a></li>
                                 </ul>
                             </p>
-                                    <p>Vulnerable Software &amp; Versions:&nbsp;(<a href="#" class="versionToggle" data-toggle=".vs10">show all</a>)<ul>
-                                        <li class="vs10"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Amozilla%3Arhino%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:mozilla:rhino:*:*:*:*:*:*:*:* versions up to (excluding) 1.7.14.1</a></li>
-                                        <li class="vs10">...</li>
-                                        <li class="vs10 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Amozilla%3Arhino%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:mozilla:rhino:*:*:*:*:*:*:*:* versions up to (excluding) 1.7.14.1</a></li>
-                                        <li class="vs10 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Amozilla%3Arhino%3A1.7.15%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:mozilla:rhino:1.7.15:*:*:*:*:*:*:*</a></li>
-                                        <li class="vs10 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Amozilla%3Arhino%3A1.8.0%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:mozilla:rhino:1.8.0:*:*:*:*:*:*:*</a></li>
+                                    <p>Vulnerable Software &amp; Versions:&nbsp;(<a href="#" class="versionToggle" data-toggle=".vs14">show all</a>)<ul>
+                                        <li class="vs14"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Amozilla%3Arhino%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:mozilla:rhino:*:*:*:*:*:*:*:* versions up to (excluding) 1.7.14.1</a></li>
+                                        <li class="vs14">...</li>
+                                        <li class="vs14 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Amozilla%3Arhino%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:mozilla:rhino:*:*:*:*:*:*:*:* versions up to (excluding) 1.7.14.1</a></li>
+                                        <li class="vs14 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Amozilla%3Arhino%3A1.7.15%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:mozilla:rhino:1.7.15:*:*:*:*:*:*:*</a></li>
+                                        <li class="vs14 hidden"><a target="_blank" href="https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Amozilla%3Arhino%3A1.8.0%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A">cpe:2.3:a:mozilla:rhino:1.8.0:*:*:*:*:*:*:*</a></li>
                                     </ul></p>
                     </div>
                 </div>
@@ -3676,8 +3768,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                             <b>SHA1:</b>&nbsp;033bd1610a8ef50a6347cd571eaef76182ca50b0<br/>
                             <b>SHA256:</b>398f61fa4825b8f86c916ae580c7e133b7c477d0b72a7d3b298d381032740bae
                         </p>
-                        <h4 id="header65" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
-                        <div id="content65" class="subsectioncontent standardsubsection hidden">
+                        <h4 id="header67" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
+                        <div id="content67" class="subsectioncontent standardsubsection hidden">
                             <table class="lined fullwidth" border="0">
                                 <tr><th class="left" style="width:10%;">Type</th><th class="left" style="width:10%;">Source</th><th class="left" style="width:20%;">Name</th><th class="left" style="width:50%;">Value</th><th class="left" style="width:10%;">Confidence</th></tr>
                                     <tr><td>Vendor</td><td>file</td><td>name</td><td>riddley</td><td>High</td></tr>
@@ -3696,8 +3788,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                                     <tr><td>Version</td><td>pom</td><td>version</td><td>0.1.12</td><td>Highest</td></tr>
                             </table>
                         </div>
-                        <h4 id="header66" class="subsectionheader white">Identifiers</h4>
-                        <div id="content66" class="subsectioncontent standardsubsection">
+                        <h4 id="header68" class="subsectionheader white">Identifiers</h4>
+                        <div id="content68" class="subsectioncontent standardsubsection">
                             <ul>
                                     <li>pkg:maven/riddley/riddley@0.1.12
                                     &nbsp;&nbsp;(<i>Confidence</i>:High)
@@ -3715,8 +3807,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                             <b>SHA1:</b>&nbsp;be4aed05849752f9ac5d09691755dec3dd8ed5f3<br/>
                             <b>SHA256:</b>a68ac22bf2ea3cd54ce34db70fd69844d631ef549f6450c278c30e6f79df63f3
                         </p>
-                        <h4 id="header67" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
-                        <div id="content67" class="subsectioncontent standardsubsection hidden">
+                        <h4 id="header69" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
+                        <div id="content69" class="subsectioncontent standardsubsection hidden">
                             <table class="lined fullwidth" border="0">
                                 <tr><th class="left" style="width:10%;">Type</th><th class="left" style="width:10%;">Source</th><th class="left" style="width:20%;">Name</th><th class="left" style="width:50%;">Value</th><th class="left" style="width:10%;">Confidence</th></tr>
                                     <tr><td>Vendor</td><td>file</td><td>name</td><td>slingshot</td><td>High</td></tr>
@@ -3733,8 +3825,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                                     <tr><td>Version</td><td>pom</td><td>version</td><td>0.12.2</td><td>Highest</td></tr>
                             </table>
                         </div>
-                        <h4 id="header68" class="subsectionheader white">Identifiers</h4>
-                        <div id="content68" class="subsectioncontent standardsubsection">
+                        <h4 id="header70" class="subsectionheader white">Identifiers</h4>
+                        <div id="content70" class="subsectioncontent standardsubsection">
                             <ul>
                                     <li>pkg:maven/slingshot/slingshot@0.12.2
                                     &nbsp;&nbsp;(<i>Confidence</i>:High)
@@ -3752,8 +3844,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                             <b>SHA1:</b>&nbsp;4eb5dea521c4e6e1f68c2c47517f14a922003e60<br/>
                             <b>SHA256:</b>94cd99b6ea639641f37af4860a643b6ed399ee5a8be5d717cff0b663c8d75077
                         </p>
-                        <h4 id="header69" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
-                        <div id="content69" class="subsectioncontent standardsubsection hidden">
+                        <h4 id="header71" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
+                        <div id="content71" class="subsectioncontent standardsubsection hidden">
                             <table class="lined fullwidth" border="0">
                                 <tr><th class="left" style="width:10%;">Type</th><th class="left" style="width:10%;">Source</th><th class="left" style="width:20%;">Name</th><th class="left" style="width:50%;">Value</th><th class="left" style="width:10%;">Confidence</th></tr>
                                     <tr><td>Vendor</td><td>file</td><td>name</td><td>spec.alpha</td><td>High</td></tr>
@@ -3784,8 +3876,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                                     <tr><td>Version</td><td>pom</td><td>version</td><td>0.5.238</td><td>Highest</td></tr>
                             </table>
                         </div>
-                        <h4 id="header70" class="subsectionheader white">Identifiers</h4>
-                        <div id="content70" class="subsectioncontent standardsubsection">
+                        <h4 id="header72" class="subsectionheader white">Identifiers</h4>
+                        <div id="content72" class="subsectioncontent standardsubsection">
                             <ul>
                                     <li>pkg:maven/org.clojure/spec.alpha@0.5.238
                                     &nbsp;&nbsp;(<i>Confidence</i>:High)
@@ -3803,8 +3895,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                             <b>SHA1:</b>&nbsp;2551fe91105779f8641ed51d8eb21f1bf50b49e4<br/>
                             <b>SHA256:</b>da123ee25d9515c7b9edc871e11ab0332d58904ca7af854b3ddc2d34332ad7bc
                         </p>
-                        <h4 id="header71" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
-                        <div id="content71" class="subsectioncontent standardsubsection hidden">
+                        <h4 id="header73" class="subsectionheader expandable expandablesubsection white">Evidence</h4>
+                        <div id="content73" class="subsectioncontent standardsubsection hidden">
                             <table class="lined fullwidth" border="0">
                                 <tr><th class="left" style="width:10%;">Type</th><th class="left" style="width:10%;">Source</th><th class="left" style="width:20%;">Name</th><th class="left" style="width:50%;">Value</th><th class="left" style="width:10%;">Confidence</th></tr>
                                     <tr><td>Vendor</td><td>file</td><td>name</td><td>tools.reader</td><td>High</td></tr>
@@ -3829,8 +3921,8 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                                     <tr><td>Version</td><td>pom</td><td>version</td><td>1.0.0-beta3</td><td>Highest</td></tr>
                             </table>
                         </div>
-                        <h4 id="header72" class="subsectionheader white">Identifiers</h4>
-                        <div id="content72" class="subsectioncontent standardsubsection">
+                        <h4 id="header74" class="subsectionheader white">Identifiers</h4>
+                        <div id="content74" class="subsectioncontent standardsubsection">
                             <ul>
                                     <li>pkg:maven/org.clojure/tools.reader@1.0.0-beta3
                                     &nbsp;&nbsp;(<i>Confidence</i>:High)
