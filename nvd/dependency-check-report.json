@@ -5,11 +5,11 @@
         "dataSource": [
 {
                 "name": "NVD API Last Checked",
-                "timestamp": "2026-07-14T08:16:03Z"
+                "timestamp": "2026-08-11T04:57:12Z"
             }
 ,{
                 "name": "NVD API Last Modified",
-                "timestamp": "2026-07-14T07:16:20Z"
+                "timestamp": "2026-08-11T04:17:31Z"
             }
         ]
 
@@ -17,7 +17,7 @@
     },
     "projectInfo": {
         "name": "com.github.pmonks\/unfurl 1.0.234-SNAPSHOT",
-        "reportDate": "2026-07-14T08:16:14.171508835Z",
+        "reportDate": "2026-08-11T04:57:23.280419119Z",
         "credits": {
             "NVD": "This product uses the NVD API but is not endorsed or certified by the NVD. This report contains data retrieved from the National Vulnerability Database: https://nvd.nist.gov",
             "CISA": "This report may contain data retrieved from the CISA Known Exploited Vulnerability Catalog: https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
@@ -8274,88 +8274,7 @@
                     "id": "cpe:2.3:a:apache:httpcomponents_core:4.4.16:*:*:*:*:*:*:*"
 ,"confidence": "HIGHEST","url": "https:\/\/nvd.nist.gov\/vuln\/search#\/nvd\/home?sortOrder=3&sortDirection=2&cpeFilterMode=applicability&resultType=records&cpeName=cpe%3A2.3%3Aa%3Aapache%3Ahttpcomponents_core%3A4.4.16%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A"                }
             ]
-            ,"vulnerabilities": [
- {
-                "source": "NVD",
-                "name": "CVE-2026-54399",
-                    "severity" : "HIGH",
-                    "cvssv3": {
-                        "baseScore": 7.5
-                        ,"attackVector": "NETWORK"
-                        ,"attackComplexity": "LOW"
-                        ,"privilegesRequired": "NONE"
-                        ,"userInteraction": "NONE"
-                        ,"scope": "UNCHANGED"
-                        ,"confidentialityImpact": "NONE"
-                        ,"integrityImpact": "NONE"
-                        ,"availabilityImpact": "HIGH"
-                        ,"baseSeverity": "HIGH"
-,"exploitabilityScore": "3.9","impactScore": "3.6","version": "3.1"                    },
-                    "cwes": [
-                        "CWE-400",                        "NVD-CWE-noinfo"                    ],
-                "description": "Uncontrolled Resource Consumption vulnerability in the HTTP\/1.1 message parser\u00A0in Apache HttpComponents Core (5.4.2 and earlier, 5.5-beta1 and earlier) allows\u00A0an remote attacker to cause a denial of service through memory exhaustion by sending messages with excessive number of headers \/ excessive header length",
-                "notes": "",
-                "references": [
- {
-                        "source": "af854a3a-2127-422b-91ae-364da2661108"
-,"url": "http:\/\/www.openwall.com\/lists\/oss-security\/2026\/07\/01\/4","name": "MAILING_LIST,THIRD_PARTY_ADVISORY"                    }, {
-                        "source": "security@apache.org"
-,"url": "https:\/\/lists.apache.org\/thread\/zmxh1pl2zohov5ntdh4lt85gfrlchgpy","name": "MAILING_LIST,VENDOR_ADVISORY"                    }                ],
-                "vulnerableSoftware": [
- {
-                        "software": { 
-                            "id":"cpe:2.3:a:apache:httpcomponents_core:*:*:*:*:*:*:*:*"
-,"vulnerabilityIdMatched":"true","versionEndIncluding":"5.4.2"                        }
-                    }, {
-                        "software": { 
-                            "id":"cpe:2.3:a:apache:httpcomponents_core:5.5:alpha1:*:*:*:*:*:*"
-                        }
-                    }, {
-                        "software": { 
-                            "id":"cpe:2.3:a:apache:httpcomponents_core:5.5:beta1:*:*:*:*:*:*"
-                        }
-                    }                ]
-                }, {
-                "source": "NVD",
-                "name": "CVE-2026-54428",
-                    "severity" : "HIGH",
-                    "cvssv3": {
-                        "baseScore": 7.5
-                        ,"attackVector": "NETWORK"
-                        ,"attackComplexity": "LOW"
-                        ,"privilegesRequired": "NONE"
-                        ,"userInteraction": "NONE"
-                        ,"scope": "UNCHANGED"
-                        ,"confidentialityImpact": "NONE"
-                        ,"integrityImpact": "NONE"
-                        ,"availabilityImpact": "HIGH"
-                        ,"baseSeverity": "HIGH"
-,"exploitabilityScore": "3.9","impactScore": "3.6","version": "3.1"                    },
-                    "cwes": [
-                        "CWE-400",                        "CWE-770"                    ],
-                "description": "Allocation of resources without limits or throttling in the HTTP\/2 HPACK decoder in Apache HttpComponents Core (5.4.2 and earlier, 5.5-beta1 and earlier) allows an remote attacker to cause a denial of service through memory exhaustion by sending oversized compressed header blocks before the HTTP\/2 SETTINGS acknowledgement causes the configured header list size limit to be applied.",
-                "notes": "",
-                "references": [
- {
-                        "source": "af854a3a-2127-422b-91ae-364da2661108"
-,"url": "http:\/\/www.openwall.com\/lists\/oss-security\/2026\/07\/01\/3","name": "MITIGATION,THIRD_PARTY_ADVISORY"                    }, {
-                        "source": "security@apache.org"
-,"url": "https:\/\/lists.apache.org\/thread\/5zjp8vczvxq19pw2rvhs21q446bhl0sd","name": "MITIGATION,VENDOR_ADVISORY"                    }                ],
-                "vulnerableSoftware": [
- {
-                        "software": { 
-                            "id":"cpe:2.3:a:apache:httpcomponents_core:*:*:*:*:*:*:*:*"
-,"vulnerabilityIdMatched":"true","versionEndIncluding":"5.4.2"                        }
-                    }, {
-                        "software": { 
-                            "id":"cpe:2.3:a:apache:httpcomponents_core:5.5:alpha1:*:*:*:*:*:*"
-                        }
-                    }, {
-                        "software": { 
-                            "id":"cpe:2.3:a:apache:httpcomponents_core:5.5:beta1:*:*:*:*:*:*"
-                        }
-                    }                ]
-                }            ]        },{
+        },{
             "isVirtual": false,
             "fileName": "httpcore-nio-4.4.15.jar",
             "filePath": "\/home\/runner\/.m2\/repository\/org\/apache\/httpcomponents\/httpcore-nio\/4.4.15\/httpcore-nio-4.4.15.jar"
@@ -8581,88 +8500,7 @@
                     "id": "cpe:2.3:a:apache:httpcomponents_core:4.4.15:*:*:*:*:*:*:*"
 ,"confidence": "HIGHEST","url": "https:\/\/nvd.nist.gov\/vuln\/search#\/nvd\/home?sortOrder=3&sortDirection=2&cpeFilterMode=applicability&resultType=records&cpeName=cpe%3A2.3%3Aa%3Aapache%3Ahttpcomponents_core%3A4.4.15%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A"                }
             ]
-            ,"vulnerabilities": [
- {
-                "source": "NVD",
-                "name": "CVE-2026-54399",
-                    "severity" : "HIGH",
-                    "cvssv3": {
-                        "baseScore": 7.5
-                        ,"attackVector": "NETWORK"
-                        ,"attackComplexity": "LOW"
-                        ,"privilegesRequired": "NONE"
-                        ,"userInteraction": "NONE"
-                        ,"scope": "UNCHANGED"
-                        ,"confidentialityImpact": "NONE"
-                        ,"integrityImpact": "NONE"
-                        ,"availabilityImpact": "HIGH"
-                        ,"baseSeverity": "HIGH"
-,"exploitabilityScore": "3.9","impactScore": "3.6","version": "3.1"                    },
-                    "cwes": [
-                        "CWE-400",                        "NVD-CWE-noinfo"                    ],
-                "description": "Uncontrolled Resource Consumption vulnerability in the HTTP\/1.1 message parser\u00A0in Apache HttpComponents Core (5.4.2 and earlier, 5.5-beta1 and earlier) allows\u00A0an remote attacker to cause a denial of service through memory exhaustion by sending messages with excessive number of headers \/ excessive header length",
-                "notes": "",
-                "references": [
- {
-                        "source": "af854a3a-2127-422b-91ae-364da2661108"
-,"url": "http:\/\/www.openwall.com\/lists\/oss-security\/2026\/07\/01\/4","name": "MAILING_LIST,THIRD_PARTY_ADVISORY"                    }, {
-                        "source": "security@apache.org"
-,"url": "https:\/\/lists.apache.org\/thread\/zmxh1pl2zohov5ntdh4lt85gfrlchgpy","name": "MAILING_LIST,VENDOR_ADVISORY"                    }                ],
-                "vulnerableSoftware": [
- {
-                        "software": { 
-                            "id":"cpe:2.3:a:apache:httpcomponents_core:*:*:*:*:*:*:*:*"
-,"vulnerabilityIdMatched":"true","versionEndIncluding":"5.4.2"                        }
-                    }, {
-                        "software": { 
-                            "id":"cpe:2.3:a:apache:httpcomponents_core:5.5:alpha1:*:*:*:*:*:*"
-                        }
-                    }, {
-                        "software": { 
-                            "id":"cpe:2.3:a:apache:httpcomponents_core:5.5:beta1:*:*:*:*:*:*"
-                        }
-                    }                ]
-                }, {
-                "source": "NVD",
-                "name": "CVE-2026-54428",
-                    "severity" : "HIGH",
-                    "cvssv3": {
-                        "baseScore": 7.5
-                        ,"attackVector": "NETWORK"
-                        ,"attackComplexity": "LOW"
-                        ,"privilegesRequired": "NONE"
-                        ,"userInteraction": "NONE"
-                        ,"scope": "UNCHANGED"
-                        ,"confidentialityImpact": "NONE"
-                        ,"integrityImpact": "NONE"
-                        ,"availabilityImpact": "HIGH"
-                        ,"baseSeverity": "HIGH"
-,"exploitabilityScore": "3.9","impactScore": "3.6","version": "3.1"                    },
-                    "cwes": [
-                        "CWE-400",                        "CWE-770"                    ],
-                "description": "Allocation of resources without limits or throttling in the HTTP\/2 HPACK decoder in Apache HttpComponents Core (5.4.2 and earlier, 5.5-beta1 and earlier) allows an remote attacker to cause a denial of service through memory exhaustion by sending oversized compressed header blocks before the HTTP\/2 SETTINGS acknowledgement causes the configured header list size limit to be applied.",
-                "notes": "",
-                "references": [
- {
-                        "source": "af854a3a-2127-422b-91ae-364da2661108"
-,"url": "http:\/\/www.openwall.com\/lists\/oss-security\/2026\/07\/01\/3","name": "MITIGATION,THIRD_PARTY_ADVISORY"                    }, {
-                        "source": "security@apache.org"
-,"url": "https:\/\/lists.apache.org\/thread\/5zjp8vczvxq19pw2rvhs21q446bhl0sd","name": "MITIGATION,VENDOR_ADVISORY"                    }                ],
-                "vulnerableSoftware": [
- {
-                        "software": { 
-                            "id":"cpe:2.3:a:apache:httpcomponents_core:*:*:*:*:*:*:*:*"
-,"vulnerabilityIdMatched":"true","versionEndIncluding":"5.4.2"                        }
-                    }, {
-                        "software": { 
-                            "id":"cpe:2.3:a:apache:httpcomponents_core:5.5:alpha1:*:*:*:*:*:*"
-                        }
-                    }, {
-                        "software": { 
-                            "id":"cpe:2.3:a:apache:httpcomponents_core:5.5:beta1:*:*:*:*:*:*"
-                        }
-                    }                ]
-                }            ]        },{
+        },{
             "isVirtual": false,
             "fileName": "httpmime-4.5.14.jar",
             "filePath": "\/home\/runner\/.m2\/repository\/org\/apache\/httpcomponents\/httpmime\/4.5.14\/httpmime-4.5.14.jar"

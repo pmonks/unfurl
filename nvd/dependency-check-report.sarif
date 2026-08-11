@@ -44,32 +44,6 @@
 "cvssv3_exploitabilityScore": "2.2","cvssv3_impactScore": "3.6","cvssv3_version": "_3_1",                "source": "NVD"
               }
             },{
-              "id": "CVE-2026-54428",
-              "shortDescription": {
-                 "text": "high severity - CVE-2026-54428 Uncontrolled Resource Consumption vulnerability in pkg:maven\/org.apache.httpcomponents\/httpcore@4.4.16"
-              },
-              "fullDescription": {
-                "text": "Allocation of resources without limits or throttling in the HTTP\/2 HPACK decoder in Apache HttpComponents Core (5.4.2 and earlier, 5.5-beta1 and earlier) allows an remote attacker to cause a denial of service through memory exhaustion by sending oversized compressed header blocks before the HTTP\/2 SETTINGS acknowledgement causes the configured header list size limit to be applied."
-              },
-              "help": {
-                "text": "",
-                "markdown": "For more information see [CVE-2026-54428](https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-54428).\n\n\nIf this is a false positive - consider using the HTML report to generate a suppression file.\nFor more information see [How dependency-check works](https://dependency-check.github.io/DependencyCheck/general/internals.html),\n[How to read the HTML report](https://dependency-check.github.io/DependencyCheck/general/thereport.html), and\n[Suppressing false positives](https://dependency-check.github.io/DependencyCheck/general/suppression.html)."
-              },
-              "properties": {
-                    "cvssv3_baseScore": 7.5,
-                    "security-severity": "7.5",
-                    "cvssv3_attackVector": "NETWORK",
-                    "cvssv3_attackComplexity": "LOW",
-                    "cvssv3_privilegesRequired": "NONE",
-                    "cvssv3_userInteraction": "NONE",
-                    "cvssv3_scope": "UNCHANGED",
-                    "cvssv3_confidentialityImpact": "NONE",
-                    "cvssv3_integrityImpact": "NONE",
-                    "cvssv3_availabilityImpact": "HIGH",
-                    "cvssv3_baseSeverity": "HIGH",
-"cvssv3_exploitabilityScore": "3.9","cvssv3_impactScore": "3.6","cvssv3_version": "_3_1",                "source": "NVD"
-              }
-            },{
               "id": "CVE-2023-0247",
               "shortDescription": {
                  "text": "high severity - CVE-2023-0247 Uncontrolled Search Path Element vulnerability in pkg:maven\/org.clojure\/clojurescript@1.9.293"
@@ -279,32 +253,6 @@
 "cvssv3_exploitabilityScore": "3.9","cvssv3_impactScore": "3.6","cvssv3_version": "_3_1",                "source": "NVD"
               }
             },{
-              "id": "CVE-2026-54399",
-              "shortDescription": {
-                 "text": "high severity - CVE-2026-54399 Uncontrolled Resource Consumption vulnerability in pkg:maven\/org.apache.httpcomponents\/httpcore@4.4.16"
-              },
-              "fullDescription": {
-                "text": "Uncontrolled Resource Consumption vulnerability in the HTTP\/1.1 message parser\u00A0in Apache HttpComponents Core (5.4.2 and earlier, 5.5-beta1 and earlier) allows\u00A0an remote attacker to cause a denial of service through memory exhaustion by sending messages with excessive number of headers \/ excessive header length"
-              },
-              "help": {
-                "text": "",
-                "markdown": "For more information see [CVE-2026-54399](https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-54399).\n\n\nIf this is a false positive - consider using the HTML report to generate a suppression file.\nFor more information see [How dependency-check works](https://dependency-check.github.io/DependencyCheck/general/internals.html),\n[How to read the HTML report](https://dependency-check.github.io/DependencyCheck/general/thereport.html), and\n[Suppressing false positives](https://dependency-check.github.io/DependencyCheck/general/suppression.html)."
-              },
-              "properties": {
-                    "cvssv3_baseScore": 7.5,
-                    "security-severity": "7.5",
-                    "cvssv3_attackVector": "NETWORK",
-                    "cvssv3_attackComplexity": "LOW",
-                    "cvssv3_privilegesRequired": "NONE",
-                    "cvssv3_userInteraction": "NONE",
-                    "cvssv3_scope": "UNCHANGED",
-                    "cvssv3_confidentialityImpact": "NONE",
-                    "cvssv3_integrityImpact": "NONE",
-                    "cvssv3_availabilityImpact": "HIGH",
-                    "cvssv3_baseSeverity": "HIGH",
-"cvssv3_exploitabilityScore": "3.9","cvssv3_impactScore": "3.6","cvssv3_version": "_3_1",                "source": "NVD"
-              }
-            },{
               "id": "CVE-2024-7254",
               "shortDescription": {
                  "text": "high severity - CVE-2024-7254 Uncontrolled Resource Consumption vulnerability in pkg:maven\/com.google.protobuf\/protobuf-java@2.5.0"
@@ -375,8 +323,8 @@
           "npm": "This report may contain data retrieved from the the Github Advisory Database (via NPM Audit API): https://github.com/advisories/",
           "retirejs": "This report may contain data retrieved from the RetireJS community: https://retirejs.github.io/retire.js/",
           "ossindex": "This report may contain data retrieved from the Sonatype OSS Index: https://ossindex.sonatype.org"
-            ,"NVD API Last Checked": "2026-07-14T08:16:03Z"
-            ,"NVD API Last Modified": "2026-07-14T07:16:20Z"
+            ,"NVD API Last Checked": "2026-08-11T04:57:12Z"
+            ,"NVD API Last Modified": "2026-08-11T04:17:31Z"
           }
         }
       },
@@ -1018,106 +966,6 @@
                 ,"logicalLocations": [
                     {
                     "fullyQualifiedName": "pkg:maven\/com.google.guava\/guava@19.0"
-                    }
-                ]
-              
-            }
-          ]
-          }, {
-          "ruleId": "CVE-2026-54399",
-          "level": "warning",
-          "message": {
-            "text": "CVE-2026-54399 - Uncontrolled Resource Consumption vulnerability in the HTTP\/1.1 message parser\u00A0in Apache HttpComponents Core (5.4.2 and earlier, 5.5-beta1 and earlier) allows\u00A0an remote attacker to cause a denial of service through memory exhaustion by sending messages with excessive number of headers \/ excessive header length"
-          },
-          "partialFingerprints": {
-            "vulnerabilityHash": "92a441185ca670c6e8e7965595fabadd"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file://\/home\/runner\/.m2\/repository\/org\/apache\/httpcomponents\/httpcore\/4.4.16\/httpcore-4.4.16.jar"
-                  ,"index": 18
-                }
-              }
-                ,"logicalLocations": [
-                    {
-                    "fullyQualifiedName": "pkg:maven\/org.apache.httpcomponents\/httpcore@4.4.16"
-                    }
-                ]
-              
-            }
-          ]
-          }, {
-          "ruleId": "CVE-2026-54428",
-          "level": "warning",
-          "message": {
-            "text": "CVE-2026-54428 - Allocation of resources without limits or throttling in the HTTP\/2 HPACK decoder in Apache HttpComponents Core (5.4.2 and earlier, 5.5-beta1 and earlier) allows an remote attacker to cause a denial of service through memory exhaustion by sending oversized compressed header blocks before the HTTP\/2 SETTINGS acknowledgement causes the configured header list size limit to be applied."
-          },
-          "partialFingerprints": {
-            "vulnerabilityHash": "2106c68acb0cd26a317c89d27050ba42"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file://\/home\/runner\/.m2\/repository\/org\/apache\/httpcomponents\/httpcore\/4.4.16\/httpcore-4.4.16.jar"
-                  ,"index": 18
-                }
-              }
-                ,"logicalLocations": [
-                    {
-                    "fullyQualifiedName": "pkg:maven\/org.apache.httpcomponents\/httpcore@4.4.16"
-                    }
-                ]
-              
-            }
-          ]
-          }, {
-          "ruleId": "CVE-2026-54399",
-          "level": "warning",
-          "message": {
-            "text": "CVE-2026-54399 - Uncontrolled Resource Consumption vulnerability in the HTTP\/1.1 message parser\u00A0in Apache HttpComponents Core (5.4.2 and earlier, 5.5-beta1 and earlier) allows\u00A0an remote attacker to cause a denial of service through memory exhaustion by sending messages with excessive number of headers \/ excessive header length"
-          },
-          "partialFingerprints": {
-            "vulnerabilityHash": "92a441185ca670c6e8e7965595fabadd"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file://\/home\/runner\/.m2\/repository\/org\/apache\/httpcomponents\/httpcore-nio\/4.4.15\/httpcore-nio-4.4.15.jar"
-                  ,"index": 19
-                }
-              }
-                ,"logicalLocations": [
-                    {
-                    "fullyQualifiedName": "pkg:maven\/org.apache.httpcomponents\/httpcore-nio@4.4.15"
-                    }
-                ]
-              
-            }
-          ]
-          }, {
-          "ruleId": "CVE-2026-54428",
-          "level": "warning",
-          "message": {
-            "text": "CVE-2026-54428 - Allocation of resources without limits or throttling in the HTTP\/2 HPACK decoder in Apache HttpComponents Core (5.4.2 and earlier, 5.5-beta1 and earlier) allows an remote attacker to cause a denial of service through memory exhaustion by sending oversized compressed header blocks before the HTTP\/2 SETTINGS acknowledgement causes the configured header list size limit to be applied."
-          },
-          "partialFingerprints": {
-            "vulnerabilityHash": "2106c68acb0cd26a317c89d27050ba42"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file://\/home\/runner\/.m2\/repository\/org\/apache\/httpcomponents\/httpcore-nio\/4.4.15\/httpcore-nio-4.4.15.jar"
-                  ,"index": 19
-                }
-              }
-                ,"logicalLocations": [
-                    {
-                    "fullyQualifiedName": "pkg:maven\/org.apache.httpcomponents\/httpcore-nio@4.4.15"
                     }
                 ]
               

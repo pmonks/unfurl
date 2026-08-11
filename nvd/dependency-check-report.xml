@@ -4,16 +4,16 @@
         <engineVersion>12.2.0</engineVersion>
         <dataSource>
             <name>NVD API Last Checked</name>
-            <timestamp>2026-07-14T08:16:03Z</timestamp>
+            <timestamp>2026-08-11T04:57:12Z</timestamp>
         </dataSource>
         <dataSource>
             <name>NVD API Last Modified</name>
-            <timestamp>2026-07-14T07:16:20Z</timestamp>
+            <timestamp>2026-08-11T04:17:31Z</timestamp>
         </dataSource>
     </scanInfo>
     <projectInfo>
         <name>com.github.pmonks/unfurl 1.0.234-SNAPSHOT</name>
-        <reportDate>2026-07-14T08:16:14.171508835Z</reportDate>
+        <reportDate>2026-08-11T04:57:23.280419119Z</reportDate>
         <credits>This product uses the NVD API but is not endorsed or certified by the NVD. This report contains data retrieved from the National Vulnerability Database: https://nvd.nist.gov, Github Advisory Database (via NPM Audit API): https://github.com/advisories/, and the RetireJS community.</credits>
     </projectInfo>
     <dependencies>
@@ -6344,78 +6344,6 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                     <url>https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aapache%3Ahttpcomponents_core%3A4.4.16%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A</url>
                 </vulnerabilityIds>
             </identifiers>
-            <vulnerabilities>
-                <vulnerability source="NVD">
-                    <name>CVE-2026-54399</name>
-                    <severity>HIGH</severity>
-                    <cvssV3>
-                        <baseScore>7.5</baseScore>
-                        <attackVector>NETWORK</attackVector>
-                        <attackComplexity>LOW</attackComplexity>
-                        <privilegesRequired>NONE</privilegesRequired>
-                        <userInteraction>NONE</userInteraction>
-                        <scope>UNCHANGED</scope>
-                        <confidentialityImpact>NONE</confidentialityImpact>
-                        <integrityImpact>NONE</integrityImpact>
-                        <availabilityImpact>HIGH</availabilityImpact>
-                        <baseSeverity>HIGH</baseSeverity>
-<exploitabilityScore>3.9</exploitabilityScore><impactScore>3.6</impactScore><version>3.1</version>                    </cvssV3>
-                    <cwes>
-<cwe>CWE-400</cwe><cwe>NVD-CWE-noinfo</cwe>                    </cwes>
-                    <description>Uncontrolled Resource Consumption vulnerability in the HTTP/1.1 message parser in Apache HttpComponents Core (5.4.2 and earlier, 5.5-beta1 and earlier) allows an remote attacker to cause a denial of service through memory exhaustion by sending messages with excessive number of headers / excessive header length</description>
-                    <references>
-                        <reference>
-                            <source>af854a3a-2127-422b-91ae-364da2661108</source>
-<url>http://www.openwall.com/lists/oss-security/2026/07/01/4</url><name>MAILING_LIST,THIRD_PARTY_ADVISORY</name>                        </reference>
-                        <reference>
-                            <source>security@apache.org</source>
-<url>https://lists.apache.org/thread/zmxh1pl2zohov5ntdh4lt85gfrlchgpy</url><name>MAILING_LIST,VENDOR_ADVISORY</name>                        </reference>
-                    </references>
-                    <vulnerableSoftware>
-                        <software vulnerabilityIdMatched="true"
- versionEndIncluding="5.4.2"                        >cpe:2.3:a:apache:httpcomponents_core:*:*:*:*:*:*:*:*</software>
-                        <software
-                        >cpe:2.3:a:apache:httpcomponents_core:5.5:alpha1:*:*:*:*:*:*</software>
-                        <software
-                        >cpe:2.3:a:apache:httpcomponents_core:5.5:beta1:*:*:*:*:*:*</software>
-                    </vulnerableSoftware>
-                </vulnerability>
-                <vulnerability source="NVD">
-                    <name>CVE-2026-54428</name>
-                    <severity>HIGH</severity>
-                    <cvssV3>
-                        <baseScore>7.5</baseScore>
-                        <attackVector>NETWORK</attackVector>
-                        <attackComplexity>LOW</attackComplexity>
-                        <privilegesRequired>NONE</privilegesRequired>
-                        <userInteraction>NONE</userInteraction>
-                        <scope>UNCHANGED</scope>
-                        <confidentialityImpact>NONE</confidentialityImpact>
-                        <integrityImpact>NONE</integrityImpact>
-                        <availabilityImpact>HIGH</availabilityImpact>
-                        <baseSeverity>HIGH</baseSeverity>
-<exploitabilityScore>3.9</exploitabilityScore><impactScore>3.6</impactScore><version>3.1</version>                    </cvssV3>
-                    <cwes>
-<cwe>CWE-400</cwe><cwe>CWE-770</cwe>                    </cwes>
-                    <description>Allocation of resources without limits or throttling in the HTTP/2 HPACK decoder in Apache HttpComponents Core (5.4.2 and earlier, 5.5-beta1 and earlier) allows an remote attacker to cause a denial of service through memory exhaustion by sending oversized compressed header blocks before the HTTP/2 SETTINGS acknowledgement causes the configured header list size limit to be applied.</description>
-                    <references>
-                        <reference>
-                            <source>af854a3a-2127-422b-91ae-364da2661108</source>
-<url>http://www.openwall.com/lists/oss-security/2026/07/01/3</url><name>MITIGATION,THIRD_PARTY_ADVISORY</name>                        </reference>
-                        <reference>
-                            <source>security@apache.org</source>
-<url>https://lists.apache.org/thread/5zjp8vczvxq19pw2rvhs21q446bhl0sd</url><name>MITIGATION,VENDOR_ADVISORY</name>                        </reference>
-                    </references>
-                    <vulnerableSoftware>
-                        <software vulnerabilityIdMatched="true"
- versionEndIncluding="5.4.2"                        >cpe:2.3:a:apache:httpcomponents_core:*:*:*:*:*:*:*:*</software>
-                        <software
-                        >cpe:2.3:a:apache:httpcomponents_core:5.5:alpha1:*:*:*:*:*:*</software>
-                        <software
-                        >cpe:2.3:a:apache:httpcomponents_core:5.5:beta1:*:*:*:*:*:*</software>
-                    </vulnerableSoftware>
-                </vulnerability>
-            </vulnerabilities>
         </dependency>
         <dependency isVirtual="false">
             <fileName>httpcore-nio-4.4.15.jar</fileName>
@@ -6582,78 +6510,6 @@ Even though the security vulnerability is fixed in version 32.0.0, we recommend 
                     <url>https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aapache%3Ahttpcomponents_core%3A4.4.15%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A</url>
                 </vulnerabilityIds>
             </identifiers>
-            <vulnerabilities>
-                <vulnerability source="NVD">
-                    <name>CVE-2026-54399</name>
-                    <severity>HIGH</severity>
-                    <cvssV3>
-                        <baseScore>7.5</baseScore>
-                        <attackVector>NETWORK</attackVector>
-                        <attackComplexity>LOW</attackComplexity>
-                        <privilegesRequired>NONE</privilegesRequired>
-                        <userInteraction>NONE</userInteraction>
-                        <scope>UNCHANGED</scope>
-                        <confidentialityImpact>NONE</confidentialityImpact>
-                        <integrityImpact>NONE</integrityImpact>
-                        <availabilityImpact>HIGH</availabilityImpact>
-                        <baseSeverity>HIGH</baseSeverity>
-<exploitabilityScore>3.9</exploitabilityScore><impactScore>3.6</impactScore><version>3.1</version>                    </cvssV3>
-                    <cwes>
-<cwe>CWE-400</cwe><cwe>NVD-CWE-noinfo</cwe>                    </cwes>
-                    <description>Uncontrolled Resource Consumption vulnerability in the HTTP/1.1 message parser in Apache HttpComponents Core (5.4.2 and earlier, 5.5-beta1 and earlier) allows an remote attacker to cause a denial of service through memory exhaustion by sending messages with excessive number of headers / excessive header length</description>
-                    <references>
-                        <reference>
-                            <source>af854a3a-2127-422b-91ae-364da2661108</source>
-<url>http://www.openwall.com/lists/oss-security/2026/07/01/4</url><name>MAILING_LIST,THIRD_PARTY_ADVISORY</name>                        </reference>
-                        <reference>
-                            <source>security@apache.org</source>
-<url>https://lists.apache.org/thread/zmxh1pl2zohov5ntdh4lt85gfrlchgpy</url><name>MAILING_LIST,VENDOR_ADVISORY</name>                        </reference>
-                    </references>
-                    <vulnerableSoftware>
-                        <software vulnerabilityIdMatched="true"
- versionEndIncluding="5.4.2"                        >cpe:2.3:a:apache:httpcomponents_core:*:*:*:*:*:*:*:*</software>
-                        <software
-                        >cpe:2.3:a:apache:httpcomponents_core:5.5:alpha1:*:*:*:*:*:*</software>
-                        <software
-                        >cpe:2.3:a:apache:httpcomponents_core:5.5:beta1:*:*:*:*:*:*</software>
-                    </vulnerableSoftware>
-                </vulnerability>
-                <vulnerability source="NVD">
-                    <name>CVE-2026-54428</name>
-                    <severity>HIGH</severity>
-                    <cvssV3>
-                        <baseScore>7.5</baseScore>
-                        <attackVector>NETWORK</attackVector>
-                        <attackComplexity>LOW</attackComplexity>
-                        <privilegesRequired>NONE</privilegesRequired>
-                        <userInteraction>NONE</userInteraction>
-                        <scope>UNCHANGED</scope>
-                        <confidentialityImpact>NONE</confidentialityImpact>
-                        <integrityImpact>NONE</integrityImpact>
-                        <availabilityImpact>HIGH</availabilityImpact>
-                        <baseSeverity>HIGH</baseSeverity>
-<exploitabilityScore>3.9</exploitabilityScore><impactScore>3.6</impactScore><version>3.1</version>                    </cvssV3>
-                    <cwes>
-<cwe>CWE-400</cwe><cwe>CWE-770</cwe>                    </cwes>
-                    <description>Allocation of resources without limits or throttling in the HTTP/2 HPACK decoder in Apache HttpComponents Core (5.4.2 and earlier, 5.5-beta1 and earlier) allows an remote attacker to cause a denial of service through memory exhaustion by sending oversized compressed header blocks before the HTTP/2 SETTINGS acknowledgement causes the configured header list size limit to be applied.</description>
-                    <references>
-                        <reference>
-                            <source>af854a3a-2127-422b-91ae-364da2661108</source>
-<url>http://www.openwall.com/lists/oss-security/2026/07/01/3</url><name>MITIGATION,THIRD_PARTY_ADVISORY</name>                        </reference>
-                        <reference>
-                            <source>security@apache.org</source>
-<url>https://lists.apache.org/thread/5zjp8vczvxq19pw2rvhs21q446bhl0sd</url><name>MITIGATION,VENDOR_ADVISORY</name>                        </reference>
-                    </references>
-                    <vulnerableSoftware>
-                        <software vulnerabilityIdMatched="true"
- versionEndIncluding="5.4.2"                        >cpe:2.3:a:apache:httpcomponents_core:*:*:*:*:*:*:*:*</software>
-                        <software
-                        >cpe:2.3:a:apache:httpcomponents_core:5.5:alpha1:*:*:*:*:*:*</software>
-                        <software
-                        >cpe:2.3:a:apache:httpcomponents_core:5.5:beta1:*:*:*:*:*:*</software>
-                    </vulnerableSoftware>
-                </vulnerability>
-            </vulnerabilities>
         </dependency>
         <dependency isVirtual="false">
             <fileName>httpmime-4.5.14.jar</fileName>
