@@ -4,16 +4,16 @@
         <engineVersion>12.2.0</engineVersion>
         <dataSource>
             <name>NVD API Last Checked</name>
-            <timestamp>2026-09-01T09:17:40Z</timestamp>
+            <timestamp>2026-09-08T07:53:13Z</timestamp>
         </dataSource>
         <dataSource>
             <name>NVD API Last Modified</name>
-            <timestamp>2026-09-01T09:16:41Z</timestamp>
+            <timestamp>2026-09-08T07:16:49Z</timestamp>
         </dataSource>
     </scanInfo>
     <projectInfo>
         <name>com.github.pmonks/unfurl 1.0.234-SNAPSHOT</name>
-        <reportDate>2026-09-01T09:17:50.706898678Z</reportDate>
+        <reportDate>2026-09-08T07:53:23.933270599Z</reportDate>
         <credits>This product uses the NVD API but is not endorsed or certified by the NVD. This report contains data retrieved from the National Vulnerability Database: https://nvd.nist.gov, Github Advisory Database (via NPM Audit API): https://github.com/advisories/, and the RetireJS community.</credits>
     </projectInfo>
     <dependencies>
@@ -248,11 +248,11 @@
             </identifiers>
         </dependency>
         <dependency isVirtual="false">
-            <fileName>clojure-1.12.5.jar</fileName>
-            <filePath>/home/runner/.m2/repository/org/clojure/clojure/1.12.5/clojure-1.12.5.jar</filePath>
-            <md5>087ba6fd877952c650a56f2f421713b5</md5>
-            <sha1>3ec635a14dea6c584eafc2fd6dab89cb5008407b</sha1>
-            <sha256>dfdee131460216a84fef22e537bb0d0579965f8f70338d748323dff26f8e5a8b</sha256>
+            <fileName>clojure-1.12.6.jar</fileName>
+            <filePath>/home/runner/.m2/repository/org/clojure/clojure/1.12.6/clojure-1.12.6.jar</filePath>
+            <md5>fed52831369cb598402a7742e1310118</md5>
+            <sha1>ea744fe01a09db46021b07c4aadf072698bf7a75</sha1>
+            <sha256>21b578db389a8e74b286ce79c4a7f86ec641e26d88b12f18d69030916b0e18ca</sha256>
             <description>Clojure core environment and runtime library.</description>
             <license>Eclipse Public License 1.0: http://opensource.org/licenses/eclipse-1.0.php</license>
             <evidenceCollected>
@@ -359,21 +359,21 @@
                 <evidence type="version" confidence="HIGH">
                     <source>file</source>
                     <name>version</name>
-                    <value>1.12.5</value>
+                    <value>1.12.6</value>
                 </evidence>
                 <evidence type="version" confidence="HIGHEST">
                     <source>pom</source>
                     <name>version</name>
-                    <value>1.12.5</value>
+                    <value>1.12.6</value>
                 </evidence>
             </evidenceCollected>
             <identifiers>
                 <package confidence="HIGH">
-                    <id>pkg:maven/org.clojure/clojure@1.12.5</id>
+                    <id>pkg:maven/org.clojure/clojure@1.12.6</id>
                 </package>
                 <vulnerabilityIds confidence="HIGHEST">
-                    <id>cpe:2.3:a:clojure:clojure:1.12.5:*:*:*:*:*:*:*</id>
-                    <url>https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aclojure%3Aclojure%3A1.12.5%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A</url>
+                    <id>cpe:2.3:a:clojure:clojure:1.12.6:*:*:*:*:*:*:*</id>
+                    <url>https://nvd.nist.gov/vuln/search#/nvd/home?sortOrder=3&amp;sortDirection=2&amp;cpeFilterMode=applicability&amp;resultType=records&amp;cpeName=cpe%3A2.3%3Aa%3Aclojure%3Aclojure%3A1.12.6%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A</url>
                 </vulnerabilityIds>
             </identifiers>
         </dependency>
