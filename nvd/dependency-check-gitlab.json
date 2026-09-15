@@ -22,8 +22,8 @@
                         "url": "https://github.com/dependency-check/DependencyCheck/"
         },
 
-        "end_time": "2026-09-08T07:53:23",
-                "start_time": "2026-09-08T07:53:23",
+        "end_time": "2026-09-15T12:01:03",
+                "start_time": "2026-09-15T12:01:03",
                 "status":  "success"  ,
                 "type": "dependency_scanning"
 
@@ -1618,7 +1618,7 @@
                         "package": {
                             "name": "org.jsoup:jsoup"
                         },
-                        "version": "1.22.1"
+                        "version": "1.23.2"
 
                                                                                                                     }
 ,                    {

@@ -5,19 +5,19 @@
         "dataSource": [
 {
                 "name": "NVD API Last Checked",
-                "timestamp": "2026-09-08T07:53:13Z"
+                "timestamp": "2026-09-15T12:00:53Z"
             }
 ,{
                 "name": "NVD API Last Modified",
-                "timestamp": "2026-09-08T07:16:49Z"
+                "timestamp": "2026-09-15T11:17:13Z"
             }
         ]
 
 
     },
     "projectInfo": {
-        "name": "com.github.pmonks\/unfurl 1.0.234-SNAPSHOT",
-        "reportDate": "2026-09-08T07:53:23.933270599Z",
+        "name": "com.github.pmonks\/unfurl 1.0.236-SNAPSHOT",
+        "reportDate": "2026-09-15T12:01:03.309217748Z",
         "credits": {
             "NVD": "This product uses the NVD API but is not endorsed or certified by the NVD. This report contains data retrieved from the National Vulnerability Database: https://nvd.nist.gov",
             "CISA": "This report may contain data retrieved from the CISA Known Exploited Vulnerability Catalog: https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
@@ -8862,11 +8862,11 @@
             ]
         },{
             "isVirtual": false,
-            "fileName": "jsoup-1.22.1.jar",
-            "filePath": "\/home\/runner\/.m2\/repository\/org\/jsoup\/jsoup\/1.22.1\/jsoup-1.22.1.jar"
-,"md5": "650c793f2362dd13d13355e558ea56f0",
-            "sha1": "9085290f1032d8bdd4ab0a279d176a4bd9e282ca",
-            "sha256": "cfd3298d8720cddfb0545109ccc6ea0ef39eff7e9c40a10ad95c93a65f01c916","description": "jsoup is a Java library that simplifies working with real-world HTML and XML. It offers an easy-to-use API for URL fetching, data parsing, extraction, and manipulation using DOM API methods, CSS, and xpath selectors. jsoup implements the WHATWG HTML5 specification, and parses HTML to the same DOM as modern browsers.","license": "The MIT License: https:\/\/jsoup.org\/license"            ,"evidenceCollected": {
+            "fileName": "jsoup-1.23.2.jar",
+            "filePath": "\/home\/runner\/.m2\/repository\/org\/jsoup\/jsoup\/1.23.2\/jsoup-1.23.2.jar"
+,"md5": "066df2c4cefe2ff7e65d8841c8845067",
+            "sha1": "514805efcc430bfb04e82f20bb998e39e3fd5c9c",
+            "sha256": "e9d8c856856680427f096d156f02a414289985c930998fcb519ce5be39b42003","description": "jsoup is a Java library that simplifies working with real-world HTML and XML. It offers an easy-to-use API for URL fetching, data parsing, extraction, and manipulation using DOM API methods, CSS, and xpath selectors. jsoup implements the WHATWG HTML5 specification, and parses HTML to the same DOM as modern browsers.","license": "The MIT License: https:\/\/jsoup.org\/license"            ,"evidenceCollected": {
                 "vendorEvidence": [
 {
                             "type": "vendor",
@@ -9150,39 +9150,39 @@
                         "confidence": "HIGH",
                         "source": "file",
                         "name": "version",
-                        "value": "1.22.1"
+                        "value": "1.23.2"
                     }
 ,                    {
                         "type": "version",
                         "confidence": "HIGH",
                         "source": "Manifest",
                         "name": "Bundle-Version",
-                        "value": "1.22.1"
+                        "value": "1.23.2"
                     }
 ,                    {
                         "type": "version",
                         "confidence": "HIGH",
                         "source": "Manifest",
                         "name": "Implementation-Version",
-                        "value": "1.22.1"
+                        "value": "1.23.2"
                     }
 ,                    {
                         "type": "version",
                         "confidence": "HIGHEST",
                         "source": "pom",
                         "name": "version",
-                        "value": "1.22.1"
+                        "value": "1.23.2"
                     }
                 ]
             }
                 ,"packages": [
                     {
-                        "id": "pkg:maven\/org.jsoup\/jsoup@1.22.1"
+                        "id": "pkg:maven\/org.jsoup\/jsoup@1.23.2"
 ,"confidence": "HIGH"                    }
             ]                ,"vulnerabilityIds": [
                 {
-                    "id": "cpe:2.3:a:jsoup:jsoup:1.22.1:*:*:*:*:*:*:*"
-,"confidence": "HIGHEST","url": "https:\/\/nvd.nist.gov\/vuln\/search#\/nvd\/home?sortOrder=3&sortDirection=2&cpeFilterMode=applicability&resultType=records&cpeName=cpe%3A2.3%3Aa%3Ajsoup%3Ajsoup%3A1.22.1%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A"                }
+                    "id": "cpe:2.3:a:jsoup:jsoup:1.23.2:*:*:*:*:*:*:*"
+,"confidence": "HIGHEST","url": "https:\/\/nvd.nist.gov\/vuln\/search#\/nvd\/home?sortOrder=3&sortDirection=2&cpeFilterMode=applicability&resultType=records&cpeName=cpe%3A2.3%3Aa%3Ajsoup%3Ajsoup%3A1.23.2%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A%3A%2A"                }
             ]
         },{
             "isVirtual": false,
