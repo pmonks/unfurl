@@ -48,8 +48,10 @@
       (do
         ; We do "fuzzy" testing because Facebook's meta tags change frequently enough that testing precise values is painful
         (is (true? (s/includes? (s/lower-case (:title result)) "facebook")))
-        (is (not (s/blank? (:description result))))
-        (is (true? (s/includes? (:url result) "https://www.facebook.com/")))
+        (is (true? (or (nil? (:description result))  ; Because Facebook (unpredictably) does not return a description in some cases 🙄
+                       (not (s/blank? (:description result))))))
+        (is (true? (or (nil? (:url result))  ; Because Facebook (unpredictably) does not return a URL in some cases 🙄
+                       (s/includes? (:url result) "https://www.facebook.com/"))))
         (is (true? (or (nil? (:preview-url result))  ; Because Facebook (unpredictably) does not return a preview URL in some cases 🙄
                        (s/includes? (:preview-url result) "https://www.facebook.com/images/")))))
       (is false "No unfurl metadata returned from Facebook"))  ; Force just one test failure if we got no metadata from Facebook, rather than several
